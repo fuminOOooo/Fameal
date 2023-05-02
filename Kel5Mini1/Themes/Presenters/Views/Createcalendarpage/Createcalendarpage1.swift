@@ -33,6 +33,7 @@ struct Createcalendarpage1: View {
                 Text("Start organizing your family meal time easily!")
                     .font(Font.custom("Fredoka", size: 22))
                     .foregroundColor(Color("PB-800"))
+                Spacer()
             }
             
             

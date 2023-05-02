@@ -15,7 +15,8 @@ struct Createcalendarpage2: View {
     
     @State var tempCalendarName: String = ""
     
-    var CcVM : CreatecalendarViewModel
+    @ObservedObject var CcVM = CreatecalendarViewModel()
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         VStack () {
@@ -37,7 +38,8 @@ struct Createcalendarpage2: View {
             // Component 4
             HStack {
                 Button {
-                    
+                    CcVM.addCalendar(name: "(Fameal)" + tempCalendarName)
+                    dismiss()
                 } label: {
                     if (tempCalendarName == "") {
                         Text("Create Calendar")

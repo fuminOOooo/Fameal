@@ -12,10 +12,12 @@ import CoreData
 struct HomePageHeader: View {
     
     @ObservedObject var PnVM = ProposenewViewModel()
-    
-    @ObservedObject var HpVM : HomepageViewModel
-    
+    @ObservedObject var HpVM = HomepageViewModel()
+    @ObservedObject var CcVM = CreatecalendarViewModel()
+    @State var calendarName: String = ""
+    @State private var selectedCalendarIndex = 0
     @State var calendarSelection: Bool = false
+    @State private var isCreatingCalendar: Bool = false
     
     var body: some View {
         VStack (spacing: 4) {
@@ -25,12 +27,9 @@ struct HomePageHeader: View {
                 
                 // Calendar Name
                 Button {
-                    
                     calendarSelection.toggle()
-                    
                 } label: {
-                    
-                    Text(HpVM.calendars[HpVM.currentCalendar].calendarName)
+                    Text(CcVM.getUserCalendars()[selectedCalendarIndex].title.dropFirst(8))
                         .font(Font.custom("Fredoka-Semibold", size: 26))
                         .foregroundColor(Color("PB-800"))
                     
@@ -58,33 +57,30 @@ struct HomePageHeader: View {
                         
                         ScrollView {
                             
-                            ForEach(0..<HpVM.calendars.count) { i in
+                            ForEach(0..<CcVM.getUserCalendars().count) { i in
                                 Button  {
-                                    
-                                    HpVM.currentCalendar = i
+                                    selectedCalendarIndex = i
                                     calendarSelection.toggle()
                                     
                                 } label: {
                                     HStack {
-                                        
                                         VStack {
-                                            
                                             HStack {
-                                                Text (HpVM.calendars[i].calendarName)
+                                                Text (CcVM.getUserCalendars()[i].title.dropFirst(8))
                                                     .font(Font.custom("Fredoka-Medium", size: 20))
                                                 Spacer()
                                             }
                                             
                                             HStack {
-                                                Text("\(HpVM.calendars[i].calendarMembers.count) Member(s)")
-                                                    .font(Font.custom("Fredoka-Light", size: 16))
+                                                //                                                    Text("\(HpVM.calendars[i].calendarMembers.count) Member(s)")
+                                                //                                                        .font(Font.custom("Fredoka-Light", size: 16))
                                                 Spacer()
                                             }
                                             
                                         }
                                         .padding(.leading)
                                         
-                                        if (HpVM.currentCalendar == i) {
+                                        if (selectedCalendarIndex == i) {
                                             VStack {
                                                 Image(systemName: "checkmark")
                                                     .bold()
@@ -94,11 +90,13 @@ struct HomePageHeader: View {
                                     }
                                 }
                                 .frame(maxWidth: 340, minHeight: 80)
-                                .background(HpVM.currentCalendar == i ? Color("PB-50") : Color(.white))
+                                .background(selectedCalendarIndex == i ? Color("PB-50") : Color(.white))
                                 .cornerRadius(8)
                                 .foregroundColor(Color("PB-800"))
                                 .padding(.leading)
                                 .padding(.trailing)
+                                
+                                
                                 
                                 if (HpVM.calendars.count != 1 && i < HpVM.calendars.count-1) {
                                     Divider()
@@ -108,17 +106,15 @@ struct HomePageHeader: View {
                             }
                             
                         }
-                        
                         Button {
-                            
+                            self.isCreatingCalendar.toggle()
                         } label: {
                             Text("+ Add another family calendar")
                                 .font(Font.custom("Fredoka-Regular", size: 16))
                                 .foregroundColor(Color("Secondary"))
+                        }.sheet(isPresented: self.$isCreatingCalendar) {
+                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection)
                         }
-                        
-                        
-                        
                     }
                     .presentationDetents([.medium])
                     
@@ -126,7 +122,7 @@ struct HomePageHeader: View {
                 
                 Spacer()
                 
-                //Add Calendar Button
+                //Add Event Button
                 NavigationLink {
                     Proposenewpage(PnVM: PnVM)
                 } label: {
@@ -141,22 +137,19 @@ struct HomePageHeader: View {
             
             //Component 2
             HStack {
-                
                 Button {
-                    
                     // SHOULD NAVIGATE TO MEMBER DETAILS
-                    
-                    
                 } label: {
-                    HStack (spacing: -2) {
+                    HStack (spacing: -4) {
                         
+                        // "temporaryUsers" SHOULD BE CHANGABLE
                         ForEach (0 ..< HpVM.calendars[HpVM.currentCalendar].calendarMembers.count) { users in
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                                .foregroundColor(.white)
-                                .shadow(radius: 3)
-                            
+                            if (users < 3) {
+                                Image(systemName: "person.circle.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .foregroundColor(.gray)
+                            }
                         }
                     }
                     
@@ -171,7 +164,6 @@ struct HomePageHeader: View {
                 Spacer()
                 
             }
-            
         }
     }
 }

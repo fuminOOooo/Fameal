@@ -34,6 +34,7 @@ struct HomePageUpcomingEvent: View {
             //card
             VStack(alignment: .leading, spacing: 14){
                 HStack{
+                    
                     // "Monday, 17 Apr" SHOULD BE CHANGABLE
                     Text("Monday, 17 Apr")
                         .font(Font.custom("Fredoka-Medium", size: 20))

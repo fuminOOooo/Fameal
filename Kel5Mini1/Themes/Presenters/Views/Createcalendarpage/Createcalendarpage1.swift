@@ -11,8 +11,6 @@ import CoreData
 
 struct Createcalendarpage1: View {
     
-    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    
     var CcVM : CreatecalendarViewModel
     
     var body: some View {

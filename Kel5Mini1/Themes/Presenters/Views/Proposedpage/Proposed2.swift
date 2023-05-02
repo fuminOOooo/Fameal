@@ -15,7 +15,10 @@ struct Proposed2: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            ForEach (0..<HpVM.calendars[HpVM.currentCalendar].calendarMembers.count) { temporaryUser in
+            
+            /// INI HARUSNYA JUMLAH DARI SEMUA MEMBER YANG JOIN KALENDER
+            ForEach (0..<        ) { temporaryUser in
+                
                 // Component 2
                 HStack {
                     VStack {
@@ -96,7 +99,9 @@ struct Proposed2: View {
                                 HStack {
                                     
                                     // "temporaryUsers" SHOULD BE CHANGABLE
-                                    ForEach (0 ..< HpVM.calendars[HpVM.currentCalendar].calendarMembers.count) { users in
+                                    
+                                    /// INI HARUSNYA JUMLAH SEMUA MEMBER YANG JOIN KALENDER
+                                    ForEach (0 ..<     ) { users in
                                         if (users < 3) {
                                             Image(systemName: "person.crop.circle.badge.clock.fill")
                                                 .font(Font.custom("Fredoka-Medium", size: 20))
@@ -107,8 +112,12 @@ struct Proposed2: View {
                                 }
                                 
                                 // "temporaryUsers" SHOULD BE CHANGABLE
-                                if (HpVM.calendars[HpVM.currentCalendar].calendarMembers.count > 3) {
-                                    Text("+\(HpVM.calendars[HpVM.currentCalendar].calendarMembers.count-3)")
+                                
+                                /// INI HARUSNYA JUMLAH DARI SEMUA MEMBER YANG JOIN KALENDER
+                                if (          > 3) {
+                                    
+                                    /// INI HARUSNYA JUMLAH DARI SEMUA MEMBER YANG JOIN KALENDER
+                                    Text("+\(       -3)")
                                         .font(Font.custom("Fredoka-Medium", size: 12))
                                         .foregroundColor(Color("PB-300"))
                                 }

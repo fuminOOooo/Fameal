@@ -69,7 +69,9 @@ struct Upcoming2: View {
                             HStack (spacing: -2) {
                                 
                                 // "temporaryUsers" SHOULD BE CHANGABLE
-                                ForEach (0 ..< temporaryUsers.count) { users in
+                                
+                                /// INI HARUSNYA TOTAL DARI SEMUA MEMBER YANG JOIN KALENDER
+                                ForEach (0 ..<     ) { users in
                                     if (users < 3) {
                                         Image(systemName: "person.circle.fill")
                                             .resizable()
@@ -81,7 +83,9 @@ struct Upcoming2: View {
                             }
                             
                             // "temporaryUsers" SHOULD BE CHANGABLE
-                            if (temporaryUsers.count > 3) {
+                            
+                            /// INI HARUSNYA TOTAL DARI SEMUA MEMBER YANG JOIN KALENDER
+                            if (         > 3) {
                                 Text("\(temporaryUsers.count-3)+")
                                     .font(Font.custom("Fredoka", size: 14))
                                     .foregroundColor(Color("PB-800"))

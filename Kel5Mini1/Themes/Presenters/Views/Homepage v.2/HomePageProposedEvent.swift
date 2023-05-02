@@ -125,7 +125,9 @@ struct HomePageProposedEvent: View {
                         } label: {
                             HStack {
                                 
-                                ForEach (0 ..< HpVM.calendars[HpVM.currentCalendar].calendarMembers.count) { users in
+                                
+                                /// INI HARUSNYA JUMLAH DARI SETIAP MEMBER YANG UDAH JOIN DI KALENDER
+                                ForEach (0 ..<         ) { users in
                                     if (users < 3) {
                                         Image(systemName: "person.crop.circle.badge.clock.fill")
                                             .font(Font.custom("Fredoka-Medium", size: 20))
@@ -136,7 +138,9 @@ struct HomePageProposedEvent: View {
                             }
                             
                             // "temporaryUsers" SHOULD BE CHANGABLE
-                            if (HpVM.calendars[HpVM.currentCalendar].calendarMembers.count > 3) {
+                            
+                            /// INI HARUSNYA TOTAL DARI  SEMUA MEMBER YANG ADA DI KALENDER
+                            if (         > 3) {
                                 Text("+\(HpVM.calendars[HpVM.currentCalendar].calendarMembers.count-3)")
                                     .font(Font.custom("Fredoka-Medium", size: 12))
                                     .foregroundColor(Color("PB-300"))

@@ -30,7 +30,9 @@ struct HomePageHeader: View {
                     
                 } label: {
                     
-                    Text(HpVM.calendars[HpVM.currentCalendar].calendarName)
+                    
+                    /// INI KALENDER YANG LAGI DI SELECT BUAT HOMEPAGE KESELURUHAN
+                    Text("    ")
                         .font(Font.custom("Fredoka-Semibold", size: 26))
                         .foregroundColor(Color("PB-800"))
                     
@@ -58,7 +60,9 @@ struct HomePageHeader: View {
                         
                         ScrollView {
                             
-                            ForEach(0..<HpVM.calendars.count) { i in
+                            
+                            /// INI HARUSNYA ADA FOR EACH BUAT SETIAP KALENDER
+                            ForEach(  ) { i in
                                 Button  {
                                     
                                     HpVM.currentCalendar = i
@@ -70,7 +74,9 @@ struct HomePageHeader: View {
                                         VStack {
                                             
                                             HStack {
-                                                Text (HpVM.calendars[i].calendarName)
+                                                
+                                                /// INI HARUSNYA ADA JUDUL DARI KALENDER
+                                                Text (     )
                                                     .font(Font.custom("Fredoka-Medium", size: 20))
                                                 Spacer()
                                             }

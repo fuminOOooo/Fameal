@@ -31,7 +31,7 @@ struct HomePageHeader: View {
                 } label: {
                     
                     Text(HpVM.calendars[HpVM.currentCalendar].calendarName)
-                        .font(Font.custom("Fredoka-Bold", size: 26))
+                        .font(Font.custom("Fredoka-Semibold", size: 26))
                         .foregroundColor(Color("PB-800"))
                     
                     Image(systemName: "chevron.down")

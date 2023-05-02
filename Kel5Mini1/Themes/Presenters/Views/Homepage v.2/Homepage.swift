@@ -12,7 +12,7 @@ struct Homepage: View {
     init() {
         let appearance = UINavigationBarAppearance()
         let customColor = UIColor(named: "PB-800")!
-        appearance.titleTextAttributes = [.foregroundColor: customColor, .font: UIFont(name: "Fredoka-Medium", size: 22)!
+        appearance.titleTextAttributes = [.foregroundColor: customColor, .font: UIFont(name: "Fredoka-Medium", size: 18)!
             ]
         UINavigationBar.appearance().standardAppearance = appearance
     }

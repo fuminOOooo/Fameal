@@ -11,8 +11,6 @@ import CoreData
 
 struct HomePageHeader: View {
     
-    @ObservedObject var PnVM = ProposenewViewModel()
-    
     @ObservedObject var HpVM : HomepageViewModel
     
     @State var calendarSelection: Bool = false
@@ -33,11 +31,11 @@ struct HomePageHeader: View {
                     
                     /// INI KALENDER YANG LAGI DI SELECT BUAT HOMEPAGE KESELURUHAN
                     Text("    ")
-                        .font(Font.custom("Fredoka-Semibold", size: 26))
+                        .font(Font.custom("Fredoka-Medium", size: 26))
                         .foregroundColor(Color("PB-800"))
                     
                     Image(systemName: "chevron.down")
-                        .font(Font.custom("Fredoka-Bold", size: 16))
+                        .font(Font.custom("Fredoka-Medium", size: 16))
                         .foregroundColor(Color("PB-800"))
                     
                 }
@@ -137,7 +135,7 @@ struct HomePageHeader: View {
                     Proposenewpage(PnVM: PnVM)
                 } label: {
                     Image(systemName: "plus")
-                        .font(Font.custom("Fredoka-Bold", size: 24))
+                        .font(Font.custom("Fredoka-Semibold", size: 24))
                         .foregroundColor(Color("PB-800"))
                         .bold()
                 }
@@ -156,19 +154,21 @@ struct HomePageHeader: View {
                 } label: {
                     HStack (spacing: -2) {
                         
-                        ForEach (0 ..< HpVM.calendars[HpVM.currentCalendar].calendarMembers.count) { users in
+                        /// INI HARUSNYA JUMLAH DARI SEMUA MEMBER YANG JOIN CALENDAR
+                        ForEach (0 ..<     ) { users in
                             Image(systemName: "person.circle.fill")
                                 .resizable()
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.white)
-                                .shadow(radius: 3)
                             
                         }
                     }
                     
-                    // "temporaryUsers" SHOULD BE CHANGABLE
-                    if (HpVM.calendars[HpVM.currentCalendar].calendarMembers.count > 3) {
-                        Text("\(HpVM.calendars[HpVM.currentCalendar].calendarMembers.count-3)+")
+                    /// INI HARUSNYA JUMLAH DARI SEMUA MEMBER YANG JOIN CALENDAR
+                    if (       > 3) {
+                        
+                        /// INI HARUSNYA JUMLAH DARI SEMUA MEMBER YANG JOIN CALENDAR
+                        Text("\(           -3)+")
                             .font(Font.custom("Fredoka", size: 14))
                             .foregroundColor(Color("PB-800"))
                     }

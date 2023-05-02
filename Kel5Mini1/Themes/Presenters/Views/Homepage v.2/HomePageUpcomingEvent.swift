@@ -11,7 +11,7 @@ import CoreData
 
 struct HomePageUpcomingEvent: View {
     
-    @ObservedObject var HpVM : HomepageViewModel
+    @ObservedObject var HpVM = HomepageViewModel()
     
     var body: some View {
         VStack{
@@ -79,5 +79,11 @@ struct HomePageUpcomingEvent: View {
             .cornerRadius(8)
             .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
         }
+    }
+}
+
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        HomePageUpcomingEvent().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

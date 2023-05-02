@@ -9,5 +9,9 @@ import Foundation
 import Combine
 
 class CalendarModel : ObservableObject {
-    
+    struct oneCalendar {
+        var calendarName: String
+        var calendarOwner: String
+        var calendarMembers: [String]
+    }
 }

@@ -33,9 +33,9 @@ struct Homepage: View {
             VStack {
                 HomePageHeader(HpVM: HpVM)
                 
-                HomePageUpcomingEvent(HpVM: HpVM)
+                HomePageUpcomingEvent()
             
-                HomePageProposedEvent(HpVM: HpVM)
+                HomePageProposedEvent()
                     .padding(.top)
                 
                 Spacer()
@@ -47,10 +47,4 @@ struct Homepage: View {
     }
 
     
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Homepage().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
 }

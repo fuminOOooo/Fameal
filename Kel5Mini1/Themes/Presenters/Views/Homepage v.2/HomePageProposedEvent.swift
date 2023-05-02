@@ -11,23 +11,16 @@ import CoreData
 
 struct HomePageProposedEvent: View {
     
-    @ObservedObject var HpVM : HomepageViewModel
+    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
     
     var body: some View {
-        
-        VStack {
-            
-            // Component 5
-            HStack {
-                
-                Text ("Proposed Event")
-                    .font(Font.custom("Fredoka-Medium", size: 20))
-                    .foregroundColor(Color("PB-800"))
-                
+        VStack{
+            //upcoming navigation
+            HStack{
+                Text ("PROPOSED EVENT")
+                    .font(Font.custom("Fredoka-Medium", size: 14))
+                    .foregroundColor(Color("Gray3"))
                 Spacer()
-                
-                // SHOULD NAVIGATE TO PROPOSED EVENTS LIST
-                
                 NavigationLink {
                     Proposed()
                 } label: {
@@ -35,147 +28,97 @@ struct HomePageProposedEvent: View {
                         .font(Font.custom("Fredoka", size: 16))
                         .foregroundColor(Color("Secondary"))
                 }
-                
-                
             }
+            .padding(.top)
             
-            // Component 6
-            HStack {
+            //card
+            VStack(alignment: .leading, spacing: 14){
+                HStack(){
+                    //Content should be changeable
+                    Text("Elvis has invited you to join...")
+                        .font(Font.custom("Fredoka-Regular", size: 14))
+                        .foregroundColor(Color("PB-900"))
+                }
                 
-                VStack {
+                HStack{
+                    // "Monday, 17 Apr" SHOULD BE CHANGABLE
+                    Text("Sunday, 21 Apr")
+                        .font(Font.custom("Fredoka-Medium", size: 20))
+                        .foregroundColor(Color("Primary"))
                     
-                    // Component 6.1, 6.2 & 6.3
+                    Image(systemName: "circle.fill")
+                        .font(Font.custom("Fredoka-Medium", size: 5))
+                        .foregroundColor(Color("Primary"))
                     
-                    VStack (spacing: 14) {
-                        
-                        // Component 6.1
+                    // "06.00 pm" SHOULD BE CHANGABLE
+                    Text("08.00 pm")
+                        .font(Font.custom("Fredoka-Medium", size: 20))
+                        .foregroundColor(Color("Primary"))
+                    Spacer()
+                }
+                
+                //Content should be changeable
+                VStack(alignment: .leading, spacing: 4){
+                    Text("I got a new resto recommendation, let’s eat there!")
+                        .font(Font.custom("Fredoka-Regular", size: 17))
+                        .foregroundColor(.gray)
+                }
+                
+                VStack(alignment: .leading, spacing: 4){
+                    Text("INVITEES STATUS")
+                        .font(Font.custom("Fredoka-Medium", size: 11))
+                        .foregroundColor(.gray)
+                    
+                    //Member List
+                    Button {
+                        // SHOULD NAVIGATE TO MEMBER DETAILS
+                    } label: {
                         HStack {
                             
-                            HStack {
-                                
-                                // "Elvis" SHOULD BE CHANGABLE
-                                Text("Elvis has invited you to join...")
-                                    .font(Font.custom("Fredoka", size: 12))
-                                    .foregroundColor(Color("PB-800"))
-                            }
-                            Spacer()
-                        }
-                        
-                        // Component 6.2 & 6.3
-                        HStack {
-                            
-                            // Component 6.2
-                            HStack {
-                                
-                                // "Monday, 17 Apr" SHOULD BE CHANGABLE
-                                Text("Monday, 17 Apr")
-                                    .font(Font.custom("Fredoka-Medium", size: 16))
-                                    .foregroundColor(Color("Primary"))
-                                
-                            }
-                            
-                            Image(systemName: "circle.fill")
-                                .font(Font.custom("Fredoka-Medium", size: 3))
-                                .foregroundColor(Color("Primary"))
-                            
-                            // Component 6.3
-                            HStack {
-                                
-                                // "09.00 pm" SHOULD BE CHANGABLE
-                                Text("09.00 pm")
-                                    .font(Font.custom("Fredoka-Medium", size: 16))
-                                    .foregroundColor(Color("Primary"))
-                                
-                                Spacer()
-                                
-                            }
-                        }
-                        
-                    }
-                    
-                    // Component 6.4
-                    HStack {
-                        
-                        // Text SHOULD BE CHANGABLE
-                        Text("I got a new resto recommendation, let’s eat there!")
-                            .font(Font.custom("Fredoka-Light", size: 16))
-                            .foregroundColor(Color("PB-800"))
-                        
-                        Spacer()
-                        
-                    }
-                    .padding(.init(top: 0.5, leading: 0, bottom: 0, trailing: 0))
-                    
-                    // Component 6.5
-                    HStack {
-                        Text("INVITEES STATUS")
-                            .font(Font.custom("Fredoka-Medium", size: 12))
-                            .foregroundColor(Color("PB-800"))
-                        Spacer()
-                    }
-                    .padding(.top)
-                    
-                    // Component 6.6
-                    HStack {
-                        Button {
-                            
-                            // SHOULD NAVIGATE TO MEMBER DETAILS
-                            
-                            
-                        } label: {
-                            HStack {
-                                
-                                
-                                /// INI HARUSNYA JUMLAH DARI SETIAP MEMBER YANG UDAH JOIN DI KALENDER
-                                ForEach (0 ..<         ) { users in
-                                    if (users < 3) {
-                                        Image(systemName: "person.crop.circle.badge.clock.fill")
-                                            .font(Font.custom("Fredoka-Medium", size: 20))
-                                            .foregroundColor(Color("PB-300"))
-                                            .foregroundColor(.gray)
-                                    }
+                            /// INI HARUSNYA ADA SEMUA USER YANG 
+                            ForEach (0 ..<     ) { users in
+                                if (users < 4) {
+                                    Image(systemName: "person.crop.circle.badge.fill")
+                                        .font(Font.custom("Fredoka-Medium", size: 20))
+                                        .foregroundColor(.green)
                                 }
                             }
-                            
-                            // "temporaryUsers" SHOULD BE CHANGABLE
-                            
-                            /// INI HARUSNYA TOTAL DARI  SEMUA MEMBER YANG ADA DI KALENDER
-                            if (         > 3) {
-                                Text("+\(HpVM.calendars[HpVM.currentCalendar].calendarMembers.count-3)")
-                                    .font(Font.custom("Fredoka-Medium", size: 12))
-                                    .foregroundColor(Color("PB-300"))
-                            }
                         }
-                        Spacer()
+
+                        if (temporaryUsers.count > 4) {
+                            Text("+\(temporaryUsers.count-4)")
+                                .font(Font.custom("Fredoka-Medium", size: 12))
+                                .foregroundColor(.green)
+                        }
                     }
-                    .padding(.init(top: 2, leading: 0, bottom: 0, trailing: 0))
                     
-                    // Component 6.7
-                    HStack (spacing: 14){
-                        
-                        Spacer()
-                        
-                        Button {
-                            
-                        } label: {
-                            Text("Decline")
-                        }.buttonStyle(BorderButton())
-  
-                        Button {
-                            
-                        } label: {
-                            Text("Accept")
-                        }.buttonStyle(FillButton())
-                    }
+                    
                 }
-                .padding()
-                .frame(height: 260)
+                
+                HStack(alignment: .center) {
+                    Button {
+                        //code here
+                    } label: {
+                        Text("Decline")
+                            .frame(minWidth: 125)
+                    }
+                    .buttonStyle(BorderButton())
+                    Spacer()
+                    Button {
+                        //code here
+                    } label: {
+                        Text("Accept")
+                            .frame(minWidth: 125)
+                    }
+                    .buttonStyle(FillButton())
+                }
                 
             }
+            .padding()
             .background(.white)
             .cornerRadius(8)
-            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 1, y: 2)
+            .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
         }
-        .padding(.top)
     }
 }
+

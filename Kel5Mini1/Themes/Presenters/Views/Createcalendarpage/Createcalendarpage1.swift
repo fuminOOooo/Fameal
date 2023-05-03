@@ -13,8 +13,6 @@ struct Createcalendarpage1: View {
     
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
     
-    var CcVM : CreatecalendarViewModel
-    
     var body: some View {
         VStack (spacing: 4) {
         
@@ -22,8 +20,8 @@ struct Createcalendarpage1: View {
             // Component 1
             HStack {
                 Text("Create your calendar")
-                    .font(Font.custom("Fredoka-SemiBold", size: 26))
-                    .foregroundColor(Color("PB-800"))
+                    .font(Font.custom("Fredoka-Regular", size: 18))
+                    .foregroundColor(.gray)
                 
                 Spacer()
             }
@@ -31,7 +29,7 @@ struct Createcalendarpage1: View {
             // Component 2
             HStack {
                 Text("Start organizing your family meal time easily!")
-                    .font(Font.custom("Fredoka", size: 22))
+                    .font(Font.custom("Fredoka-Medium", size: 26))
                     .foregroundColor(Color("PB-800"))
                 Spacer()
             }

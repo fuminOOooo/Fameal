@@ -13,9 +13,9 @@ struct HomePageHeader: View {
     
     @ObservedObject var PnVM = ProposenewViewModel()
     @ObservedObject var HpVM = HomepageViewModel()
-    @ObservedObject var CcVM = CreatecalendarViewModel()
+    @ObservedObject var CcVM = calendarViewModel()
     @State var calendarName: String = ""
-    @State private var selectedCalendarIndex = 0
+    @State var selectedCalendarIndex: Int = 0
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
     
@@ -58,10 +58,8 @@ struct HomePageHeader: View {
                         ScrollView {
                             
                             ForEach(0..<CcVM.getUserCalendars().count) { i in
-                                Button  {
-                                    selectedCalendarIndex = i
+                                Button  {                                    selectedCalendarIndex = i
                                     calendarSelection.toggle()
-                                    
                                 } label: {
                                     HStack {
                                         VStack {
@@ -72,8 +70,7 @@ struct HomePageHeader: View {
                                             }
                                             
                                             HStack {
-                                                //                                                    Text("\(HpVM.calendars[i].calendarMembers.count) Member(s)")
-                                                //                                                        .font(Font.custom("Fredoka-Light", size: 16))
+                                                //fill with calendar member count .font(Font.custom("Fredoka-Light", size: 16))
                                                 Spacer()
                                             }
                                             
@@ -98,7 +95,7 @@ struct HomePageHeader: View {
                                 
                                 
                                 
-                                if (HpVM.calendars.count != 1 && i < HpVM.calendars.count-1) {
+                                if (CcVM.getUserCalendars().count != 1 && i < CcVM.getUserCalendars().count-1) {
                                     Divider()
                                         .frame(maxWidth: 340)
                                 }
@@ -113,7 +110,7 @@ struct HomePageHeader: View {
                                 .font(Font.custom("Fredoka-Regular", size: 16))
                                 .foregroundColor(Color("Secondary"))
                         }.sheet(isPresented: self.$isCreatingCalendar) {
-                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection)
+                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
                         }
                     }
                     .presentationDetents([.medium])

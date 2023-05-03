@@ -10,9 +10,10 @@ import CoreData
 
 struct Createcalendarpage: View {
     
-    @StateObject var CcVM = CreatecalendarViewModel()
+    @StateObject var CcVM = calendarViewModel()
     @Binding var isCreatingCalendar: Bool
     @Binding var calendarSelection: Bool
+    @Binding var selectedCalendarIndex: Int
     
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -26,18 +27,19 @@ struct Createcalendarpage: View {
             
             Spacer()
             
-            Createcalendarpage1(CcVM: CcVM)
+            Createcalendarpage1()
             
             Createcalendarpage2(CcVM: CcVM)
             
             Spacer()
             
-            Createcalendarpage3(CcVM: CcVM)
+            Createcalendarpage3()
             
         }
         .onDisappear{
             self.calendarSelection = false
             self.isCreatingCalendar = false
+            self.selectedCalendarIndex = CcVM.getUserCalendars().count-1
         }
     }
 }

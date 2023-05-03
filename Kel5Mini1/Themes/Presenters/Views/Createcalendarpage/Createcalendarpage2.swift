@@ -15,16 +15,16 @@ struct Createcalendarpage2: View {
     
     @State var tempCalendarName: String = ""
     
-    @ObservedObject var CcVM = CreatecalendarViewModel()
+    @ObservedObject var CcVM = calendarViewModel()
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        VStack () {
-        
+        VStack(spacing: 24){
+            
             // Component 3
-            HStack {
-                TextField(text: $tempCalendarName, prompt: Text("Add calendar name")) {
-                        
+            HStack{
+                TextField(text: $tempCalendarName, prompt: Text("Add calendar name")){
+                    
                 }
                 .font(Font.custom("Fredoka-Medium", size: 16))
                 .foregroundColor(Color("PB-800"))
@@ -36,7 +36,7 @@ struct Createcalendarpage2: View {
             .padding(.trailing)
             
             // Component 4
-            HStack {
+            HStack{
                 Button {
                     CcVM.addCalendar(name: "(Fameal)" + tempCalendarName)
                     dismiss()
@@ -62,11 +62,6 @@ struct Createcalendarpage2: View {
                 .padding(.leading)
                 .padding(.trailing)
             }
-            
         }
     }
 }
-
-
-
-

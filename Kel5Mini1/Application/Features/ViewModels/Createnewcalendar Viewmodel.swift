@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import EventKit
 
-class CreatecalendarViewModel: ObservableObject {
+class calendarViewModel: ObservableObject {
     private let eventStore = EKEventStore()
     @Published var calendars = [EKCalendar]()
     @Published var selectedCalendar: EKCalendar?
@@ -27,18 +27,35 @@ class CreatecalendarViewModel: ObservableObject {
     }
     
     func addCalendar(name: String) {
-        eventStore.requestAccess(to: .event) { [self] granted, error in
-            if granted {
-                let newCalendar = EKCalendar(for: .event, eventStore: self.eventStore)
-                newCalendar.title = name
-                newCalendar.source = self.eventStore.defaultCalendarForNewEvents?.source
-                do {
-                    try self.eventStore.saveCalendar(newCalendar, commit: true)
-                } catch let error {
-                    print("Failed to save calendar: \(error.localizedDescription)")
+        eventStore.requestAccess(to: .event) { (granted, error) in
+            if granted && error == nil {
+                // Authorized access to the calendar
+                let calendar = EKCalendar(for: .event, eventStore: self.eventStore)
+                calendar.title = name
+                
+                // Find the iCloud source
+                var iCloudSource: EKSource?
+                for source in self.eventStore.sources {
+                    if source.sourceType == .calDAV && source.title == "iCloud" {
+                        iCloudSource = source
+                        break
+                    }
+                }
+                
+                if let source = iCloudSource {
+                    calendar.source = source
+                    
+                    do {
+                        try self.eventStore.saveCalendar(calendar, commit: true)
+                        print("Calendar saved successfully.")
+                    } catch {
+                        print("Error saving calendar: \(error.localizedDescription)")
+                    }
+                } else {
+                    print("iCloud source not found.")
                 }
             } else {
-                print("Access denied")
+                print("Access to calendar not granted.")
             }
         }
     }
@@ -48,6 +65,9 @@ class CreatecalendarViewModel: ObservableObject {
         let filteredCalendars = calendars.filter { calendar in
             return calendar.title.contains("(Fameal)")
         }
+        print(filteredCalendars)
         return filteredCalendars
+//        let sortedCalendars = filteredCalendars.sorted { $0.timeIntervalSince1970 > $1.timeIntervalSince1970 }
+//        return sortedCalendars
     }
 }

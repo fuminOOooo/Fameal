@@ -18,24 +18,14 @@ struct ProposeNewProposalButton: View {
     @ObservedObject var PnVM : ProposenewViewModel
     
     var body: some View {
-        VStack () {
-
-            HStack {
+        VStack(alignment: .center) {
+            Button {
                 
-                Button {
-                    
-                } label: {
-                    Text("Propose Event")
-                        .foregroundColor(.white)
-                        .background(Color("Secondary"))
-                        .bold()
-                        .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(FillButton())
-                .padding(.top)
-                
+            } label: {
+                Text("Propose Event")
+                    .frame(minWidth: 317)
             }
-            
+            .buttonStyle(FillButton())
         }
         .padding()
     }

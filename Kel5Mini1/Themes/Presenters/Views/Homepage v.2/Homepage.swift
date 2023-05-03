@@ -29,9 +29,8 @@ struct Homepage: View {
     var body:some View {
         
         NavigationView {
-            
             VStack {
-                HomePageHeader(HpVM: HpVM)
+                HomePageHeader(HpVM: HpVM, selectedCalendarIndex: 0)
                 
                 HomePageUpcomingEvent(HpVM: HpVM)
             

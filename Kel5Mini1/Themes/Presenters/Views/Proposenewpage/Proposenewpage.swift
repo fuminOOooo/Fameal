@@ -27,9 +27,9 @@ struct Proposenewpage: View {
                 
                 ProposeNewEventDatePicker(PnVM: PnVM)
                 
-                ProposeNewTextFields(PnVM: PnVM)
-                
                 ProposeNewStartTime(PnVM: PnVM)
+               
+                ProposeNewTextFields(PnVM: PnVM)
                 
                 ProposeNewProposalButton(PnVM: PnVM)
                 
@@ -37,6 +37,7 @@ struct Proposenewpage: View {
                 
             }
             .navigationTitle("Propose New Event")
+            .navigationBarTitleDisplayMode(.inline)
             .padding()
             .navigationBarBackButtonHidden(true)
     }

@@ -41,7 +41,7 @@ struct HomePageUpcomingEvent: View {
                         .foregroundColor(Color("Primary"))
                     
                     Image(systemName: "circle.fill")
-                        .font(Font.custom("Fredoka-Medium", size: 3))
+                        .font(Font.custom("Fredoka-Medium", size: 5))
                         .foregroundColor(Color("Primary"))
                     
                     // "06.00 pm" SHOULD BE CHANGABLE

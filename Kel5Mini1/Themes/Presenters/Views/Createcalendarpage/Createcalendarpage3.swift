@@ -10,11 +10,6 @@ import SwiftUI
 import CoreData
 
 struct Createcalendarpage3: View {
-    
-    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    
-    var CcVM : CreatecalendarViewModel
-    
     var body: some View {
         VStack () {
         

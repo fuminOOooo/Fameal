@@ -15,7 +15,7 @@
 		1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942729FCEE1500A31780 /* Homepage Model.swift */; };
 		1551942B29FD72A600A31780 /* Createcalendarpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942A29FD72A600A31780 /* Createcalendarpage.swift */; };
 		1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942C29FD72F800A31780 /* Createcalendarpage1.swift */; };
-		1551942F29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942E29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift */; };
+		1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942E29FD75BE00A31780 /* CalendarViewModel.swift */; };
 		1551943129FE4EE800A31780 /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551943029FE4EE800A31780 /* Createcalendarpage2.swift */; };
 		155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194322A003F4600A31780 /* Createcalendarpage3.swift */; };
 		155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */; };
@@ -40,8 +40,12 @@
 		15D975CF29F938300033D857 /* Proposed2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975CE29F938300033D857 /* Proposed2.swift */; };
 		15D975D229F9413E0033D857 /* Proposenewpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975D129F9413E0033D857 /* Proposenewpage.swift */; };
 		15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */; };
+		380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A62A023E2700FF98E3 /* OnboardingView.swift */; };
+		380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A82A02476100FF98E3 /* CreateJoinView.swift */; };
 		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
 		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
+		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
+		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +74,7 @@
 		1551942729FCEE1500A31780 /* Homepage Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homepage Model.swift"; sourceTree = "<group>"; };
 		1551942A29FD72A600A31780 /* Createcalendarpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage.swift; sourceTree = "<group>"; };
 		1551942C29FD72F800A31780 /* Createcalendarpage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage1.swift; sourceTree = "<group>"; };
-		1551942E29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Createnewcalendar Viewmodel.swift"; sourceTree = "<group>"; };
+		1551942E29FD75BE00A31780 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		1551943029FE4EE800A31780 /* Createcalendarpage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
 		155194322A003F4600A31780 /* Createcalendarpage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage3.swift; sourceTree = "<group>"; };
 		155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewProposalButton.swift; sourceTree = "<group>"; };
@@ -98,9 +102,13 @@
 		15D975CE29F938300033D857 /* Proposed2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposed2.swift; sourceTree = "<group>"; };
 		15D975D129F9413E0033D857 /* Proposenewpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposenewpage.swift; sourceTree = "<group>"; };
 		15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewEventBackButton.swift; sourceTree = "<group>"; };
+		380014A62A023E2700FF98E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		380014A82A02476100FF98E3 /* CreateJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinView.swift; sourceTree = "<group>"; };
 		382123FB29FAD58D003B5002 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
 		382123FD29FAE83C003B5002 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
+		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
+		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +139,6 @@
 		1551941C29FB938B00A31780 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				155194372A01670200A31780 /* Models */,
 				155194362A0166E600A31780 /* ViewModels */,
 			);
 			path = Features;
@@ -169,7 +176,7 @@
 			children = (
 				1551941D29FB939E00A31780 /* Proposenew Viewmodel.swift */,
 				1551942329FC417100A31780 /* Homepage Viewmodel.swift */,
-				1551942E29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift */,
+				1551942E29FD75BE00A31780 /* CalendarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -272,6 +279,7 @@
 		15BF953529F2E6B600CA517E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				380014A52A023E0700FF98E3 /* Onboarding */,
 				1551942929FD729200A31780 /* Createcalendarpage */,
 				15D975D029F941310033D857 /* Proposenewpage */,
 				15BF953929F2F73900CA517E /* Homepage v.2 */,
@@ -321,8 +329,20 @@
 				1551941F29FB9DAA00A31780 /* ProposeNewTextFields.swift */,
 				1551942129FBC73D00A31780 /* ProposeNewStartTime.swift */,
 				155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */,
+				155194372A01670200A31780 /* Models */,
 			);
 			path = Proposenewpage;
+			sourceTree = "<group>";
+		};
+		380014A52A023E0700FF98E3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				380014A62A023E2700FF98E3 /* OnboardingView.swift */,
+				380014A82A02476100FF98E3 /* CreateJoinView.swift */,
+				38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */,
+				38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		382123FC29FAE805003B5002 /* Style */ = {
@@ -465,18 +485,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1551942029FB9DAA00A31780 /* ProposeNewTextFields.swift in Sources */,
+				38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */,
 				15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */,
 				155194392A01671600A31780 /* Calendar Model.swift in Sources */,
+				380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */,
 				157EB61E29EFA7A00056F675 /* Persistence.swift in Sources */,
 				15BF953D29F31AF900CA517E /* HomePageUpcomingEvent.swift in Sources */,
 				1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */,
-				1551942F29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift in Sources */,
+				1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */,
 				155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */,
 				155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */,
 				15D975CB29F933170033D857 /* Proposedpage.swift in Sources */,
+				38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */,
 				382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */,
 				1551942429FC417100A31780 /* Homepage Viewmodel.swift in Sources */,
 				1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */,
+				380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */,
 				1551941E29FB939E00A31780 /* Proposenew Viewmodel.swift in Sources */,
 				1551942229FBC73D00A31780 /* ProposeNewStartTime.swift in Sources */,
 				1551941B29FB931400A31780 /* ProposeNewEventDatePicker.swift in Sources */,
@@ -655,6 +679,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Fameal need to access your calendar to fetch all calendars generated";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -685,6 +710,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Fameal need to access your calendar to fetch all calendars generated";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

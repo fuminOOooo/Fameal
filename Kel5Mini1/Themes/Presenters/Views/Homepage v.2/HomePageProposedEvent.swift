@@ -11,6 +11,7 @@ import CoreData
 
 struct HomePageProposedEvent: View {
     
+    @ObservedObject var HpVM : HomepageViewModel
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
     
     var body: some View {
@@ -74,9 +75,7 @@ struct HomePageProposedEvent: View {
                         // SHOULD NAVIGATE TO MEMBER DETAILS
                     } label: {
                         HStack {
-                            
-                            /// INI HARUSNYA ADA SEMUA USER YANG 
-                            ForEach (0 ..<     ) { users in
+                            ForEach (0 ..< HpVM.calendars[HpVM.currentCalendar].calendarMembers.count) { users in
                                 if (users < 4) {
                                     Image(systemName: "person.crop.circle.badge.fill")
                                         .font(Font.custom("Fredoka-Medium", size: 20))
@@ -84,9 +83,9 @@ struct HomePageProposedEvent: View {
                                 }
                             }
                         }
-
-                        if (temporaryUsers.count > 4) {
-                            Text("+\(temporaryUsers.count-4)")
+                        
+                        if (HpVM.calendars[HpVM.currentCalendar].calendarMembers.count > 4) {
+                            Text("+\(HpVM.calendars[HpVM.currentCalendar].calendarMembers.count-4)")
                                 .font(Font.custom("Fredoka-Medium", size: 12))
                                 .foregroundColor(.green)
                         }
@@ -100,7 +99,7 @@ struct HomePageProposedEvent: View {
                         //code here
                     } label: {
                         Text("Decline")
-                            .frame(minWidth: 125)
+                            .frame(minWidth: 128)
                     }
                     .buttonStyle(BorderButton())
                     Spacer()
@@ -108,7 +107,7 @@ struct HomePageProposedEvent: View {
                         //code here
                     } label: {
                         Text("Accept")
-                            .frame(minWidth: 125)
+                            .frame(minWidth: 128)
                     }
                     .buttonStyle(FillButton())
                 }
@@ -121,4 +120,3 @@ struct HomePageProposedEvent: View {
         }
     }
 }
-

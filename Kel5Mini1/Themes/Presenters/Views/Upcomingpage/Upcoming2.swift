@@ -15,111 +15,53 @@ struct Upcoming2: View {
     
     var body: some View {
         ScrollView (.vertical){
-            ForEach (0..<temporaryUsers.count) { temporaryUser in
-                HStack {
-                    
-                    VStack {
-                        
-                        // Component 4.1
-                        HStack {
+            VStack(spacing: 24){
+                ForEach (0..<temporaryUsers.count) { temporaryUser in
+                    VStack(alignment: .leading, spacing: 14){
+                        HStack{
+                            // "Monday, 17 Apr" SHOULD BE CHANGABLE
+                            Text("Monday, 17 Apr")
+                                .font(Font.custom("Fredoka-Medium", size: 20))
+                                .foregroundColor(Color("Primary"))
                             
-                            HStack {
-                                
-                                // "Monday, 17 Apr" SHOULD BE CHANGABLE
-                                Text("Monday, 17 Apr")
-                                    .font(Font.custom("Fredoka-Medium", size: 24))
-                                    .foregroundColor(Color("Primary"))
-                                
-                                Image(systemName: "circle.fill")
-                                    .font(Font.custom("Fredoka-Medium", size: 3))
-                                    .foregroundColor(Color("Primary"))
-                                
-                                // "06.00 pm" SHOULD BE CHANGABLE
-                                Text("06.00 pm")
-                                    .font(Font.custom("Fredoka-Medium", size: 24))
-                                    .foregroundColor(Color("Primary"))
-                            }
+                            Image(systemName: "circle.fill")
+                                .font(Font.custom("Fredoka-Medium", size: 5))
+                                .foregroundColor(Color("Primary"))
+                            
+                            // "06.00 pm" SHOULD BE CHANGABLE
+                            Text("06.00 pm")
+                                .font(Font.custom("Fredoka-Medium", size: 20))
+                                .foregroundColor(Color("Primary"))
                             Spacer()
                         }
                         
-                        // Component 4.2
-                        HStack {
-                            
+                        //Content should be changeable
+                        VStack(alignment: .leading, spacing: 4){
                             Text("It's Mealtime!")
-                                .font(Font.custom("Fredoka-Regular", size: 18))
-                                .foregroundColor(Color("PB-800"))
+                                .font(Font.custom("Fredoka-Medium", size: 17))
+                                .foregroundColor(Color("Grey"))
                             
-                            Spacer()
-                            
-                        }
-                        .padding(.top)
-                        
-                        
-                        // Component 4.3
-                        HStack {
-                            // Text SHOULD BE CHANGABLE
-                            Text("This iftar, Hannah will pay for everything!")
-                                .font(Font.custom("Fredoka-Light", size: 14))
-                                .foregroundColor(Color("PB-800"))
-                            Spacer()
-                            
+                            Text("This iftar, Dary will pay for everything!")
+                                .font(Font.custom("Fredoka-Regular", size: 17))
+                                .foregroundColor(.gray)
                         }
                         
-                        HStack {
-                            HStack (spacing: -2) {
-                                
-                                // "temporaryUsers" SHOULD BE CHANGABLE
-                                
-                                /// INI HARUSNYA TOTAL DARI SEMUA MEMBER YANG JOIN KALENDER
-                                ForEach (0 ..<     ) { users in
-                                    if (users < 3) {
-                                        Image(systemName: "person.circle.fill")
-                                            .resizable()
-                                            .frame(width: 25, height: 25)
-                                            .foregroundColor(.white)
-                                            .shadow(radius: 3)
-                                    }
-                                }
-                            }
-                            
-                            // "temporaryUsers" SHOULD BE CHANGABLE
-                            
-                            /// INI HARUSNYA TOTAL DARI SEMUA MEMBER YANG JOIN KALENDER
-                            if (         > 3) {
-                                Text("\(temporaryUsers.count-3)+")
-                                    .font(Font.custom("Fredoka", size: 14))
-                                    .foregroundColor(Color("PB-800"))
-                            }
-                            
-                            Spacer()
-                        }
                         
-                        // Component 4.4
-                        HStack {
-                            
+                        HStack(alignment: .center) {
                             Button {
-                                
+                                //code here
                             } label: {
-                                Text("Need an interesting topic to discuss? Click Me! 🥳")
-                                    .font(Font.custom("Fredoka-Medium", size: 12))
-                                    .foregroundColor(.white)
-                            }
-                            
-                            
+                                Text("Find Topic 🤩")
+                                    .frame(minWidth: 300)
+                            }.buttonStyle(FillButton())
                         }
-                        .padding()
-                        .frame(width: 320, height: 44)
-                        .background(Color("Secondary"))
-                        .cornerRadius(6)
                         
                     }
                     .padding()
-                    .frame(height: 220)
+                    .background(Color("PB-50"))
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
                 }
-                .background(Color("PB-50"))
-                .cornerRadius(8)
-                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 1, y: 2)
-                .padding(.bottom)
             }
             .padding()
         }

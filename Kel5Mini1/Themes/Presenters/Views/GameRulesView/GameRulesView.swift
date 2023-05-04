@@ -22,10 +22,10 @@ struct GameRulesView: View {
                 GameRulesWholeView()
                 
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(true)
             
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
         
     }
     

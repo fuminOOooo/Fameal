@@ -60,12 +60,17 @@ struct Cards: View {
                     offset = gesture.translation
                 }
                 .onEnded { gesture in
-                    CSVM.unmovedCards -= 1
                     withAnimation {
                         if abs(offset.width) > abs(offset.height) {
                             offset = CGSize(width: offset.width > 0 ? 500 : -500, height: 0)
+                            if (CSVM.unmovedCards != 0) {
+                                CSVM.unmovedCards -= 1
+                            }
                         } else {
                             offset = CGSize(width: 0, height: 500)
+                            if (CSVM.unmovedCards != 0) {
+                                CSVM.unmovedCards -= 1
+                            }
                         }
                     }
                 }
@@ -76,13 +81,15 @@ struct Cards: View {
         .onTapGesture {
             card.moved = false
             print(card.moved)
-            CSVM.unmovedCards += 1
             isResetting = true
             withAnimation(.spring()) {
                 offset = .zero
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 isResetting = false
+                if (CSVM.unmovedCards != 5) {
+                    CSVM.unmovedCards += 1
+                }
             }
         }
         

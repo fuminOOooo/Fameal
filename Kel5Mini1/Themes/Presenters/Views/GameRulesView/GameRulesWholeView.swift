@@ -9,8 +9,6 @@ import SwiftUI
 
 struct GameRulesWholeView: View {
     
-    @Environment(\.dismiss) private var dismiss
-    
     @ObservedObject var CSVM = CardStackViewModel()
     
     var body: some View {

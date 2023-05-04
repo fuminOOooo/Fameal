@@ -49,6 +49,8 @@ struct CardStackWholeView: View {
             }
             
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
         
     }
 }

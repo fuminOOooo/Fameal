@@ -38,7 +38,7 @@ struct Createcalendarpage2: View {
             // Component 4
             HStack{
                 Button {
-                    CcVM.addCalendar(name: "(Fameal)" + tempCalendarName)
+                    CcVM.addCalendar(name: "(Fameal) " + tempCalendarName)
                     dismiss()
                 } label: {
                     if (tempCalendarName == "") {

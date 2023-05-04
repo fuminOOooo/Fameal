@@ -6,35 +6,25 @@
 //
 
 import SwiftUI
-import CoreData
+import EventKit
 
 struct Homepage: View {
-    init() {
-        let appearance = UINavigationBarAppearance()
-        let customColor = UIColor(named: "PB-800")!
-        appearance.titleTextAttributes = [.foregroundColor: customColor, .font: UIFont(name: "Fredoka-Medium", size: 18)!
-            ]
-        UINavigationBar.appearance().standardAppearance = appearance
-    }
-    
     @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
     @StateObject var HpVM = HomepageViewModel()
-    @State var selectedCalendarIndex: Int = 0
+    @ObservedObject var CcVM = calendarViewModel()
+//    @Binding private var selectedCalendarID: String
+    @State var selectedCalendar: EKCalendar
+    //    @State var selectedCalendarIndex: Int = 0
+    @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
     
     var body:some View {
-        
         NavigationView {
             VStack {
-                HomePageHeader(HpVM: HpVM, selectedCalendarIndex: self.$selectedCalendarIndex)
+                HomePageHeader(selectedCalendar: $selectedCalendar)
                 
                 HomePageUpcomingEvent()
-            
+                
                 HomePageProposedEvent(HpVM: HpVM)
                     .padding(.top)
                 
@@ -45,6 +35,4 @@ struct Homepage: View {
         }
         .navigationBarBackButtonHidden(true)
     }
-
-    
 }

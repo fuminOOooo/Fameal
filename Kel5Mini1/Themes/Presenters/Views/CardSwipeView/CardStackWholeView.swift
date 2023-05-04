@@ -54,3 +54,9 @@ struct CardStackWholeView: View {
         
     }
 }
+
+struct CardStacks_Previews: PreviewProvider {
+    static var previews: some View {
+        CardStackView()
+    }
+}

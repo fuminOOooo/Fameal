@@ -36,8 +36,16 @@ struct Cards: View {
                         Spacer()
                         Text(card.title)
                             .foregroundColor(.white)
-                            .bold()
-                            .font(.title3)
+                            .font(Font.custom("Fredoka-Semibold", size: 26))
+                        HStack {
+                            Text("BY FAMEAL")
+                                .foregroundColor(.white)
+                                .font(Font.custom("Fredoka-Medium", size: 12))
+                            Spacer()
+                        }
+                        .padding(.leading)
+                        .padding(.top)
+                        
                     }
                     .frame(height: 280)
                     Spacer()

@@ -13,7 +13,7 @@ struct OnboardingView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 34){
-                Image("aset1")
+                Image("family")
                 VStack(alignment: .leading, spacing: 8){
                     Text("We makes your meal-time!")
                         .font(Font.custom("Fredoka-Regular", size: 18))

@@ -48,8 +48,9 @@ struct Upcoming2: View {
                         
                         
                         HStack(alignment: .center) {
-                            Button {
+                            NavigationLink {
                                 //code here
+                                GameRulesView()
                             } label: {
                                 Text("Find Topic 🤩")
                                     .frame(minWidth: 300)

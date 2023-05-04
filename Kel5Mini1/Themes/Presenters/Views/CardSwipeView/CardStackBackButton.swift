@@ -9,14 +9,15 @@ import Foundation
 import SwiftUI
 import CoreData
 
-struct Upcoming1: View {
+struct CardStackBackButton: View {
     
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
+        
         VStack (spacing: 4) {
             
-        // Component 1
+        // Back Button
         }
         .toolbar {
             
@@ -27,13 +28,12 @@ struct Upcoming1: View {
                     } label: {
                         Image(systemName: "chevron.left")
                             .font(Font.custom("Fredoka-Bold", size: 14))
-                            .foregroundColor(Color("PB-800"))
+                            .foregroundColor(Color.black)
                             .padding(.leading)
                     }
                 
             }
         }
-        .padding(.leading)
-        .padding(.trailing)
+        
     }
 }

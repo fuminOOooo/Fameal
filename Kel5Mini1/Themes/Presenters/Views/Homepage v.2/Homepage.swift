@@ -33,7 +33,7 @@ struct Homepage: View {
             VStack {
                 HomePageHeader(HpVM: HpVM, selectedCalendarIndex: self.$selectedCalendarIndex)
                 
-                HomePageUpcomingEvent(HpVM: HpVM)
+                HomePageUpcomingEvent()
             
                 HomePageProposedEvent(HpVM: HpVM)
                     .padding(.top)
@@ -47,10 +47,4 @@ struct Homepage: View {
     }
 
     
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Homepage().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
 }

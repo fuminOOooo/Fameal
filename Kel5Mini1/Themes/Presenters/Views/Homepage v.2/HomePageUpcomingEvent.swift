@@ -11,7 +11,7 @@ import CoreData
 
 struct HomePageUpcomingEvent: View {
     
-    @ObservedObject var HpVM : HomepageViewModel
+    @ObservedObject var HpVM = HomepageViewModel()
     
     var body: some View {
         VStack{
@@ -34,6 +34,7 @@ struct HomePageUpcomingEvent: View {
             //card
             VStack(alignment: .leading, spacing: 14){
                 HStack{
+                    
                     // "Monday, 17 Apr" SHOULD BE CHANGABLE
                     Text("Monday, 17 Apr")
                         .font(Font.custom("Fredoka-Medium", size: 20))
@@ -63,8 +64,9 @@ struct HomePageUpcomingEvent: View {
                 
                 
                 HStack(alignment: .center) {
-                    Button {
+                    NavigationLink {
                         //code here
+                        GameRulesView()
                     } label: {
                         Text("Find Topic 🤩")
                             .frame(minWidth: 300)
@@ -78,5 +80,11 @@ struct HomePageUpcomingEvent: View {
             .cornerRadius(8)
             .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
         }
+    }
+}
+
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        HomePageUpcomingEvent().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

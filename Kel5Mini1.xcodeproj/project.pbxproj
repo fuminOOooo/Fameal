@@ -44,6 +44,7 @@
 		380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A82A02476100FF98E3 /* CreateJoinView.swift */; };
 		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
 		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
+		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		382123FB29FAD58D003B5002 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
 		382123FD29FAE83C003B5002 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
+		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 			children = (
 				380014A62A023E2700FF98E3 /* OnboardingView.swift */,
 				380014A82A02476100FF98E3 /* CreateJoinView.swift */,
+				38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1551942029FB9DAA00A31780 /* ProposeNewTextFields.swift in Sources */,
+				38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */,
 				15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */,
 				155194392A01671600A31780 /* Calendar Model.swift in Sources */,
 				380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */,

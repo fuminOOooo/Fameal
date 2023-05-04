@@ -13,8 +13,11 @@ struct CreateJoinView: View {
     //ini cuman buat preview aja
     @ObservedObject var HpVM = HomepageViewModel()
     var adaptiveGridItem = [
-        GridItem(.adaptive(minimum: 150), spacing: 20)
+        GridItem(.adaptive(minimum: 150), spacing: 5)
     ]
+    @State var selectedCalendarIndex: Int = 0
+    @State var calendarSelection: Bool = false
+    @State private var isCreatingCalendar: Bool = false
     
     var body: some View {
         NavigationView {
@@ -28,36 +31,74 @@ struct CreateJoinView: View {
                     .font(Font.custom("Fredoka-Medium", size: 26))
                     .foregroundColor(Color("PB-800"))
                 
-                LazyVGrid(columns: adaptiveGridItem, spacing: 10) {
-                    VStack(spacing: 14){
-                        ZStack{
-                            Image(systemName: "plus.circle.fill")
-                                .font(.system(size: 55))
-                                .foregroundColor(Color("SO-100"))
-                            Image(systemName: "plus")
-                                .font(.system(size: 55))
+                LazyVGrid(columns: adaptiveGridItem, spacing: 30) {
+                    NavigationLink {
+                        Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
+                    } label: {
+                        VStack(spacing: 14){
+                            ZStack{
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.system(size: 55))
+                                    .foregroundColor(Color("SO-100"))
+                                Image(systemName: "plus")
+                                    .font(Font.custom("Fredoka-Bold", size: 35))
+                                    .foregroundColor(Color("Secondary"))
+                            }
+                            Text("Create a Calendar")
+                                .font(Font.custom("Fredoka-Medium", size: 16))
                                 .foregroundColor(Color("Secondary"))
                         }
-                        Text("Create a Calendar")
-                            .font(Font.custom("Fredoka-Medium", size: 16))
-                            .foregroundColor(Color("Secondary"))
-                    }
-                    .frame(width: 163, height: 163)
-                    .background(Color("PB-50"))
+                        .frame(width: 163, height: 163)
+                        .background(Color("CCGray"))
                     .cornerRadius(10)
+                    }
+                    /* For Test
+                     */
+                     ForEach(0..<HpVM.calendars.count){ i in
+                         VStack{
+                             VStack(alignment: .leading, spacing: 4){
+                                 Text("\(HpVM.calendars[i].calendarName)")
+                                     .font(Font.custom("Fredoka-Medium", size: 19))
+                                     .foregroundColor(Color("PB-800"))
+                                     .padding(.leading, -16)
+                                 Text("\(HpVM.calendars[i].calendarMembers.count) members")
+                                     .font(Font.custom("Fredoka-Regular", size: 16))
+                                     .foregroundColor(.gray)
+                                     .padding(.leading, -16)
+                                 Spacer()
+                             }
+                             .padding()
+                             .frame(width: 163, height: 163)
+                             .background(Color("PB-100"))
+                             .cornerRadius(10)
+                         }
+                     }
+                     
                     
-                    ForEach(0..<HpVM.calendars.count){ i in
-                        VStack{
-                            Text("\(HpVM.calendars[i].calendarName)")
-                                .frame(minWidth: 150)
-                                .background(.blue)
-                            Spacer()
+                    ForEach(0..<CcVM.getUserCalendars().count){ i in
+                        NavigationLink {
+                            Homepage()
+                        }label: {
+                            VStack{
+                                VStack(alignment: .leading, spacing: 4){
+                                    Text((CcVM.getUserCalendars()[i].title.dropFirst(8)))
+                                        .font(Font.custom("Fredoka-Medium", size: 19))
+                                        .foregroundColor(Color("PB-800"))
+                                        .padding(.leading, -14)
+                                    //belom diubah
+                                    Text("count members")
+                                        .font(Font.custom("Fredoka-Regular", size: 16))
+                                        .foregroundColor(.gray)
+                                        .padding(.leading, -14)
+                                    Spacer()
+                                }
+                                .padding()
+                                .frame(width: 163, height: 163)
+                                .background(Color("PB-100"))
+                                .cornerRadius(10)
+                            }
                         }
                     }
-                    /*ForEach(0..<CcVM.getUserCalendars().count){ calendars in
-                     Text("\(CcVM.getUserCalendars()[calendars].title)")
-                     
-                     }*/
                 }
                 .padding(.top)
                 
@@ -66,9 +107,6 @@ struct CreateJoinView: View {
         }
         .navigationBarBackButtonHidden(true)
         .padding()
-        .onAppear{
-            CcVM.getUserCalendars()
-        }
     }
 }
 

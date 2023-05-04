@@ -15,7 +15,7 @@
 		1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942729FCEE1500A31780 /* Homepage Model.swift */; };
 		1551942B29FD72A600A31780 /* Createcalendarpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942A29FD72A600A31780 /* Createcalendarpage.swift */; };
 		1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942C29FD72F800A31780 /* Createcalendarpage1.swift */; };
-		1551942F29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942E29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift */; };
+		1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942E29FD75BE00A31780 /* CalendarViewModel.swift */; };
 		1551943129FE4EE800A31780 /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551943029FE4EE800A31780 /* Createcalendarpage2.swift */; };
 		155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194322A003F4600A31780 /* Createcalendarpage3.swift */; };
 		155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */; };
@@ -74,7 +74,7 @@
 		1551942729FCEE1500A31780 /* Homepage Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homepage Model.swift"; sourceTree = "<group>"; };
 		1551942A29FD72A600A31780 /* Createcalendarpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage.swift; sourceTree = "<group>"; };
 		1551942C29FD72F800A31780 /* Createcalendarpage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage1.swift; sourceTree = "<group>"; };
-		1551942E29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Createnewcalendar Viewmodel.swift"; sourceTree = "<group>"; };
+		1551942E29FD75BE00A31780 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		1551943029FE4EE800A31780 /* Createcalendarpage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
 		155194322A003F4600A31780 /* Createcalendarpage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage3.swift; sourceTree = "<group>"; };
 		155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewProposalButton.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			children = (
 				1551941D29FB939E00A31780 /* Proposenew Viewmodel.swift */,
 				1551942329FC417100A31780 /* Homepage Viewmodel.swift */,
-				1551942E29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift */,
+				1551942E29FD75BE00A31780 /* CalendarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -492,7 +492,7 @@
 				157EB61E29EFA7A00056F675 /* Persistence.swift in Sources */,
 				15BF953D29F31AF900CA517E /* HomePageUpcomingEvent.swift in Sources */,
 				1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */,
-				1551942F29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift in Sources */,
+				1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */,
 				155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */,
 				155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */,
 				15D975CB29F933170033D857 /* Proposedpage.swift in Sources */,

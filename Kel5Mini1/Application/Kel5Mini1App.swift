@@ -13,7 +13,7 @@ struct Kel5Mini1App: App {
 
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            CreateJoinView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

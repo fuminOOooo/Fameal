@@ -87,12 +87,12 @@ struct CreateJoinView: View {
                                             Text((CcVM.getUserCalendars()[i].title.dropFirst(8)))
                                                 .font(Font.custom("Fredoka-Medium", size: 19))
                                                 .foregroundColor(Color("PB-800"))
-//                                                .padding(.leading, -14)
+                                            //                                                .padding(.leading, -14)
                                             //belom diubah
                                             Text("count members")
                                                 .font(Font.custom("Fredoka-Regular", size: 16))
                                                 .foregroundColor(.gray)
-//                                                .padding(.leading, -14)
+                                            //                                                .padding(.leading, -14)
                                             Spacer()
                                         }
                                         .padding()
@@ -120,11 +120,11 @@ struct CreateJoinView: View {
                 .padding()
                 
                 if isPresented {
-                    Color.black.opacity(0.2)
-                        .blur(radius: 10)
+                    Color.black.opacity(0.5)
                         .edgesIgnoringSafeArea(.all)
                     // Modal View
                     JoinInfoModal(isPresented: $isPresented)
+                        .zIndex(1)
                 }
             }
         }

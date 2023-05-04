@@ -10,6 +10,12 @@ import SwiftUI
 struct JoinInfoModal: View {
     @Binding var isPresented: Bool
     
+//    func close(){
+//        withAnimation(.spring()){
+//            
+//        }
+//    }
+    
     var body: some View {
         VStack (alignment: .leading, spacing: 10){
             HStack{
@@ -49,8 +55,9 @@ struct JoinInfoModal: View {
         .cornerRadius(10)
 //        .shadow(radius: 10)
         .opacity(isPresented ? 1 : 0)
-        .scaleEffect(isPresented ? 1 : 0.7)
-        .animation(.spring(response: 0.5, dampingFraction: 0.8))
+        .scaleEffect(isPresented ? 1 : 0)
+        .animation(.spring(response: 0.4, dampingFraction: 0.8))
+        .transition(.move(edge: .bottom))
     }
     
 }

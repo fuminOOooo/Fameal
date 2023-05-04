@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 34){
@@ -38,9 +40,9 @@ struct OnboardingView: View {
             .padding()
         }
         .navigationBarBackButtonHidden(true)
-//        .onDisappear(){
-//            CcVM.getUserCalendars()
-//        }
+        .onDisappear(){
+            dismiss()
+        }
     }
 }
 

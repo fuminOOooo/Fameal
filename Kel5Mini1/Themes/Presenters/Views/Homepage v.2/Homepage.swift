@@ -25,12 +25,13 @@ struct Homepage: View {
     private var items: FetchedResults<Item>
 
     @StateObject var HpVM = HomepageViewModel()
+    @State var selectedCalendarIndex: Int = 0
     
     var body:some View {
         
         NavigationView {
             VStack {
-                HomePageHeader(HpVM: HpVM, selectedCalendarIndex: 0)
+                HomePageHeader(HpVM: HpVM, selectedCalendarIndex: self.$selectedCalendarIndex)
                 
                 HomePageUpcomingEvent(HpVM: HpVM)
             

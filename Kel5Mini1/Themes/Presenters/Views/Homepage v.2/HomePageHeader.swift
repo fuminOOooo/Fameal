@@ -15,7 +15,7 @@ struct HomePageHeader: View {
     @ObservedObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = calendarViewModel()
     @State var calendarName: String = ""
-    @State var selectedCalendarIndex: Int = 0
+    @Binding var selectedCalendarIndex: Int
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
     
@@ -114,7 +114,7 @@ struct HomePageHeader: View {
                         }
                     }
                     .presentationDetents([.medium])
-                    
+                    .padding(.bottom)
                 })
                 
                 Spacer()

@@ -18,95 +18,117 @@ struct CreateJoinView: View {
     @State var selectedCalendarIndex: Int = 0
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
+    @State private var isPresented = false
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 4){
-                //ini harusnya bisa diganti ga si
-                Text("Hi, Dary!")
-                    .font(Font.custom("Fredoka-Medium", size: 26))
-                    .foregroundColor(Color("PB-800"))
-                    .padding(.top)
-                Text("Create or join calendar")
-                    .font(Font.custom("Fredoka-Medium", size: 26))
-                    .foregroundColor(Color("PB-800"))
-                
-                LazyVGrid(columns: adaptiveGridItem, spacing: 30) {
-                    NavigationLink {
-                        Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
-                    } label: {
-                        VStack(spacing: 14){
-                            ZStack{
-                                Image(systemName: "plus.circle.fill")
-                                    .font(.system(size: 55))
-                                    .foregroundColor(Color("SO-100"))
-                                Image(systemName: "plus")
-                                    .font(Font.custom("Fredoka-Bold", size: 35))
-                                    .foregroundColor(Color("Secondary"))
+            ZStack {
+                VStack(alignment: .leading, spacing: 4){
+                    //ini harusnya bisa diganti ga si
+                    Text("Hi, Dary!")
+                        .font(Font.custom("Fredoka-Medium", size: 26))
+                        .foregroundColor(Color("PB-800"))
+                        .padding(.top)
+                    Text("Create or join calendar")
+                        .font(Font.custom("Fredoka-Medium", size: 26))
+                        .foregroundColor(Color("PB-800"))
+                    
+                    ScrollView{
+                        LazyVGrid(columns: adaptiveGridItem, spacing: 20) {
+                            NavigationLink {
+                                Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
+                            } label:{
+                                //button create a calendar
+                                VStack(spacing: 14){
+                                    ZStack{
+                                        Image(systemName: "plus.circle.fill")
+                                            .font(.system(size: 55))
+                                            .foregroundColor(Color("SO-100"))
+                                        Image(systemName: "plus")
+                                            .font(Font.custom("Fredoka-Bold", size: 35))
+                                            .foregroundColor(Color("Secondary"))
+                                    }
+                                    Text("Create a Calendar")
+                                        .font(Font.custom("Fredoka-Medium", size: 16))
+                                        .foregroundColor(Color("Secondary"))
+                                }
+                                .frame(width: 163, height: 163)
+                                .background(Color("CCGray"))
+                                .cornerRadius(10)
                             }
-                            Text("Create a Calendar")
-                                .font(Font.custom("Fredoka-Medium", size: 16))
-                                .foregroundColor(Color("Secondary"))
-                        }
-                        .frame(width: 163, height: 163)
-                        .background(Color("CCGray"))
-                    .cornerRadius(10)
-                    }
-                    /* For Test
-                     */
-                     ForEach(0..<HpVM.calendars.count){ i in
-                         VStack{
+                            /* For Test
+                             ForEach(0..<HpVM.calendars.count){ i in
+                             VStack{
                              VStack(alignment: .leading, spacing: 4){
-                                 Text("\(HpVM.calendars[i].calendarName)")
-                                     .font(Font.custom("Fredoka-Medium", size: 19))
-                                     .foregroundColor(Color("PB-800"))
-                                     .padding(.leading, -16)
-                                 Text("\(HpVM.calendars[i].calendarMembers.count) members")
-                                     .font(Font.custom("Fredoka-Regular", size: 16))
-                                     .foregroundColor(.gray)
-                                     .padding(.leading, -16)
-                                 Spacer()
+                             Text("\(HpVM.calendars[i].calendarName)")
+                             .font(Font.custom("Fredoka-Medium", size: 19))
+                             .foregroundColor(Color("PB-800"))
+                             .padding(.leading, -16)
+                             Text("\(HpVM.calendars[i].calendarMembers.count) members")
+                             .font(Font.custom("Fredoka-Regular", size: 16))
+                             .foregroundColor(.gray)
+                             .padding(.leading, -16)
+                             Spacer()
                              }
                              .padding()
                              .frame(width: 163, height: 163)
                              .background(Color("PB-100"))
                              .cornerRadius(10)
-                         }
-                     }
-                     
-                    
-                    ForEach(0..<CcVM.getUserCalendars().count){ i in
-                        NavigationLink {
-                            Homepage()
-                        }label: {
-                            VStack{
-                                VStack(alignment: .leading, spacing: 4){
-                                    Text((CcVM.getUserCalendars()[i].title.dropFirst(8)))
-                                        .font(Font.custom("Fredoka-Medium", size: 19))
-                                        .foregroundColor(Color("PB-800"))
-                                        .padding(.leading, -14)
-                                    //belom diubah
-                                    Text("count members")
-                                        .font(Font.custom("Fredoka-Regular", size: 16))
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, -14)
-                                    Spacer()
+                             }
+                             }
+                             */
+                            
+                            ForEach(0..<CcVM.getUserCalendars().count){ i in
+                                NavigationLink {
+                                    Homepage()
+                                }label: {
+                                    VStack{
+                                        VStack(alignment: .leading, spacing: 4){
+                                            Text((CcVM.getUserCalendars()[i].title.dropFirst(8)))
+                                                .font(Font.custom("Fredoka-Medium", size: 19))
+                                                .foregroundColor(Color("PB-800"))
+//                                                .padding(.leading, -14)
+                                            //belom diubah
+                                            Text("count members")
+                                                .font(Font.custom("Fredoka-Regular", size: 16))
+                                                .foregroundColor(.gray)
+//                                                .padding(.leading, -14)
+                                            Spacer()
+                                        }
+                                        .padding()
+                                        .frame(width: 163, height: 163)
+                                        .background(Color("PB-100"))
+                                        .cornerRadius(10)
+                                    }
                                 }
-                                .padding()
-                                .frame(width: 163, height: 163)
-                                .background(Color("PB-100"))
-                                .cornerRadius(10)
                             }
+                            
                         }
                     }
+                    .padding(.top)
+                    
+                    Spacer()
+                    
+                    Button {
+                        self.isPresented.toggle()
+                    } label: {
+                        Text("How to Join a Calendar?")
+                            .frame(maxWidth: .infinity)
+                    }.buttonStyle(BorderButton())
+                        .padding(.bottom)
                 }
-                .padding(.top)
+                .padding()
                 
-                Spacer()
+                if isPresented {
+                    Color.black.opacity(0.2)
+                        .blur(radius: 10)
+                        .edgesIgnoringSafeArea(.all)
+                    // Modal View
+                    JoinInfoModal(isPresented: $isPresented)
+                }
             }
         }
         .navigationBarBackButtonHidden(true)
-        .padding()
     }
 }
 

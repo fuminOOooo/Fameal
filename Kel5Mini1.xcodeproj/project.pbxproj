@@ -45,6 +45,7 @@
 		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
 		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
 		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
+		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		382123FD29FAE83C003B5002 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
 		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
+		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 			children = (
 				380014A62A023E2700FF98E3 /* OnboardingView.swift */,
 				380014A82A02476100FF98E3 /* CreateJoinView.swift */,
+				38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */,
 				38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */,
 			);
 			path = Onboarding;
@@ -493,6 +496,7 @@
 				155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */,
 				155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */,
 				15D975CB29F933170033D857 /* Proposedpage.swift in Sources */,
+				38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */,
 				382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */,
 				1551942429FC417100A31780 /* Homepage Viewmodel.swift in Sources */,
 				1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */,

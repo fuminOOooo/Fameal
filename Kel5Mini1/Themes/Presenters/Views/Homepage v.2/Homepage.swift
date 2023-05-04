@@ -35,7 +35,7 @@ struct Homepage: View {
                 
                 HomePageUpcomingEvent()
             
-                HomePageProposedEvent()
+                HomePageProposedEvent(HpVM: HpVM)
                     .padding(.top)
                 
                 Spacer()

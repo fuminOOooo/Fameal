@@ -64,8 +64,9 @@ struct HomePageUpcomingEvent: View {
                 
                 
                 HStack(alignment: .center) {
-                    Button {
+                    NavigationLink {
                         //code here
+                        CardStackView()
                     } label: {
                         Text("Find Topic 🤩")
                             .frame(minWidth: 300)

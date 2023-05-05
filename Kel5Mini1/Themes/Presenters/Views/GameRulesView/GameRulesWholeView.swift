@@ -18,7 +18,7 @@ struct GameRulesWholeView: View {
     @ObservedObject var CSVM = CardStackViewModel()
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 
                 Spacer()
@@ -108,7 +108,7 @@ struct GameRulesWholeView: View {
                 Spacer()
                 
             }
-        }
+//        }
         .navigationBarBackButtonHidden(true)
     }
 }

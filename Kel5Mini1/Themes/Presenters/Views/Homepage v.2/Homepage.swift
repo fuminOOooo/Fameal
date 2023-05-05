@@ -19,7 +19,7 @@ struct Homepage: View {
     @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
     
     var body:some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 HomePageHeader(selectedCalendar: self.$selectedCalendar)
                 
@@ -32,7 +32,7 @@ struct Homepage: View {
                 
             }
             .padding(24)
-        }
+//        }
         .navigationBarBackButtonHidden(true)
     }
 }

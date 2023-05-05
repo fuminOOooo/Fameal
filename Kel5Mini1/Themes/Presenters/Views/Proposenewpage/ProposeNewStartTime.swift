@@ -14,7 +14,8 @@ struct ProposeNewStartTime: View {
     @State var temporarySelectedTime = Date()
     
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    @ObservedObject var PnVM : ProposenewViewModel
+    
+    @Binding var selectedTime: Date
     
     var body: some View {
         VStack () {
@@ -29,26 +30,26 @@ struct ProposeNewStartTime: View {
                 
                 Spacer()
                 
-                DatePicker("", selection: $temporarySelectedTime, displayedComponents: .hourAndMinute)
+                DatePicker("", selection: $selectedTime, displayedComponents: .hourAndMinute)
                             .labelsHidden()
                 
             }
             
-            HStack {
-                
-                Button {
-                    
-                } label: {
-                    Text("Propose Event")
-                        .foregroundColor(.white)
-                        .background(Color("Secondary"))
-                        .bold()
-                        .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(FillButton())
-                .padding(.top)
-                
-            }
+//            HStack {
+//
+//                Button {
+//
+//                } label: {
+//                    Text("Propose Event")
+//                        .foregroundColor(.white)
+//                        .background(Color("Secondary"))
+//                        .bold()
+//                        .frame(maxWidth: .infinity)
+//                }
+//                .buttonStyle(FillButton())
+//                .padding(.top)
+//
+//            }
             
         }
         .padding()

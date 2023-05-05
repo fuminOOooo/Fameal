@@ -6,15 +6,21 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 @main
 struct Kel5Mini1App: App {
+    @StateObject var calendarManager : CalendarManager = CalendarManager()
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            Homepage()
+            //LoginView()
+            
+            LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(calendarManager)
+           // ContentView()
         }
     }
 }

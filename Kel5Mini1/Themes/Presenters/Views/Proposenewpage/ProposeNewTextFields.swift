@@ -12,16 +12,17 @@ import CoreData
 struct ProposeNewTextFields: View {
     
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    @ObservedObject var PnVM : ProposenewViewModel
-    @State var tempEventName: String = ""
-    @State var tempDescription: String = ""
+    
+    @State private var selectedDate = Date()
+    @Binding var eventName: String
+    @Binding var eventDesc: String
     
     var body: some View {
         VStack (spacing: 4) {
             
                 VStack {
                         // Component 4
-                        TextField(text: $tempEventName, prompt: Text("Add event name")) {
+                        TextField(text: $eventName, prompt: Text("Add event name")) {
                         }
                         .bold()
                         .padding()
@@ -29,7 +30,7 @@ struct ProposeNewTextFields: View {
                         Divider()
                         
                         // Component 5
-                        TextField(text: $tempDescription, prompt: Text("Add description")) {
+                        TextField(text: $eventDesc, prompt: Text("Add description")) {
                         }
                         .padding()
                         

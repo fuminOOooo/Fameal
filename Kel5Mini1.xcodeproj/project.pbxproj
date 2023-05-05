@@ -42,6 +42,8 @@
 		15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */; };
 		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
 		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
+		46A6FB2F2A02110800E07391 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6FB2E2A02110800E07391 /* CalendarManager.swift */; };
+		46A6FB322A04068400E07391 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6FB312A04068400E07391 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,9 @@
 		382123FB29FAD58D003B5002 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
 		382123FD29FAE83C003B5002 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
+		46A6FB2E2A02110800E07391 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		46A6FB312A04068400E07391 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		46A6FB332A04B08500E07391 /* Kel5Mini1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kel5Mini1.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +175,7 @@
 				1551941D29FB939E00A31780 /* Proposenew Viewmodel.swift */,
 				1551942329FC417100A31780 /* Homepage Viewmodel.swift */,
 				1551942E29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift */,
+				46A6FB2E2A02110800E07391 /* CalendarManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 		157EB61329EFA79F0056F675 /* Kel5Mini1 */ = {
 			isa = PBXGroup;
 			children = (
+				46A6FB332A04B08500E07391 /* Kel5Mini1.entitlements */,
 				1551942529FCEDE300A31780 /* Core */,
 				382123FC29FAE805003B5002 /* Style */,
 				38250DE129FA67380021746F /* Info.plist */,
@@ -272,6 +279,7 @@
 		15BF953529F2E6B600CA517E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				46A6FB302A04064E00E07391 /* Login View */,
 				1551942929FD729200A31780 /* Createcalendarpage */,
 				15D975D029F941310033D857 /* Proposenewpage */,
 				15BF953929F2F73900CA517E /* Homepage v.2 */,
@@ -331,6 +339,14 @@
 				382123FD29FAE83C003B5002 /* CustomButton.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		46A6FB302A04064E00E07391 /* Login View */ = {
+			isa = PBXGroup;
+			children = (
+				46A6FB312A04068400E07391 /* LoginView.swift */,
+			);
+			path = "Login View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +489,7 @@
 				1551942F29FD75BE00A31780 /* Createnewcalendar Viewmodel.swift in Sources */,
 				155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */,
 				155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */,
+				46A6FB2F2A02110800E07391 /* CalendarManager.swift in Sources */,
 				15D975CB29F933170033D857 /* Proposedpage.swift in Sources */,
 				382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */,
 				1551942429FC417100A31780 /* Homepage Viewmodel.swift in Sources */,
@@ -485,6 +502,7 @@
 				157EB62129EFA7A00056F675 /* Kel5Mini1.xcdatamodeld in Sources */,
 				15D975D229F9413E0033D857 /* Proposenewpage.swift in Sources */,
 				15BF953F29F333F700CA517E /* HomePageProposedEvent.swift in Sources */,
+				46A6FB322A04068400E07391 /* LoginView.swift in Sources */,
 				15BF954429F7DEF600CA517E /* Upcoming1.swift in Sources */,
 				15D975CD29F9380D0033D857 /* Proposed1.swift in Sources */,
 				15BF954129F7DD2000CA517E /* Upcomingpage.swift in Sources */,
@@ -648,10 +666,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kel5Mini1/Kel5Mini1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
-				DEVELOPMENT_TEAM = GT493Z58L2;
+				DEVELOPMENT_TEAM = RV753K5W6M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
@@ -661,12 +680,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini12345;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -679,10 +699,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kel5Mini1/Kel5Mini1.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
-				DEVELOPMENT_TEAM = GT493Z58L2;
+				DEVELOPMENT_TEAM = RV753K5W6M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
@@ -692,13 +714,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini12345;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -732,7 +756,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35V95TRX69;
+				DEVELOPMENT_TEAM = JDBL69MT8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -769,7 +793,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35V95TRX69;
+				DEVELOPMENT_TEAM = JDBL69MT8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1UITests;

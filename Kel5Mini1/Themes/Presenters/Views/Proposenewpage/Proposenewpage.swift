@@ -8,9 +8,9 @@
 import SwiftUI
 import CoreData
 
-struct Proposenewpage: View {
+//struct Proposenewpage: View {
+struct ProposeNewEvent: View {
     
-    var PnVM: ProposenewViewModel
     
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -18,20 +18,25 @@ struct Proposenewpage: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @State private var selectedDate = Date()
+    @State private var selectedTime = Date()
+    @State private var eventName: String = ""
+    @State private var eventDesc: String = ""
 
     var body:some View {
         
             VStack {
                 
-                ProposeNewEventBackButton(PnVM: PnVM)
+                ProposeNewEventBackButton()
                 
-                ProposeNewEventDatePicker(PnVM: PnVM)
+                ProposeNewEventDatePicker(selectedDate : $selectedDate)
                 
-                ProposeNewTextFields(PnVM: PnVM)
+                ProposeNewTextFields(eventName:$eventName, eventDesc: $eventDesc)
                 
-                ProposeNewStartTime(PnVM: PnVM)
+                ProposeNewStartTime(selectedTime:$selectedTime)
                 
-                ProposeNewProposalButton(PnVM: PnVM)
+                ProposeNewProposalButton(selectedDate: selectedDate, selectedTime: selectedTime,eventName: eventName, eventDesc: eventDesc)
                 
                 Spacer()
                 
@@ -41,5 +46,11 @@ struct Proposenewpage: View {
             .navigationBarBackButtonHidden(true)
     }
 
-    
+    }
+
+struct ProposeNewEvent_Previews: PreviewProvider {
+    static var previews: some View {
+        ProposeNewEvent().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
 }
+

@@ -11,6 +11,8 @@ import CoreData
 
 struct HomePageUpcomingEvent: View {
     
+    
+    
     @ObservedObject var HpVM : HomepageViewModel
     
     var body: some View {

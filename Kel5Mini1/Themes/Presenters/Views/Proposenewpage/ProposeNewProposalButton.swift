@@ -11,26 +11,39 @@ import CoreData
 
 struct ProposeNewProposalButton: View {
     
-    @State var temporarySelectedTime = Date()
+    @EnvironmentObject var calendarManager: CalendarManager
+    @Environment(\.dismiss) private var dismiss
     
-    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    
-    @ObservedObject var PnVM : ProposenewViewModel
+    var selectedDate: Date
+    var selectedTime: Date
+    var eventName: String
+    var eventDesc: String
     
     var body: some View {
         VStack () {
 
             HStack {
                 
-                Button {
+                
+                Button (action: {
                     
-                } label: {
-                    Text("Propose Event")
+//                    if(selectedDate != Date || selectedTime || eventName == nil || eventDesc == nil ){
+                        
+//                    }else {
+                        
+                        calendarManager.addEvent(startDate: selectedDate, startTime: selectedTime, title: eventName, notes: eventDesc)
+                        
+                        dismiss()
+//                    }
+                    
+                    
+                }, label: {
+                    Text("Propose Event test")
                         .foregroundColor(.white)
                         .background(Color("Secondary"))
                         .bold()
                         .frame(maxWidth: .infinity)
-                }
+                })
                 .buttonStyle(FillButton())
                 .padding(.top)
                 

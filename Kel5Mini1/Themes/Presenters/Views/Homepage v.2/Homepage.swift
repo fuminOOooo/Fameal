@@ -31,7 +31,7 @@ struct Homepage: View {
         NavigationView {
             
             VStack {
-                HomePageHeader(HpVM: HpVM)
+                HomePageHeader()
                 
                 HomePageUpcomingEvent(HpVM: HpVM)
             

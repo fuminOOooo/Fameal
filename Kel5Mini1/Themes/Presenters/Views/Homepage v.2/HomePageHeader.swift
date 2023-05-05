@@ -14,6 +14,7 @@ struct HomePageHeader: View {
     @ObservedObject var PnVM = ProposenewViewModel()
     @ObservedObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = CreatecalendarViewModel()
+    
     @State var calendarName: String = ""
     @State private var selectedCalendarIndex = 0
     @State var calendarSelection: Bool = false
@@ -29,9 +30,9 @@ struct HomePageHeader: View {
                 Button {
                     calendarSelection.toggle()
                 } label: {
-                    Text(CcVM.getUserCalendars()[selectedCalendarIndex].title.dropFirst(8))
-                        .font(Font.custom("Fredoka-Semibold", size: 26))
-                        .foregroundColor(Color("PB-800"))
+//                    Text(CcVM.getUserCalendars()[selectedCalendarIndex].title.dropFirst(8))
+//                        .font(Font.custom("Fredoka-Semibold", size: 26))
+//                        .foregroundColor(Color("PB-800"))
                     
                     Image(systemName: "chevron.down")
                         .font(Font.custom("Fredoka-Bold", size: 16))
@@ -124,7 +125,7 @@ struct HomePageHeader: View {
                 
                 //Add Event Button
                 NavigationLink {
-                    Proposenewpage(PnVM: PnVM)
+                    ProposeNewEvent()
                 } label: {
                     Image(systemName: "plus")
                         .font(Font.custom("Fredoka-Bold", size: 24))

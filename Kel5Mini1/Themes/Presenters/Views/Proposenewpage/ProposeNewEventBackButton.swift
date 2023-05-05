@@ -11,7 +11,7 @@ import CoreData
 
 struct ProposeNewEventBackButton: View {
     
-    @ObservedObject var PnVM : ProposenewViewModel
+    
     
     @Environment(\.dismiss) private var dismiss
     

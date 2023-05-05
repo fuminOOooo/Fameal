@@ -5,7 +5,6 @@
 //  Created by Elvis Susanto on 21/04/23.
 //
 
-import Foundation
 import SwiftUI
 import EventKit
 
@@ -15,22 +14,22 @@ struct HomePageHeader: View {
     @ObservedObject var CcVM = calendarViewModel()
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
-    @Binding var selectedCalendar: EKCalendar
-    @State private var selectedCalendarID: String?
+    @Binding var selectedCalendar: EKCalendar?
     @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
-//    var selectedCalendarIndex: Int
     
     var body: some View {
         VStack (spacing: 4) {
-            Text(selectedCalendar.calendarIdentifier) // Debugging
+//            Text(selectedCalendar.calendarIdentifier)
             // Component 1
             HStack {
                 
                 // Calendar Name
                 Button {
+                    calendars = CcVM.getUserCalendars()
+                    print(calendars)
                     calendarSelection.toggle()
                 } label: {
-                    Text((selectedCalendar.title.dropFirst(9)))
+                    Text(((selectedCalendar?.title.dropFirst(9) ?? "")!))
                         .font(Font.custom("Fredoka-Semibold", size: 26))
                         .foregroundColor(Color("PB-800"))
                     
@@ -60,11 +59,9 @@ struct HomePageHeader: View {
                             
                             ForEach(calendars, id: \.calendarIdentifier) { calendar in
                                 Button  {
-                                    print(calendar)
+//                                    print(calendar)
                                     selectedCalendar = calendar
-                                    print(selectedCalendar.title)
-                                    selectedCalendarID = calendar.calendarIdentifier
-                                    print(selectedCalendarID)
+                                    print(selectedCalendar?.title)
                                     calendarSelection.toggle()
                                 } label: {
                                     HStack {
@@ -79,7 +76,6 @@ struct HomePageHeader: View {
                                                 //fill with calendar member count .font(Font.custom("Fredoka-Light", size: 16))
                                                 Spacer()
                                             }
-                                            
                                         }
                                         .padding(.leading)
                                         
@@ -101,13 +97,11 @@ struct HomePageHeader: View {
                                 
                                 
                                 
-                                if (calendars.count != 1 ) {
+                                if (calendars.count != 1) {
                                     Divider()
                                         .frame(maxWidth: 340)
                                 }
-                                
                             }
-                            
                         }
                         Button {
                             self.isCreatingCalendar.toggle()
@@ -115,13 +109,13 @@ struct HomePageHeader: View {
                             Text("+ Add another family calendar")
                                 .font(Font.custom("Fredoka-Regular", size: 16))
                                 .foregroundColor(Color("Secondary"))
+                                .frame(height:64)
                         }.sheet(isPresented: self.$isCreatingCalendar) {
                             //                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
-                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection)
+                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendar: self.$selectedCalendar)
                         }
                     }
                     .presentationDetents([.medium])
-                    .padding(.bottom)
                 })
                 
                 Spacer()
@@ -168,6 +162,9 @@ struct HomePageHeader: View {
                 Spacer()
                 
             }
+        }
+        .onAppear{
+            print("Result" + (selectedCalendar?.title ?? ""))
         }
     }
 }

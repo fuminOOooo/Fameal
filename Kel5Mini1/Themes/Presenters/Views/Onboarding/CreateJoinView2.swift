@@ -61,7 +61,7 @@ struct CreateJoinView2: View {
             }
             VStack(spacing: 14){
                 NavigationLink {
-                    Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection)
+//                    Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection)
                 } label: {
                     Text("Create a calendar")
                 }

@@ -14,14 +14,14 @@ struct Homepage: View {
     @StateObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = calendarViewModel()
 //    @Binding private var selectedCalendarID: String
-    @State var selectedCalendar: EKCalendar
+    @State var selectedCalendar: EKCalendar?
     //    @State var selectedCalendarIndex: Int = 0
     @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
     
     var body:some View {
         NavigationView {
             VStack {
-                HomePageHeader(selectedCalendar: $selectedCalendar)
+                HomePageHeader(selectedCalendar: self.$selectedCalendar)
                 
                 HomePageUpcomingEvent()
                 

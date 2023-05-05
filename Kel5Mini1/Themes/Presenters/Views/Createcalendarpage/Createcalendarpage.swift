@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-import CoreData
+import EventKit
 
 struct Createcalendarpage: View {
     
     @ObservedObject var CcVM = calendarViewModel()
     @Binding var isCreatingCalendar: Bool
     @Binding var calendarSelection: Bool
+    @Binding var selectedCalendar: EKCalendar?
 //    @Binding var selectedCalendarIndex: Int
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -29,7 +30,7 @@ struct Createcalendarpage: View {
             
             Createcalendarpage1()
             
-            Createcalendarpage2(CcVM: CcVM)
+            Createcalendarpage2(CcVM: CcVM, selectedCalendar: self.$selectedCalendar)
             
             Spacer()
             
@@ -39,6 +40,8 @@ struct Createcalendarpage: View {
         .onDisappear{
             self.calendarSelection = false
             self.isCreatingCalendar = false
+            print(selectedCalendar)
+            self.selectedCalendar = selectedCalendar
 //            self.selectedCalendarIndex = CcVM.getUserCalendars().count-1
         }
     }

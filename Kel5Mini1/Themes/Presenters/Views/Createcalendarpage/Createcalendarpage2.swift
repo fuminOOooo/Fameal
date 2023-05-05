@@ -5,17 +5,18 @@
 //  Created by Elvis Susanto on 30/04/23.
 //
 
-import Foundation
 import SwiftUI
-import CoreData
+import EventKit
 
 struct Createcalendarpage2: View {
     
-    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
+//    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
     
     @State var tempCalendarName: String = ""
-    
     @ObservedObject var CcVM = calendarViewModel()
+    @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
+    @Binding var selectedCalendar: EKCalendar?
+    @State private var selectedCalendarUID: String?
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -39,6 +40,11 @@ struct Createcalendarpage2: View {
             HStack{
                 Button {
                     CcVM.addCalendar(name: "(Fameal) " + tempCalendarName)
+                    calendars = CcVM.getUserCalendars()
+                    print(calendars.count)
+                    selectedCalendarUID = CcVM.getCalendarIdentifier(forTitle: ("(Fameal) " + tempCalendarName)) ?? ""
+                    selectedCalendar = CcVM.getCalendar(withIdentifier: selectedCalendarUID ?? "")
+                    print(selectedCalendar)
                     dismiss()
                 } label: {
                     if (tempCalendarName == "") {

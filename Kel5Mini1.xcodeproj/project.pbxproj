@@ -57,6 +57,7 @@
 		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
 		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
 		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
+		467C78252A04FB6F00973931 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467C78242A04FB6F00973931 /* CalendarManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
 		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
 		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
+		467C78242A04FB6F00973931 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				1551942329FC417100A31780 /* Homepage Viewmodel.swift */,
 				1551942E29FD75BE00A31780 /* CalendarViewModel.swift */,
 				155194AB2A03986D00A31780 /* CardStackViewModel.swift */,
+				467C78242A04FB6F00973931 /* CalendarManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				15BF954129F7DD2000CA517E /* Upcomingpage.swift in Sources */,
 				157EB61729EFA79F0056F675 /* Homepage.swift in Sources */,
 				155194AC2A03986D00A31780 /* CardStackViewModel.swift in Sources */,
+				467C78252A04FB6F00973931 /* CalendarManager.swift in Sources */,
 				157EB61529EFA79F0056F675 /* Kel5Mini1App.swift in Sources */,
 				15BF953B29F2F80900CA517E /* HomePageHeader.swift in Sources */,
 				15D975CF29F938300033D857 /* Proposed2.swift in Sources */,

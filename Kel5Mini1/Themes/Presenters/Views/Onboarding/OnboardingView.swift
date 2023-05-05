@@ -11,6 +11,8 @@ import EventKit
 struct OnboardingView: View {
     @Environment(\.dismiss) private var dismiss
     
+    @ObservedObject var CalendarManager : CalendarManager
+    
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 34){

@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct Kel5Mini1App: App {
+    
+    @StateObject var calendarManager : CalendarManager = CalendarManager()
+    
     init() {
         let appearance = UINavigationBarAppearance()
         let customColor = UIColor(named: "PB-800")!
@@ -21,8 +24,9 @@ struct Kel5Mini1App: App {
 
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            OnboardingView(CalendarManager: calendarManager)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
         }
     }
 }

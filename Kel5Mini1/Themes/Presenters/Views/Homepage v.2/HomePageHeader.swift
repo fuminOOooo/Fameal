@@ -5,32 +5,31 @@
 //  Created by Elvis Susanto on 21/04/23.
 //
 
-import Foundation
 import SwiftUI
-import CoreData
+import EventKit
 
 struct HomePageHeader: View {
-    
     @ObservedObject var PnVM = ProposenewViewModel()
     @ObservedObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = calendarViewModel()
-    @State var calendarName: String = ""
-    @Binding var selectedCalendarIndex: Int
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
+    @Binding var selectedCalendar: EKCalendar?
+    @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
     
     var body: some View {
         VStack (spacing: 4) {
-            
+//            Text(selectedCalendar.calendarIdentifier)
             // Component 1
             HStack {
                 
                 // Calendar Name
                 Button {
+                    calendars = CcVM.getUserCalendars()
+                    print(calendars)
                     calendarSelection.toggle()
                 } label: {
-                    
-                    Text(CcVM.getUserCalendars()[selectedCalendarIndex].title.dropFirst(8))
+                    Text(((selectedCalendar?.title.dropFirst(9) ?? "")!))
                         .font(Font.custom("Fredoka-Semibold", size: 26))
                         .foregroundColor(Color("PB-800"))
                     
@@ -58,14 +57,17 @@ struct HomePageHeader: View {
                         
                         ScrollView {
                             
-                            ForEach(0..<CcVM.getUserCalendars().count) { i in
-                                Button  {                                    selectedCalendarIndex = i
+                            ForEach(calendars, id: \.calendarIdentifier) { calendar in
+                                Button  {
+//                                    print(calendar)
+                                    selectedCalendar = calendar
+                                    print(selectedCalendar?.title)
                                     calendarSelection.toggle()
                                 } label: {
                                     HStack {
                                         VStack {
                                             HStack {
-                                                Text (CcVM.getUserCalendars()[i].title.dropFirst(8))
+                                                Text (calendar.title.dropFirst(9))
                                                     .font(Font.custom("Fredoka-Medium", size: 20))
                                                 Spacer()
                                             }
@@ -74,11 +76,10 @@ struct HomePageHeader: View {
                                                 //fill with calendar member count .font(Font.custom("Fredoka-Light", size: 16))
                                                 Spacer()
                                             }
-                                            
                                         }
                                         .padding(.leading)
                                         
-                                        if (selectedCalendarIndex == i) {
+                                        if (selectedCalendar == calendar) {
                                             VStack {
                                                 Image(systemName: "checkmark")
                                                     .bold()
@@ -88,7 +89,7 @@ struct HomePageHeader: View {
                                     }
                                 }
                                 .frame(maxWidth: 340, minHeight: 80)
-                                .background(selectedCalendarIndex == i ? Color("PB-50") : Color(.white))
+                                .background(selectedCalendar == calendar ? Color("PB-50") : Color(.white))
                                 .cornerRadius(8)
                                 .foregroundColor(Color("PB-800"))
                                 .padding(.leading)
@@ -96,13 +97,11 @@ struct HomePageHeader: View {
                                 
                                 
                                 
-                                if (CcVM.getUserCalendars().count != 1 && i < CcVM.getUserCalendars().count-1) {
+                                if (calendars.count != 1) {
                                     Divider()
                                         .frame(maxWidth: 340)
                                 }
-                                
                             }
-                            
                         }
                         Button {
                             self.isCreatingCalendar.toggle()
@@ -110,12 +109,13 @@ struct HomePageHeader: View {
                             Text("+ Add another family calendar")
                                 .font(Font.custom("Fredoka-Regular", size: 16))
                                 .foregroundColor(Color("Secondary"))
+                                .frame(height:64)
                         }.sheet(isPresented: self.$isCreatingCalendar) {
-                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
+                            //                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
+                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendar: self.$selectedCalendar)
                         }
                     }
                     .presentationDetents([.medium])
-                    .padding(.bottom)
                 })
                 
                 Spacer()
@@ -136,7 +136,7 @@ struct HomePageHeader: View {
             //Component 2
             HStack {
                 Button {
-                    // SHOULD NAVIGATE TO MEMBER DETAILS
+                    //                    CcVM.inviteToCalendar(calendar: CcVM, participants: <#T##[String]#>, viewController: <#T##UIViewController#>)
                 } label: {
                     HStack (spacing: -4) {
                         
@@ -162,6 +162,9 @@ struct HomePageHeader: View {
                 Spacer()
                 
             }
+        }
+        .onAppear{
+            print("Result" + (selectedCalendar?.title ?? ""))
         }
     }
 }

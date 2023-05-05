@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import EventKit
 
 struct OnboardingView: View {
     @Environment(\.dismiss) private var dismiss
@@ -14,7 +13,7 @@ struct OnboardingView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 34){
-                Image("family")
+                Image("aset1")
                 VStack(alignment: .leading, spacing: 8){
                     Text("We makes your meal-time!")
                         .font(Font.custom("Fredoka-Regular", size: 18))

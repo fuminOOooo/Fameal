@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-import EventKit
 
 struct CreateJoinView: View {
     @ObservedObject var CcVM = calendarViewModel()
     
+    //ini cuman buat preview aja
+    @ObservedObject var HpVM = HomepageViewModel()
     var adaptiveGridItem = [
         GridItem(.adaptive(minimum: 150), spacing: 5)
     ]
@@ -18,7 +19,6 @@ struct CreateJoinView: View {
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
     @State private var isPresented = false
-    @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
     
     var body: some View {
         NavigationView {
@@ -36,7 +36,7 @@ struct CreateJoinView: View {
                     ScrollView{
                         LazyVGrid(columns: adaptiveGridItem, spacing: 20) {
                             NavigationLink {
-//                                Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection)
+                                Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
                             } label:{
                                 //button create a calendar
                                 VStack(spacing: 14){
@@ -56,25 +56,53 @@ struct CreateJoinView: View {
                                 .background(Color("CCGray"))
                                 .cornerRadius(10)
                             }
+                            /* For Test
+                             ForEach(0..<HpVM.calendars.count){ i in
+                             VStack{
+                             VStack(alignment: .leading, spacing: 4){
+                             Text("\(HpVM.calendars[i].calendarName)")
+                             .font(Font.custom("Fredoka-Medium", size: 19))
+                             .foregroundColor(Color("PB-800"))
+                             .padding(.leading, -16)
+                             Text("\(HpVM.calendars[i].calendarMembers.count) members")
+                             .font(Font.custom("Fredoka-Regular", size: 16))
+                             .foregroundColor(.gray)
+                             .padding(.leading, -16)
+                             Spacer()
+                             }
+                             .padding()
+                             .frame(width: 163, height: 163)
+                             .background(Color("PB-100"))
+                             .cornerRadius(10)
+                             }
+                             }
+                             */
                             
-                            ForEach(calendars, id: \.calendarIdentifier) { calendar in
-                                NavigationLink(destination: Homepage(selectedCalendar: calendar)) {
-                                    VStack(alignment: .leading, spacing: 4){
-                                        Text(calendar.title.dropFirst(9))
-                                            .font(Font.custom("Fredoka-Medium", size: 19))
-                                            .foregroundColor(Color("PB-800"))
-                                        //insyaallah nanti bisa invite family member
-                                        Text("count members")
-                                            .font(Font.custom("Fredoka-Regular", size: 16))
-                                            .foregroundColor(.gray)
-                                        Spacer()
+                            ForEach(0..<CcVM.getUserCalendars().count){ i in
+                                NavigationLink {
+                                    Homepage()
+                                }label: {
+                                    VStack{
+                                        VStack(alignment: .leading, spacing: 4){
+                                            Text((CcVM.getUserCalendars()[i].title.dropFirst(8)))
+                                                .font(Font.custom("Fredoka-Medium", size: 19))
+                                                .foregroundColor(Color("PB-800"))
+                                            //                                                .padding(.leading, -14)
+                                            //belom diubah
+                                            Text("count members")
+                                                .font(Font.custom("Fredoka-Regular", size: 16))
+                                                .foregroundColor(.gray)
+                                            //                                                .padding(.leading, -14)
+                                            Spacer()
+                                        }
+                                        .padding()
+                                        .frame(width: 163, height: 163)
+                                        .background(Color("PB-100"))
+                                        .cornerRadius(10)
                                     }
                                 }
-                                .padding()
-                                .frame(width: 163, height: 163)
-                                .background(Color("PB-100"))
-                                .cornerRadius(10)
                             }
+                            
                         }
                     }
                     .padding(.top)

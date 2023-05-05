@@ -38,6 +38,7 @@ struct GameRulesWholeView: View {
             Spacer()
 
         }
+        .navigationBarBackButtonHidden(true)
         .padding()
         
     }

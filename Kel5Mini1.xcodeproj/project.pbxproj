@@ -1,0 +1,931 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1551941B29FB931400A31780 /* ProposeNewEventDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551941A29FB931400A31780 /* ProposeNewEventDatePicker.swift */; };
+		1551941E29FB939E00A31780 /* Proposenew Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551941D29FB939E00A31780 /* Proposenew Viewmodel.swift */; };
+		1551942029FB9DAA00A31780 /* ProposeNewTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551941F29FB9DAA00A31780 /* ProposeNewTextFields.swift */; };
+		1551942229FBC73D00A31780 /* ProposeNewStartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942129FBC73D00A31780 /* ProposeNewStartTime.swift */; };
+		1551942429FC417100A31780 /* Homepage Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942329FC417100A31780 /* Homepage Viewmodel.swift */; };
+		1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942729FCEE1500A31780 /* Homepage Model.swift */; };
+		1551942B29FD72A600A31780 /* Createcalendarpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942A29FD72A600A31780 /* Createcalendarpage.swift */; };
+		1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942C29FD72F800A31780 /* Createcalendarpage1.swift */; };
+		1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942E29FD75BE00A31780 /* CalendarViewModel.swift */; };
+		1551943129FE4EE800A31780 /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551943029FE4EE800A31780 /* Createcalendarpage2.swift */; };
+		155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194322A003F4600A31780 /* Createcalendarpage3.swift */; };
+		155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */; };
+		155194392A01671600A31780 /* Calendar Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194382A01671600A31780 /* Calendar Model.swift */; };
+		155194AC2A03986D00A31780 /* CardStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194AB2A03986D00A31780 /* CardStackViewModel.swift */; };
+		155194AE2A03988E00A31780 /* CardShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194AD2A03988E00A31780 /* CardShape.swift */; };
+		155194B02A0398A300A31780 /* CardPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194AF2A0398A300A31780 /* CardPageModel.swift */; };
+		155194B32A0398F000A31780 /* GameRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194B22A0398F000A31780 /* GameRulesView.swift */; };
+		155194B52A03990200A31780 /* GameRulesBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194B42A03990200A31780 /* GameRulesBackButton.swift */; };
+		155194B72A03991B00A31780 /* GameRulesWholeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194B62A03991B00A31780 /* GameRulesWholeView.swift */; };
+		155194BA2A03995500A31780 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194B92A03995500A31780 /* CardStackView.swift */; };
+		155194BC2A03996600A31780 /* CardStackBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194BB2A03996600A31780 /* CardStackBackButton.swift */; };
+		155194BE2A03997E00A31780 /* CardStackWholeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194BD2A03997E00A31780 /* CardStackWholeView.swift */; };
+		155194DE2A04B2FF00A31780 /* Invitationpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194DD2A04B2FF00A31780 /* Invitationpage.swift */; };
+		157EB61529EFA79F0056F675 /* Kel5Mini1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB61429EFA79F0056F675 /* Kel5Mini1App.swift */; };
+		157EB61729EFA79F0056F675 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB61629EFA79F0056F675 /* Homepage.swift */; };
+		157EB61929EFA7A00056F675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157EB61829EFA7A00056F675 /* Assets.xcassets */; };
+		157EB61C29EFA7A00056F675 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157EB61B29EFA7A00056F675 /* Preview Assets.xcassets */; };
+		157EB61E29EFA7A00056F675 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB61D29EFA7A00056F675 /* Persistence.swift */; };
+		157EB62129EFA7A00056F675 /* Kel5Mini1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 157EB61F29EFA7A00056F675 /* Kel5Mini1.xcdatamodeld */; };
+		157EB62B29EFA7A00056F675 /* Kel5Mini1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB62A29EFA7A00056F675 /* Kel5Mini1Tests.swift */; };
+		157EB63529EFA7A00056F675 /* Kel5Mini1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB63429EFA7A00056F675 /* Kel5Mini1UITests.swift */; };
+		157EB63729EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB63629EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift */; };
+		15BF953B29F2F80900CA517E /* HomePageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF953A29F2F80900CA517E /* HomePageHeader.swift */; };
+		15BF953D29F31AF900CA517E /* HomePageUpcomingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF953C29F31AF900CA517E /* HomePageUpcomingEvent.swift */; };
+		15BF953F29F333F700CA517E /* HomePageProposedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF953E29F333F700CA517E /* HomePageProposedEvent.swift */; };
+		15BF954129F7DD2000CA517E /* Upcomingpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF954029F7DD2000CA517E /* Upcomingpage.swift */; };
+		15BF954429F7DEF600CA517E /* Upcoming1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF954329F7DEF600CA517E /* Upcoming1.swift */; };
+		15D975C829F90E620033D857 /* Upcoming2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975C729F90E620033D857 /* Upcoming2.swift */; };
+		15D975CB29F933170033D857 /* Proposedpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975CA29F933170033D857 /* Proposedpage.swift */; };
+		15D975CD29F9380D0033D857 /* Proposed1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975CC29F9380D0033D857 /* Proposed1.swift */; };
+		15D975CF29F938300033D857 /* Proposed2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975CE29F938300033D857 /* Proposed2.swift */; };
+		15D975D229F9413E0033D857 /* Proposenewpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975D129F9413E0033D857 /* Proposenewpage.swift */; };
+		15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */; };
+		15FAA54D2A04B3AC00935DF6 /* InvitationpageBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FAA54C2A04B3AC00935DF6 /* InvitationpageBackButton.swift */; };
+		380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A62A023E2700FF98E3 /* OnboardingView.swift */; };
+		380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A82A02476100FF98E3 /* CreateJoinView.swift */; };
+		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
+		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
+		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
+		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		157EB62729EFA7A00056F675 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 157EB60929EFA79F0056F675 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 157EB61029EFA79F0056F675;
+			remoteInfo = Kel5Mini1;
+		};
+		157EB63129EFA7A00056F675 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 157EB60929EFA79F0056F675 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 157EB61029EFA79F0056F675;
+			remoteInfo = Kel5Mini1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1551941A29FB931400A31780 /* ProposeNewEventDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewEventDatePicker.swift; sourceTree = "<group>"; };
+		1551941D29FB939E00A31780 /* Proposenew Viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Proposenew Viewmodel.swift"; sourceTree = "<group>"; };
+		1551941F29FB9DAA00A31780 /* ProposeNewTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewTextFields.swift; sourceTree = "<group>"; };
+		1551942129FBC73D00A31780 /* ProposeNewStartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewStartTime.swift; sourceTree = "<group>"; };
+		1551942329FC417100A31780 /* Homepage Viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homepage Viewmodel.swift"; sourceTree = "<group>"; };
+		1551942729FCEE1500A31780 /* Homepage Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homepage Model.swift"; sourceTree = "<group>"; };
+		1551942A29FD72A600A31780 /* Createcalendarpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage.swift; sourceTree = "<group>"; };
+		1551942C29FD72F800A31780 /* Createcalendarpage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage1.swift; sourceTree = "<group>"; };
+		1551942E29FD75BE00A31780 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		1551943029FE4EE800A31780 /* Createcalendarpage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
+		155194322A003F4600A31780 /* Createcalendarpage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage3.swift; sourceTree = "<group>"; };
+		155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewProposalButton.swift; sourceTree = "<group>"; };
+		155194382A01671600A31780 /* Calendar Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar Model.swift"; sourceTree = "<group>"; };
+		155194AB2A03986D00A31780 /* CardStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackViewModel.swift; sourceTree = "<group>"; };
+		155194AD2A03988E00A31780 /* CardShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShape.swift; sourceTree = "<group>"; };
+		155194AF2A0398A300A31780 /* CardPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPageModel.swift; sourceTree = "<group>"; };
+		155194B22A0398F000A31780 /* GameRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesView.swift; sourceTree = "<group>"; };
+		155194B42A03990200A31780 /* GameRulesBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesBackButton.swift; sourceTree = "<group>"; };
+		155194B62A03991B00A31780 /* GameRulesWholeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesWholeView.swift; sourceTree = "<group>"; };
+		155194B92A03995500A31780 /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
+		155194BB2A03996600A31780 /* CardStackBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackBackButton.swift; sourceTree = "<group>"; };
+		155194BD2A03997E00A31780 /* CardStackWholeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackWholeView.swift; sourceTree = "<group>"; };
+		155194DD2A04B2FF00A31780 /* Invitationpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitationpage.swift; sourceTree = "<group>"; };
+		157EB61129EFA79F0056F675 /* Kel5Mini1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kel5Mini1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		157EB61429EFA79F0056F675 /* Kel5Mini1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kel5Mini1App.swift; sourceTree = "<group>"; };
+		157EB61629EFA79F0056F675 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
+		157EB61829EFA7A00056F675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		157EB61B29EFA7A00056F675 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		157EB61D29EFA7A00056F675 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		157EB62029EFA7A00056F675 /* Kel5Mini1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kel5Mini1.xcdatamodel; sourceTree = "<group>"; };
+		157EB62629EFA7A00056F675 /* Kel5Mini1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kel5Mini1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		157EB62A29EFA7A00056F675 /* Kel5Mini1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kel5Mini1Tests.swift; sourceTree = "<group>"; };
+		157EB63029EFA7A00056F675 /* Kel5Mini1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kel5Mini1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		157EB63429EFA7A00056F675 /* Kel5Mini1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kel5Mini1UITests.swift; sourceTree = "<group>"; };
+		157EB63629EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kel5Mini1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		15BF953A29F2F80900CA517E /* HomePageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageHeader.swift; sourceTree = "<group>"; };
+		15BF953C29F31AF900CA517E /* HomePageUpcomingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageUpcomingEvent.swift; sourceTree = "<group>"; };
+		15BF953E29F333F700CA517E /* HomePageProposedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProposedEvent.swift; sourceTree = "<group>"; };
+		15BF954029F7DD2000CA517E /* Upcomingpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcomingpage.swift; sourceTree = "<group>"; };
+		15BF954329F7DEF600CA517E /* Upcoming1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming1.swift; sourceTree = "<group>"; };
+		15D975C729F90E620033D857 /* Upcoming2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming2.swift; sourceTree = "<group>"; };
+		15D975CA29F933170033D857 /* Proposedpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposedpage.swift; sourceTree = "<group>"; };
+		15D975CC29F9380D0033D857 /* Proposed1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposed1.swift; sourceTree = "<group>"; };
+		15D975CE29F938300033D857 /* Proposed2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposed2.swift; sourceTree = "<group>"; };
+		15D975D129F9413E0033D857 /* Proposenewpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposenewpage.swift; sourceTree = "<group>"; };
+		15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewEventBackButton.swift; sourceTree = "<group>"; };
+		15FAA54C2A04B3AC00935DF6 /* InvitationpageBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationpageBackButton.swift; sourceTree = "<group>"; };
+		380014A62A023E2700FF98E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		380014A82A02476100FF98E3 /* CreateJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinView.swift; sourceTree = "<group>"; };
+		382123FB29FAD58D003B5002 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
+		382123FD29FAE83C003B5002 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
+		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
+		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		157EB60E29EFA79F0056F675 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157EB62329EFA7A00056F675 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157EB62D29EFA7A00056F675 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1551941C29FB938B00A31780 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				155194362A0166E600A31780 /* ViewModels */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1551942529FCEDE300A31780 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1551942629FCEDF000A31780 /* Constants */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1551942629FCEDF000A31780 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1551942729FCEE1500A31780 /* Homepage Model.swift */,
+				155194AD2A03988E00A31780 /* CardShape.swift */,
+				155194AF2A0398A300A31780 /* CardPageModel.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1551942929FD729200A31780 /* Createcalendarpage */ = {
+			isa = PBXGroup;
+			children = (
+				1551942A29FD72A600A31780 /* Createcalendarpage.swift */,
+				1551942C29FD72F800A31780 /* Createcalendarpage1.swift */,
+				1551943029FE4EE800A31780 /* Createcalendarpage2.swift */,
+				155194322A003F4600A31780 /* Createcalendarpage3.swift */,
+			);
+			path = Createcalendarpage;
+			sourceTree = "<group>";
+		};
+		155194362A0166E600A31780 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1551941D29FB939E00A31780 /* Proposenew Viewmodel.swift */,
+				1551942329FC417100A31780 /* Homepage Viewmodel.swift */,
+				1551942E29FD75BE00A31780 /* CalendarViewModel.swift */,
+				155194AB2A03986D00A31780 /* CardStackViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		155194372A01670200A31780 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				155194382A01671600A31780 /* Calendar Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		155194B12A0398DC00A31780 /* GameRulesView */ = {
+			isa = PBXGroup;
+			children = (
+				155194B22A0398F000A31780 /* GameRulesView.swift */,
+				155194B42A03990200A31780 /* GameRulesBackButton.swift */,
+				155194B62A03991B00A31780 /* GameRulesWholeView.swift */,
+			);
+			path = GameRulesView;
+			sourceTree = "<group>";
+		};
+		155194B82A03993F00A31780 /* CardSwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				155194B92A03995500A31780 /* CardStackView.swift */,
+				155194BB2A03996600A31780 /* CardStackBackButton.swift */,
+				155194BD2A03997E00A31780 /* CardStackWholeView.swift */,
+			);
+			path = CardSwipeView;
+			sourceTree = "<group>";
+		};
+		155194DF2A04B30A00A31780 /* Invitationpage */ = {
+			isa = PBXGroup;
+			children = (
+				155194DD2A04B2FF00A31780 /* Invitationpage.swift */,
+				15FAA54C2A04B3AC00935DF6 /* InvitationpageBackButton.swift */,
+			);
+			path = Invitationpage;
+			sourceTree = "<group>";
+		};
+		157EB60829EFA79F0056F675 = {
+			isa = PBXGroup;
+			children = (
+				157EB61329EFA79F0056F675 /* Kel5Mini1 */,
+				157EB62929EFA7A00056F675 /* Kel5Mini1Tests */,
+				157EB63329EFA7A00056F675 /* Kel5Mini1UITests */,
+				157EB61229EFA79F0056F675 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		157EB61229EFA79F0056F675 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				157EB61129EFA79F0056F675 /* Kel5Mini1.app */,
+				157EB62629EFA7A00056F675 /* Kel5Mini1Tests.xctest */,
+				157EB63029EFA7A00056F675 /* Kel5Mini1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		157EB61329EFA79F0056F675 /* Kel5Mini1 */ = {
+			isa = PBXGroup;
+			children = (
+				1551942529FCEDE300A31780 /* Core */,
+				382123FC29FAE805003B5002 /* Style */,
+				38250DE129FA67380021746F /* Info.plist */,
+				15BF953229F2E68700CA517E /* Application */,
+				15BF953329F2E69800CA517E /* Themes */,
+				157EB61829EFA7A00056F675 /* Assets.xcassets */,
+				382123FB29FAD58D003B5002 /* Fredoka.ttf */,
+				157EB61D29EFA7A00056F675 /* Persistence.swift */,
+				157EB61F29EFA7A00056F675 /* Kel5Mini1.xcdatamodeld */,
+				157EB61A29EFA7A00056F675 /* Preview Content */,
+			);
+			path = Kel5Mini1;
+			sourceTree = "<group>";
+		};
+		157EB61A29EFA7A00056F675 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				157EB61B29EFA7A00056F675 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		157EB62929EFA7A00056F675 /* Kel5Mini1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				157EB62A29EFA7A00056F675 /* Kel5Mini1Tests.swift */,
+			);
+			path = Kel5Mini1Tests;
+			sourceTree = "<group>";
+		};
+		157EB63329EFA7A00056F675 /* Kel5Mini1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				157EB63429EFA7A00056F675 /* Kel5Mini1UITests.swift */,
+				157EB63629EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift */,
+			);
+			path = Kel5Mini1UITests;
+			sourceTree = "<group>";
+		};
+		15BF953229F2E68700CA517E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				157EB61429EFA79F0056F675 /* Kel5Mini1App.swift */,
+				1551941C29FB938B00A31780 /* Features */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		15BF953329F2E69800CA517E /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				15BF953429F2E6AC00CA517E /* Presenters */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		15BF953429F2E6AC00CA517E /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				15BF953529F2E6B600CA517E /* Views */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		15BF953529F2E6B600CA517E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				155194DF2A04B30A00A31780 /* Invitationpage */,
+				155194B82A03993F00A31780 /* CardSwipeView */,
+				155194B12A0398DC00A31780 /* GameRulesView */,
+				380014A52A023E0700FF98E3 /* Onboarding */,
+				1551942929FD729200A31780 /* Createcalendarpage */,
+				15D975D029F941310033D857 /* Proposenewpage */,
+				15BF953929F2F73900CA517E /* Homepage v.2 */,
+				15BF954229F7DD2600CA517E /* Upcomingpage */,
+				15D975C929F9323B0033D857 /* Proposedpage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15BF953929F2F73900CA517E /* Homepage v.2 */ = {
+			isa = PBXGroup;
+			children = (
+				157EB61629EFA79F0056F675 /* Homepage.swift */,
+				15BF953A29F2F80900CA517E /* HomePageHeader.swift */,
+				15BF953C29F31AF900CA517E /* HomePageUpcomingEvent.swift */,
+				15BF953E29F333F700CA517E /* HomePageProposedEvent.swift */,
+			);
+			path = "Homepage v.2";
+			sourceTree = "<group>";
+		};
+		15BF954229F7DD2600CA517E /* Upcomingpage */ = {
+			isa = PBXGroup;
+			children = (
+				15BF954029F7DD2000CA517E /* Upcomingpage.swift */,
+				15BF954329F7DEF600CA517E /* Upcoming1.swift */,
+				15D975C729F90E620033D857 /* Upcoming2.swift */,
+			);
+			path = Upcomingpage;
+			sourceTree = "<group>";
+		};
+		15D975C929F9323B0033D857 /* Proposedpage */ = {
+			isa = PBXGroup;
+			children = (
+				15D975CA29F933170033D857 /* Proposedpage.swift */,
+				15D975CC29F9380D0033D857 /* Proposed1.swift */,
+				15D975CE29F938300033D857 /* Proposed2.swift */,
+			);
+			path = Proposedpage;
+			sourceTree = "<group>";
+		};
+		15D975D029F941310033D857 /* Proposenewpage */ = {
+			isa = PBXGroup;
+			children = (
+				15D975D129F9413E0033D857 /* Proposenewpage.swift */,
+				15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */,
+				1551941A29FB931400A31780 /* ProposeNewEventDatePicker.swift */,
+				1551941F29FB9DAA00A31780 /* ProposeNewTextFields.swift */,
+				1551942129FBC73D00A31780 /* ProposeNewStartTime.swift */,
+				155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */,
+				155194372A01670200A31780 /* Models */,
+			);
+			path = Proposenewpage;
+			sourceTree = "<group>";
+		};
+		380014A52A023E0700FF98E3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				380014A62A023E2700FF98E3 /* OnboardingView.swift */,
+				380014A82A02476100FF98E3 /* CreateJoinView.swift */,
+				38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */,
+				38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		382123FC29FAE805003B5002 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				382123FD29FAE83C003B5002 /* CustomButton.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		157EB61029EFA79F0056F675 /* Kel5Mini1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 157EB63A29EFA7A00056F675 /* Build configuration list for PBXNativeTarget "Kel5Mini1" */;
+			buildPhases = (
+				157EB60D29EFA79F0056F675 /* Sources */,
+				157EB60E29EFA79F0056F675 /* Frameworks */,
+				157EB60F29EFA79F0056F675 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kel5Mini1;
+			productName = Kel5Mini1;
+			productReference = 157EB61129EFA79F0056F675 /* Kel5Mini1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		157EB62529EFA7A00056F675 /* Kel5Mini1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 157EB63D29EFA7A00056F675 /* Build configuration list for PBXNativeTarget "Kel5Mini1Tests" */;
+			buildPhases = (
+				157EB62229EFA7A00056F675 /* Sources */,
+				157EB62329EFA7A00056F675 /* Frameworks */,
+				157EB62429EFA7A00056F675 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				157EB62829EFA7A00056F675 /* PBXTargetDependency */,
+			);
+			name = Kel5Mini1Tests;
+			productName = Kel5Mini1Tests;
+			productReference = 157EB62629EFA7A00056F675 /* Kel5Mini1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		157EB62F29EFA7A00056F675 /* Kel5Mini1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 157EB64029EFA7A00056F675 /* Build configuration list for PBXNativeTarget "Kel5Mini1UITests" */;
+			buildPhases = (
+				157EB62C29EFA7A00056F675 /* Sources */,
+				157EB62D29EFA7A00056F675 /* Frameworks */,
+				157EB62E29EFA7A00056F675 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				157EB63229EFA7A00056F675 /* PBXTargetDependency */,
+			);
+			name = Kel5Mini1UITests;
+			productName = Kel5Mini1UITests;
+			productReference = 157EB63029EFA7A00056F675 /* Kel5Mini1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		157EB60929EFA79F0056F675 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					157EB61029EFA79F0056F675 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					157EB62529EFA7A00056F675 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 157EB61029EFA79F0056F675;
+					};
+					157EB62F29EFA7A00056F675 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 157EB61029EFA79F0056F675;
+					};
+				};
+			};
+			buildConfigurationList = 157EB60C29EFA79F0056F675 /* Build configuration list for PBXProject "Kel5Mini1" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 157EB60829EFA79F0056F675;
+			productRefGroup = 157EB61229EFA79F0056F675 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				157EB61029EFA79F0056F675 /* Kel5Mini1 */,
+				157EB62529EFA7A00056F675 /* Kel5Mini1Tests */,
+				157EB62F29EFA7A00056F675 /* Kel5Mini1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		157EB60F29EFA79F0056F675 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157EB61C29EFA7A00056F675 /* Preview Assets.xcassets in Resources */,
+				157EB61929EFA7A00056F675 /* Assets.xcassets in Resources */,
+				382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157EB62429EFA7A00056F675 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157EB62E29EFA7A00056F675 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		157EB60D29EFA79F0056F675 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155194AE2A03988E00A31780 /* CardShape.swift in Sources */,
+				1551942029FB9DAA00A31780 /* ProposeNewTextFields.swift in Sources */,
+				38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */,
+				15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */,
+				155194392A01671600A31780 /* Calendar Model.swift in Sources */,
+				380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */,
+				157EB61E29EFA7A00056F675 /* Persistence.swift in Sources */,
+				15BF953D29F31AF900CA517E /* HomePageUpcomingEvent.swift in Sources */,
+				1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */,
+				1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */,
+				155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */,
+				155194BC2A03996600A31780 /* CardStackBackButton.swift in Sources */,
+				155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */,
+				15D975CB29F933170033D857 /* Proposedpage.swift in Sources */,
+				38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */,
+				382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */,
+				1551942429FC417100A31780 /* Homepage Viewmodel.swift in Sources */,
+				1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */,
+				380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */,
+				1551941E29FB939E00A31780 /* Proposenew Viewmodel.swift in Sources */,
+				1551942229FBC73D00A31780 /* ProposeNewStartTime.swift in Sources */,
+				155194B32A0398F000A31780 /* GameRulesView.swift in Sources */,
+				1551941B29FB931400A31780 /* ProposeNewEventDatePicker.swift in Sources */,
+				155194DE2A04B2FF00A31780 /* Invitationpage.swift in Sources */,
+				1551943129FE4EE800A31780 /* Createcalendarpage2.swift in Sources */,
+				1551942B29FD72A600A31780 /* Createcalendarpage.swift in Sources */,
+				157EB62129EFA7A00056F675 /* Kel5Mini1.xcdatamodeld in Sources */,
+				155194BA2A03995500A31780 /* CardStackView.swift in Sources */,
+				155194BE2A03997E00A31780 /* CardStackWholeView.swift in Sources */,
+				15D975D229F9413E0033D857 /* Proposenewpage.swift in Sources */,
+				155194B52A03990200A31780 /* GameRulesBackButton.swift in Sources */,
+				15BF953F29F333F700CA517E /* HomePageProposedEvent.swift in Sources */,
+				15FAA54D2A04B3AC00935DF6 /* InvitationpageBackButton.swift in Sources */,
+				15BF954429F7DEF600CA517E /* Upcoming1.swift in Sources */,
+				155194B72A03991B00A31780 /* GameRulesWholeView.swift in Sources */,
+				15D975CD29F9380D0033D857 /* Proposed1.swift in Sources */,
+				15BF954129F7DD2000CA517E /* Upcomingpage.swift in Sources */,
+				157EB61729EFA79F0056F675 /* Homepage.swift in Sources */,
+				155194AC2A03986D00A31780 /* CardStackViewModel.swift in Sources */,
+				157EB61529EFA79F0056F675 /* Kel5Mini1App.swift in Sources */,
+				15BF953B29F2F80900CA517E /* HomePageHeader.swift in Sources */,
+				15D975CF29F938300033D857 /* Proposed2.swift in Sources */,
+				155194B02A0398A300A31780 /* CardPageModel.swift in Sources */,
+				15D975C829F90E620033D857 /* Upcoming2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157EB62229EFA7A00056F675 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157EB62B29EFA7A00056F675 /* Kel5Mini1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157EB62C29EFA7A00056F675 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157EB63729EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift in Sources */,
+				157EB63529EFA7A00056F675 /* Kel5Mini1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		157EB62829EFA7A00056F675 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 157EB61029EFA79F0056F675 /* Kel5Mini1 */;
+			targetProxy = 157EB62729EFA7A00056F675 /* PBXContainerItemProxy */;
+		};
+		157EB63229EFA7A00056F675 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 157EB61029EFA79F0056F675 /* Kel5Mini1 */;
+			targetProxy = 157EB63129EFA7A00056F675 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		157EB63829EFA7A00056F675 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		157EB63929EFA7A00056F675 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		157EB63B29EFA7A00056F675 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kel5Mini1/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Fameal need to access your calendar to fetch all calendars generated";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		157EB63C29EFA7A00056F675 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kel5Mini1/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Fameal need to access your calendar to fetch all calendars generated";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		157EB63E29EFA7A00056F675 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kel5Mini1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kel5Mini1";
+			};
+			name = Debug;
+		};
+		157EB63F29EFA7A00056F675 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kel5Mini1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kel5Mini1";
+			};
+			name = Release;
+		};
+		157EB64129EFA7A00056F675 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kel5Mini1;
+			};
+			name = Debug;
+		};
+		157EB64229EFA7A00056F675 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kel5Mini1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		157EB60C29EFA79F0056F675 /* Build configuration list for PBXProject "Kel5Mini1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157EB63829EFA7A00056F675 /* Debug */,
+				157EB63929EFA7A00056F675 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		157EB63A29EFA7A00056F675 /* Build configuration list for PBXNativeTarget "Kel5Mini1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157EB63B29EFA7A00056F675 /* Debug */,
+				157EB63C29EFA7A00056F675 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		157EB63D29EFA7A00056F675 /* Build configuration list for PBXNativeTarget "Kel5Mini1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157EB63E29EFA7A00056F675 /* Debug */,
+				157EB63F29EFA7A00056F675 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		157EB64029EFA7A00056F675 /* Build configuration list for PBXNativeTarget "Kel5Mini1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157EB64129EFA7A00056F675 /* Debug */,
+				157EB64229EFA7A00056F675 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		157EB61F29EFA7A00056F675 /* Kel5Mini1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				157EB62029EFA7A00056F675 /* Kel5Mini1.xcdatamodel */,
+			);
+			currentVersion = 157EB62029EFA7A00056F675 /* Kel5Mini1.xcdatamodel */;
+			path = Kel5Mini1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 157EB60929EFA79F0056F675 /* Project object */;
+}

@@ -112,7 +112,7 @@ struct HomePageHeader: View {
                                 .frame(height:64)
                         }.sheet(isPresented: self.$isCreatingCalendar) {
                             //                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
-                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendar: self.$selectedCalendar)
+                            addCalendarPage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendar: self.$selectedCalendar)
                         }
                     }
                     .presentationDetents([.medium])

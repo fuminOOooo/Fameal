@@ -53,6 +53,7 @@
 		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
 		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
 		389FF1122A04CEC70064326F /* createCalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1112A04CEC70064326F /* createCalendarPage.swift */; };
+		389FF1142A04EAD00064326F /* AcceptModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1132A04EAD00064326F /* AcceptModal.swift */; };
 		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
 		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,7 @@
 		382123FD29FAE83C003B5002 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
 		389FF1112A04CEC70064326F /* createCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createCalendarPage.swift; sourceTree = "<group>"; };
+		389FF1132A04EAD00064326F /* AcceptModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptModal.swift; sourceTree = "<group>"; };
 		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
 		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -338,6 +340,7 @@
 				157EB61629EFA79F0056F675 /* Homepage.swift */,
 				15BF953A29F2F80900CA517E /* HomePageHeader.swift */,
 				15BF953C29F31AF900CA517E /* HomePageUpcomingEvent.swift */,
+				389FF1132A04EAD00064326F /* AcceptModal.swift */,
 				15BF953E29F333F700CA517E /* HomePageProposedEvent.swift */,
 			);
 			path = "Homepage v.2";
@@ -533,6 +536,7 @@
 				15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */,
 				155194392A01671600A31780 /* Calendar Model.swift in Sources */,
 				380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */,
+				389FF1142A04EAD00064326F /* AcceptModal.swift in Sources */,
 				157EB61E29EFA7A00056F675 /* Persistence.swift in Sources */,
 				15BF953D29F31AF900CA517E /* HomePageUpcomingEvent.swift in Sources */,
 				1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */,

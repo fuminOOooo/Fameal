@@ -13,7 +13,6 @@ struct HomePageProposedEvent: View {
     
     @ObservedObject var HpVM : HomepageViewModel
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    @State private var isPresented = false
     
     var body: some View {
         ZStack {
@@ -120,16 +119,6 @@ struct HomePageProposedEvent: View {
                 .background(.white)
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
-            }
-            
-            //modal shown
-            if isPresented {
-                Color.black.opacity(0.5)
-                    .edgesIgnoringSafeArea(.all)
-                // Modal View
-                AcceptModal(isPresented: $isPresented)
-                    .frame(width:400, height: 1200)
-                    .zIndex(1)
             }
         }
     }

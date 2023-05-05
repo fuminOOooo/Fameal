@@ -13,11 +13,7 @@
 		1551942229FBC73D00A31780 /* ProposeNewStartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942129FBC73D00A31780 /* ProposeNewStartTime.swift */; };
 		1551942429FC417100A31780 /* Homepage Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942329FC417100A31780 /* Homepage Viewmodel.swift */; };
 		1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942729FCEE1500A31780 /* Homepage Model.swift */; };
-		1551942B29FD72A600A31780 /* Createcalendarpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942A29FD72A600A31780 /* Createcalendarpage.swift */; };
-		1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942C29FD72F800A31780 /* Createcalendarpage1.swift */; };
 		1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551942E29FD75BE00A31780 /* CalendarViewModel.swift */; };
-		1551943129FE4EE800A31780 /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551943029FE4EE800A31780 /* Createcalendarpage2.swift */; };
-		155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194322A003F4600A31780 /* Createcalendarpage3.swift */; };
 		155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */; };
 		155194392A01671600A31780 /* Calendar Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194382A01671600A31780 /* Calendar Model.swift */; };
 		155194AC2A03986D00A31780 /* CardStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194AB2A03986D00A31780 /* CardStackViewModel.swift */; };
@@ -56,6 +52,10 @@
 		380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A82A02476100FF98E3 /* CreateJoinView.swift */; };
 		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
 		382123FF29FAEF10003B5002 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382123FB29FAD58D003B5002 /* Fredoka.ttf */; };
+		389FF1212A04FE0B0064326F /* addCalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11D2A04FE0B0064326F /* addCalendarPage.swift */; };
+		389FF1222A04FE0B0064326F /* Createcalendarpage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */; };
+		389FF1232A04FE0B0064326F /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */; };
+		389FF1242A04FE0B0064326F /* createCalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1202A04FE0B0064326F /* createCalendarPage.swift */; };
 		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
 		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
 /* End PBXBuildFile section */
@@ -84,11 +84,7 @@
 		1551942129FBC73D00A31780 /* ProposeNewStartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewStartTime.swift; sourceTree = "<group>"; };
 		1551942329FC417100A31780 /* Homepage Viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homepage Viewmodel.swift"; sourceTree = "<group>"; };
 		1551942729FCEE1500A31780 /* Homepage Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homepage Model.swift"; sourceTree = "<group>"; };
-		1551942A29FD72A600A31780 /* Createcalendarpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage.swift; sourceTree = "<group>"; };
-		1551942C29FD72F800A31780 /* Createcalendarpage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage1.swift; sourceTree = "<group>"; };
 		1551942E29FD75BE00A31780 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
-		1551943029FE4EE800A31780 /* Createcalendarpage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
-		155194322A003F4600A31780 /* Createcalendarpage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcalendarpage3.swift; sourceTree = "<group>"; };
 		155194342A0129DE00A31780 /* ProposeNewProposalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewProposalButton.swift; sourceTree = "<group>"; };
 		155194382A01671600A31780 /* Calendar Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar Model.swift"; sourceTree = "<group>"; };
 		155194AB2A03986D00A31780 /* CardStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +127,10 @@
 		382123FB29FAD58D003B5002 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
 		382123FD29FAE83C003B5002 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		38250DE129FA67380021746F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kel5Mini1/Info.plist; sourceTree = SOURCE_ROOT; };
+		389FF11D2A04FE0B0064326F /* addCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addCalendarPage.swift; path = ../../../../../../Fameal/Kel5Mini1/Themes/Presenters/Views/Createcalendarpage/addCalendarPage.swift; sourceTree = "<group>"; };
+		389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Createcalendarpage1.swift; sourceTree = "<group>"; };
+		389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
+		389FF1202A04FE0B0064326F /* createCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createCalendarPage.swift; sourceTree = "<group>"; };
 		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
 		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,10 +189,10 @@
 		1551942929FD729200A31780 /* Createcalendarpage */ = {
 			isa = PBXGroup;
 			children = (
-				1551942A29FD72A600A31780 /* Createcalendarpage.swift */,
-				1551942C29FD72F800A31780 /* Createcalendarpage1.swift */,
-				1551943029FE4EE800A31780 /* Createcalendarpage2.swift */,
-				155194322A003F4600A31780 /* Createcalendarpage3.swift */,
+				389FF11D2A04FE0B0064326F /* addCalendarPage.swift */,
+				389FF1202A04FE0B0064326F /* createCalendarPage.swift */,
+				389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */,
+				389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */,
 			);
 			path = Createcalendarpage;
 			sourceTree = "<group>";
@@ -554,22 +554,19 @@
 				15BF953D29F31AF900CA517E /* HomePageUpcomingEvent.swift in Sources */,
 				1551942829FCEE1500A31780 /* Homepage Model.swift in Sources */,
 				1551942F29FD75BE00A31780 /* CalendarViewModel.swift in Sources */,
-				155194332A003F4600A31780 /* Createcalendarpage3.swift in Sources */,
 				155194BC2A03996600A31780 /* CardStackBackButton.swift in Sources */,
 				155194352A0129DE00A31780 /* ProposeNewProposalButton.swift in Sources */,
 				15D975CB29F933170033D857 /* Proposedpage.swift in Sources */,
 				38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */,
+				389FF1232A04FE0B0064326F /* Createcalendarpage2.swift in Sources */,
 				382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */,
 				1551942429FC417100A31780 /* Homepage Viewmodel.swift in Sources */,
-				1551942D29FD72F800A31780 /* Createcalendarpage1.swift in Sources */,
 				380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */,
 				1551941E29FB939E00A31780 /* Proposenew Viewmodel.swift in Sources */,
 				1551942229FBC73D00A31780 /* ProposeNewStartTime.swift in Sources */,
 				155194B32A0398F000A31780 /* GameRulesView.swift in Sources */,
 				1551941B29FB931400A31780 /* ProposeNewEventDatePicker.swift in Sources */,
 				155194DE2A04B2FF00A31780 /* Invitationpage.swift in Sources */,
-				1551943129FE4EE800A31780 /* Createcalendarpage2.swift in Sources */,
-				1551942B29FD72A600A31780 /* Createcalendarpage.swift in Sources */,
 				157EB62129EFA7A00056F675 /* Kel5Mini1.xcdatamodeld in Sources */,
 				155194BA2A03995500A31780 /* CardStackView.swift in Sources */,
 				155194BE2A03997E00A31780 /* CardStackWholeView.swift in Sources */,
@@ -577,8 +574,11 @@
 				155194B52A03990200A31780 /* GameRulesBackButton.swift in Sources */,
 				15BF953F29F333F700CA517E /* HomePageProposedEvent.swift in Sources */,
 				15FAA54D2A04B3AC00935DF6 /* InvitationpageBackButton.swift in Sources */,
+				389FF1212A04FE0B0064326F /* addCalendarPage.swift in Sources */,
 				15BF954429F7DEF600CA517E /* Upcoming1.swift in Sources */,
 				155194B72A03991B00A31780 /* GameRulesWholeView.swift in Sources */,
+				389FF1222A04FE0B0064326F /* Createcalendarpage1.swift in Sources */,
+				389FF1242A04FE0B0064326F /* createCalendarPage.swift in Sources */,
 				15D975CD29F9380D0033D857 /* Proposed1.swift in Sources */,
 				15BF954129F7DD2000CA517E /* Upcomingpage.swift in Sources */,
 				157EB61729EFA79F0056F675 /* Homepage.swift in Sources */,

@@ -18,7 +18,8 @@ struct CreateJoinView: View {
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
     @State private var isPresented = false
-    @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
+//    @Binding var selectedCalendar: EKCalendar?
+    @State var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
     
     var body: some View {
         NavigationView {
@@ -36,7 +37,7 @@ struct CreateJoinView: View {
                     ScrollView{
                         LazyVGrid(columns: adaptiveGridItem, spacing: 20) {
                             NavigationLink {
-//                                Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection)
+                                createCalendarPage()
                             } label:{
                                 //button create a calendar
                                 VStack(spacing: 14){
@@ -101,11 +102,15 @@ struct CreateJoinView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .onAppear{
+            calendars = CcVM.getUserCalendars()
+            print(calendars)
+        }
     }
 }
 
-struct CreateJoinView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateJoinView()
-    }
-}
+//struct CreateJoinView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreateJoinView()
+//    }
+//}

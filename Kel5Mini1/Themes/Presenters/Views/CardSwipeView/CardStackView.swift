@@ -18,11 +18,9 @@ struct CardStackView: View {
         
         VStack {
             
-            CardStackBackButton()
-            
             CardStackWholeView()
             
-        }
+        }.navigationBarBackButtonHidden(true)
         
     }
         

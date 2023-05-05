@@ -20,7 +20,7 @@ struct Cards: View {
     
     var rotationAngle: Double {
         let cardOffset = Double(index - totalCards / 2)
-        return Double(offset.width / 10) + cardOffset
+            return Double(offset.width / 10) + cardOffset
     }
     
     var body: some View {
@@ -34,9 +34,9 @@ struct Cards: View {
                 HStack {
                     VStack {
                         Spacer()
-                        Text(card.title)
-                            .foregroundColor(.white)
-                            .font(Font.custom("Fredoka-Semibold", size: 26))
+                            Text(card.title)
+                                .foregroundColor(.white)
+                                .font(Font.custom("Fredoka-Semibold", size: 26))
                         HStack {
                             Text("BY FAMEAL")
                                 .foregroundColor(.white)
@@ -71,14 +71,8 @@ struct Cards: View {
                     withAnimation {
                         if abs(offset.width) > abs(offset.height) {
                             offset = CGSize(width: offset.width > 0 ? 500 : -500, height: 0)
-                            if (CSVM.unmovedCards != 0) {
-                                CSVM.unmovedCards -= 1
-                            }
                         } else {
                             offset = CGSize(width: 0, height: 500)
-                            if (CSVM.unmovedCards != 0) {
-                                CSVM.unmovedCards -= 1
-                            }
                         }
                     }
                 }
@@ -95,9 +89,6 @@ struct Cards: View {
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 isResetting = false
-                if (CSVM.unmovedCards != 5) {
-                    CSVM.unmovedCards += 1
-                }
             }
         }
         

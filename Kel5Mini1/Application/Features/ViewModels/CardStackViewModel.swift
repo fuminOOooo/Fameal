@@ -11,19 +11,18 @@ import Combine
 class CardStackViewModel : ObservableObject {
     
     @Published var cards: [OneCard] = [
-        OneCard(title: "Siapa anggota keluarga yang kamu harap bisa punya hubungan lebih dekat. Mengapa?"),
-        OneCard(title: "Aku bangga menjadi bagian dari keluarga ini karena ___"),
-        OneCard(title: "Sebutkan satu hal yang kamu banggakan dari setiap anggota keluargamu. Jelaskan."),
-        OneCard(title: "Apakah kamu pernah merasa bahwa rumah bukan tempat pulangmu? Ceritakan contohnya."),
-        OneCard(title: "Apa impian kamu terhadap keluarga ini yang belum pernah tercapai?"),
-        OneCard(title: "Apa ekspetasi yang kamu miliki untuk tiap anggota keluarga? Jawab dengan jujur."),
-        OneCard(title: "Ceritakan sebuah momen paling berkesan bersama keluargamu yang ingin kamu reka ulang."),
-        OneCard(title: "Apakah kamu pernah merasa orangtuamu lebih menyayangi kakak/adikmu? Ceritakan."),
-        OneCard(title: "Jika bisa terlahir kembali, apakah kamu ingin menjadi anak tunggal, sulung, tengah, atau bungsu? Mengapa?"),
-        OneCard(title: "Apa tradisi keluarga favoritmu untuk menyambut bulan Ramadan/Natal? Ceritakan."),
-        OneCard(title: "Pernahkah kamu merasa gengsi untuk meminta maaf pada anggota keluargamu, padahal tahu bahwa sebenarnya kamu yang salah?"),
-        OneCard(title: "Apa arti keluarga untukmu?"),
-        OneCard(title: "Jika ini adalah kesempatan terakhir, apa yang ingin kamu sampaikan pada anggota keluargamu?")
+        OneCard(title: "What family member do you wish to have a closer relationship with, and why?"),
+        OneCard(title: "I am proud to be a part of this family because ___"),
+        OneCard(title: "Explain one thing you are proud of for each of your family members!"),
+        OneCard(title: "Have you ever felt like home is not where you belong? Give examples.."),
+        OneCard(title: "What is your dream for this family that has not yet been achieved?"),
+        OneCard(title: "What expectations do you have for each family member? Answer honestly!"),
+        OneCard(title: "Tell each other about a most memorable moment with your family that you would like to relive!"),
+        OneCard(title: "Have you ever felt like your parents loved your sibling more than you? Please share your story.."),
+        OneCard(title: "If you could be born again, would you want to be an only child, first-born, middle child, or youngest, and why?"),
+        OneCard(title: "What is your favorite family tradition for celebrating big holidays?"),
+        OneCard(title: "Have you ever felt egoistic enough to apologize to a family member even though you knew you were wrong?"),
+        OneCard(title: "What does family mean to each of you?"),
+        OneCard(title: "If this is your last chance to meet your family, what do you want to say to them?")
     ]
-    @Published var unmovedCards : Int = 13
 }

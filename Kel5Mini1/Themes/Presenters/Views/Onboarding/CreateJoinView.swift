@@ -56,27 +56,6 @@ struct CreateJoinView: View {
                                 .background(Color("CCGray"))
                                 .cornerRadius(10)
                             }
-                            /* For Test
-                             ForEach(0..<HpVM.calendars.count){ i in
-                             VStack{
-                             VStack(alignment: .leading, spacing: 4){
-                             Text("\(HpVM.calendars[i].calendarName)")
-                             .font(Font.custom("Fredoka-Medium", size: 19))
-                             .foregroundColor(Color("PB-800"))
-                             .padding(.leading, -16)
-                             Text("\(HpVM.calendars[i].calendarMembers.count) members")
-                             .font(Font.custom("Fredoka-Regular", size: 16))
-                             .foregroundColor(.gray)
-                             .padding(.leading, -16)
-                             Spacer()
-                             }
-                             .padding()
-                             .frame(width: 163, height: 163)
-                             .background(Color("PB-100"))
-                             .cornerRadius(10)
-                             }
-                             }
-                             */
                             
                             ForEach(0..<CcVM.getUserCalendars().count){ i in
                                 NavigationLink {

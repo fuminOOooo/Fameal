@@ -60,14 +60,14 @@ class calendarViewModel: ObservableObject {
         }
     }
     
-    func getUserCalendars() -> [EKCalendar] {
-        let calendars = eventStore.calendars(for: .event)
-        let filteredCalendars = calendars.filter { calendar in
-            return calendar.title.contains("(Fameal)")
+        func getUserCalendars() -> [EKCalendar] {
+            let calendars = eventStore.calendars(for: .event)
+            let filteredCalendars = calendars.filter { calendar in
+                return calendar.title.contains("(Fameal)")
+            }
+            print(filteredCalendars)
+            return filteredCalendars
+    //        let sortedCalendars = filteredCalendars.sorted { $0.timeIntervalSince1970 > $1.timeIntervalSince1970 }
+    //        return sortedCalendars
         }
-        print(filteredCalendars)
-        return filteredCalendars
-//        let sortedCalendars = filteredCalendars.sorted { $0.timeIntervalSince1970 > $1.timeIntervalSince1970 }
-//        return sortedCalendars
-    }
 }

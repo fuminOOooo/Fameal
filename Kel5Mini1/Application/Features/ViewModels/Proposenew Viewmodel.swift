@@ -12,4 +12,8 @@ class ProposenewViewModel: ObservableObject {
     
     @Published var selectedDate = Date()
     
+    // Ada satu function yang ngefetch semua event di satu calendar
+    // Di compare satu satu sesuai tanggalnya
+    // Jika sama, ada indikator di viewmodel yang nantinya ngubah satu view proposal
+    
 }

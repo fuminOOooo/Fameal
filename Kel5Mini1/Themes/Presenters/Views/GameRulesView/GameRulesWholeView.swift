@@ -16,7 +16,11 @@ struct GameRulesWholeView: View {
             
             Spacer()
             
-            Text("Game Rules")
+            Text ("How to play topics prompt")
+                .foregroundColor(Color("PB-800"))
+                .font(Font.custom("Fredoka-Semibold", size: 26))
+            
+            
             
             Spacer()
             

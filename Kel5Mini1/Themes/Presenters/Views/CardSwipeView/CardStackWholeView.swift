@@ -22,27 +22,32 @@ struct CardStackWholeView: View {
                 
                 Spacer()
                 
-                Text("\(CSVM.unmovedCards) cards left")
-                    .font(.subheadline)
-                
-                // All Stack of Cards
-                ZStack {
-                    
-                    ForEach(CSVM.cards) { card in
-                        Cards(card: card, index: index, totalCards: CSVM.cards.count, CSVM: CSVM)
-                    }
-                    
-                }
-                .padding()
-                
                 // Text Under Cards
                 VStack {
                     Text("SWIPE TO CHANGE THE TOPIC")
                         .font(.subheadline)
+                        .foregroundColor(Color("Gray3"))
+                        .font(Font.custom("Fredoka-Medium", size: 16))
                     Text("TAP TO TAKE A CARD BACK TO THE DECK")
                         .font(.subheadline)
+                        .foregroundColor(Color("Gray3"))
+                        .font(Font.custom("Fredoka-Medium", size: 16))
                 }
                 
+                // All Stack of Cards
+                ZStack {
+                    
+                    Text("OUT OF TOPICS!")
+                        .font(.subheadline)
+                        .foregroundColor(Color("Gray3"))
+                        .font(Font.custom("Fredoka-Medium", size: 16))
+                    
+                    ForEach (0..<CSVM.cards.count) { index in
+                        Cards(card: CSVM.cards[index], index: index, totalCards: CSVM.cards.count, CSVM: CSVM)
+                    }
+                    
+                }
+                .padding()
                 
                 Spacer()
                 
@@ -52,11 +57,5 @@ struct CardStackWholeView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         
-    }
-}
-
-struct CardStacks_Previews: PreviewProvider {
-    static var previews: some View {
-        CardStackView()
     }
 }

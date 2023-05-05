@@ -29,6 +29,7 @@ struct HomePageHeader: View {
                 Button {
                     calendarSelection.toggle()
                 } label: {
+                    
                     Text(CcVM.getUserCalendars()[selectedCalendarIndex].title.dropFirst(8))
                         .font(Font.custom("Fredoka-Semibold", size: 26))
                         .foregroundColor(Color("PB-800"))

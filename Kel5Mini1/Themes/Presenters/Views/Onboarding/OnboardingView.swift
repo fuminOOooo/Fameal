@@ -10,6 +10,8 @@ import EventKit
 
 struct OnboardingView: View {
     @Environment(\.dismiss) private var dismiss
+    @ObservedObject var CcVM = calendarViewModel()
+    @State private var calendars = calendarViewModel().getUserCalendars()
     
     var body: some View {
         NavigationView{
@@ -24,7 +26,7 @@ struct OnboardingView: View {
                         .foregroundColor(Color("PB-800"))
                     
                     NavigationLink {
-                        CreateJoinView()
+                        CreateJoinView(calendars: self.calendars)
                     } label: {
                         Text("Continue")
                             .frame(maxWidth: .infinity)

@@ -19,7 +19,7 @@ struct Createcalendarpage1: View {
             
             // Component 1
             HStack {
-                Text("Create your calendar")
+                Text("Add more calendar")
                     .font(Font.custom("Fredoka-Regular", size: 18))
                     .foregroundColor(.gray)
                 

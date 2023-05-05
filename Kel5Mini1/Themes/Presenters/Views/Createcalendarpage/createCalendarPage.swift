@@ -8,7 +8,7 @@
 import SwiftUI
 import EventKit
 
-struct Createcalendarpage: View {
+struct createCalendarPage: View {
     
     @ObservedObject var CcVM = calendarViewModel()
     @Binding var isCreatingCalendar: Bool

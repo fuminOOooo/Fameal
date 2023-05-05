@@ -29,6 +29,7 @@
 		155194BA2A03995500A31780 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194B92A03995500A31780 /* CardStackView.swift */; };
 		155194BC2A03996600A31780 /* CardStackBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194BB2A03996600A31780 /* CardStackBackButton.swift */; };
 		155194BE2A03997E00A31780 /* CardStackWholeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194BD2A03997E00A31780 /* CardStackWholeView.swift */; };
+		155194DE2A04B2FF00A31780 /* Invitationpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155194DD2A04B2FF00A31780 /* Invitationpage.swift */; };
 		157EB61529EFA79F0056F675 /* Kel5Mini1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB61429EFA79F0056F675 /* Kel5Mini1App.swift */; };
 		157EB61729EFA79F0056F675 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB61629EFA79F0056F675 /* Homepage.swift */; };
 		157EB61929EFA7A00056F675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157EB61829EFA7A00056F675 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		15D975CF29F938300033D857 /* Proposed2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975CE29F938300033D857 /* Proposed2.swift */; };
 		15D975D229F9413E0033D857 /* Proposenewpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975D129F9413E0033D857 /* Proposenewpage.swift */; };
 		15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */; };
+		15FAA54D2A04B3AC00935DF6 /* InvitationpageBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FAA54C2A04B3AC00935DF6 /* InvitationpageBackButton.swift */; };
 		380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A62A023E2700FF98E3 /* OnboardingView.swift */; };
 		380014A92A02476100FF98E3 /* CreateJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380014A82A02476100FF98E3 /* CreateJoinView.swift */; };
 		382123FE29FAE83C003B5002 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382123FD29FAE83C003B5002 /* CustomButton.swift */; };
@@ -97,6 +99,7 @@
 		155194B92A03995500A31780 /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
 		155194BB2A03996600A31780 /* CardStackBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackBackButton.swift; sourceTree = "<group>"; };
 		155194BD2A03997E00A31780 /* CardStackWholeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackWholeView.swift; sourceTree = "<group>"; };
+		155194DD2A04B2FF00A31780 /* Invitationpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitationpage.swift; sourceTree = "<group>"; };
 		157EB61129EFA79F0056F675 /* Kel5Mini1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kel5Mini1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157EB61429EFA79F0056F675 /* Kel5Mini1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kel5Mini1App.swift; sourceTree = "<group>"; };
 		157EB61629EFA79F0056F675 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		15D975CE29F938300033D857 /* Proposed2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposed2.swift; sourceTree = "<group>"; };
 		15D975D129F9413E0033D857 /* Proposenewpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposenewpage.swift; sourceTree = "<group>"; };
 		15D975D329F9417A0033D857 /* ProposeNewEventBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposeNewEventBackButton.swift; sourceTree = "<group>"; };
+		15FAA54C2A04B3AC00935DF6 /* InvitationpageBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationpageBackButton.swift; sourceTree = "<group>"; };
 		380014A62A023E2700FF98E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		380014A82A02476100FF98E3 /* CreateJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinView.swift; sourceTree = "<group>"; };
 		382123FB29FAD58D003B5002 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
@@ -230,6 +234,15 @@
 			path = CardSwipeView;
 			sourceTree = "<group>";
 		};
+		155194DF2A04B30A00A31780 /* Invitationpage */ = {
+			isa = PBXGroup;
+			children = (
+				155194DD2A04B2FF00A31780 /* Invitationpage.swift */,
+				15FAA54C2A04B3AC00935DF6 /* InvitationpageBackButton.swift */,
+			);
+			path = Invitationpage;
+			sourceTree = "<group>";
+		};
 		157EB60829EFA79F0056F675 = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +333,7 @@
 		15BF953529F2E6B600CA517E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				155194DF2A04B30A00A31780 /* Invitationpage */,
 				155194B82A03993F00A31780 /* CardSwipeView */,
 				155194B12A0398DC00A31780 /* GameRulesView */,
 				380014A52A023E0700FF98E3 /* Onboarding */,
@@ -550,6 +564,7 @@
 				1551942229FBC73D00A31780 /* ProposeNewStartTime.swift in Sources */,
 				155194B32A0398F000A31780 /* GameRulesView.swift in Sources */,
 				1551941B29FB931400A31780 /* ProposeNewEventDatePicker.swift in Sources */,
+				155194DE2A04B2FF00A31780 /* Invitationpage.swift in Sources */,
 				1551943129FE4EE800A31780 /* Createcalendarpage2.swift in Sources */,
 				1551942B29FD72A600A31780 /* Createcalendarpage.swift in Sources */,
 				157EB62129EFA7A00056F675 /* Kel5Mini1.xcdatamodeld in Sources */,
@@ -558,6 +573,7 @@
 				15D975D229F9413E0033D857 /* Proposenewpage.swift in Sources */,
 				155194B52A03990200A31780 /* GameRulesBackButton.swift in Sources */,
 				15BF953F29F333F700CA517E /* HomePageProposedEvent.swift in Sources */,
+				15FAA54D2A04B3AC00935DF6 /* InvitationpageBackButton.swift in Sources */,
 				15BF954429F7DEF600CA517E /* Upcoming1.swift in Sources */,
 				155194B72A03991B00A31780 /* GameRulesWholeView.swift in Sources */,
 				15D975CD29F9380D0033D857 /* Proposed1.swift in Sources */,
@@ -727,7 +743,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
-				DEVELOPMENT_TEAM = GT493Z58L2;
+				DEVELOPMENT_TEAM = 35V95TRX69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
@@ -742,7 +758,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -758,7 +774,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
-				DEVELOPMENT_TEAM = GT493Z58L2;
+				DEVELOPMENT_TEAM = 35V95TRX69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
@@ -773,7 +789,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DarySini.Kel5Mini1;
+				PRODUCT_BUNDLE_IDENTIFIER = DarySini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

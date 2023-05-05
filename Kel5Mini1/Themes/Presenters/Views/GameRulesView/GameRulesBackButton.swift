@@ -34,6 +34,8 @@ struct GameRulesBackButton: View {
                 
             }
         }
+        .padding(.leading)
+        .padding(.trailing)
         
     }
 }

@@ -23,7 +23,7 @@ struct Proposenewpage: View {
         
             VStack {
                 
-                ProposeNewEventBackButton(PnVM: PnVM)
+                ProposeNewEventBackButton()
                 
                 ProposeNewEventDatePicker(PnVM: PnVM)
                 

@@ -12,20 +12,14 @@ struct GameRulesView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        
-        NavigationView {
             
-            VStack {
-                
-                GameRulesBackButton()
-                
-                GameRulesWholeView()
-                
-            }
+        VStack {
+            
+            GameRulesBackButton()
+            
+            GameRulesWholeView()
             
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
         
     }
     

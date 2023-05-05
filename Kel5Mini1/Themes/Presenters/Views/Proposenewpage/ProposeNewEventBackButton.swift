@@ -11,11 +11,10 @@ import CoreData
 
 struct ProposeNewEventBackButton: View {
     
-    @ObservedObject var PnVM : ProposenewViewModel
-    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
+        
         VStack (spacing: 4) {
             
         // Component 1

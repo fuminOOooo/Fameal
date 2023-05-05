@@ -6,23 +6,21 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 @main
 struct Kel5Mini1App: App {
-    init() {
-        let appearance = UINavigationBarAppearance()
-        let customColor = UIColor(named: "PB-800")!
-        appearance.titleTextAttributes = [.foregroundColor: customColor, .font: UIFont(name: "Fredoka-Medium", size: 18)!
-            ]
-        UINavigationBar.appearance().standardAppearance = appearance
-    }
-    
+    @StateObject var calendarManager : CalendarManager = CalendarManager()
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            //LoginView()
+            
+            LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(calendarManager)
+           // ContentView()
         }
     }
 }

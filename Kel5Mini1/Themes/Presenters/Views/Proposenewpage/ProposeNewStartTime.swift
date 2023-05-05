@@ -14,7 +14,8 @@ struct ProposeNewStartTime: View {
     @State var temporarySelectedTime = Date()
     
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    @ObservedObject var PnVM : ProposenewViewModel
+    
+    @Binding var selectedTime: Date
     
     var body: some View {
         VStack () {
@@ -22,19 +23,35 @@ struct ProposeNewStartTime: View {
             HStack() {
                 
                 Image(systemName: "clock")
-                    .foregroundColor(Color("PB-800"))
                     .bold()
-                Text("START")
-                    .font(Font.custom("Fredoka-Regular", size: 17))
-                    .foregroundColor(Color("PB-800"))
+                Text("Start time")
+                    .font(.subheadline)
+                    .bold()
                 
                 Spacer()
                 
-                DatePicker("", selection: $temporarySelectedTime, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
+                DatePicker("", selection: $selectedTime, displayedComponents: .hourAndMinute)
+                            .labelsHidden()
                 
             }
+            
+//            HStack {
+//
+//                Button {
+//
+//                } label: {
+//                    Text("Propose Event")
+//                        .foregroundColor(.white)
+//                        .background(Color("Secondary"))
+//                        .bold()
+//                        .frame(maxWidth: .infinity)
+//                }
+//                .buttonStyle(FillButton())
+//                .padding(.top)
+//
+//            }
+            
         }
-        .padding(.init(top: 0, leading: 6, bottom: 0, trailing: 6))
+        .padding()
     }
 }

@@ -12,34 +12,33 @@ import CoreData
 struct ProposeNewTextFields: View {
     
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    @ObservedObject var PnVM : ProposenewViewModel
-    @State var tempEventName: String = ""
-    @State var tempDescription: String = ""
+    
+    @State private var selectedDate = Date()
+    @Binding var eventName: String
+    @Binding var eventDesc: String
     
     var body: some View {
         VStack (spacing: 4) {
             
-            VStack {
-                // Component 4
-                TextField(text: $tempEventName, prompt: Text("Add event name")) {
-                }
-                .font(Font.custom("Fredoka-Medium", size: 17))
-                .padding(.init(top: 10, leading: 16, bottom: 6, trailing: 16))
-                
-                Divider()
-                
-                // Component 5
-                TextField(text: $tempDescription, prompt: Text("Add description")) {
-                }
-                .font(Font.custom("Fredoka-Regular", size: 17))
-                .padding(.init(top: 4, leading: 16, bottom: 8, trailing: 16))
-                
-                Spacer()
+                VStack {
+                        // Component 4
+                        TextField(text: $eventName, prompt: Text("Add event name")) {
+                        }
+                        .bold()
+                        .padding()
+                        
+                        Divider()
+                        
+                        // Component 5
+                        TextField(text: $eventDesc, prompt: Text("Add description")) {
+                        }
+                        .padding()
+                        
+                        Spacer()
+                        
+                    }
+                .cornerRadius(10)
                 
             }
-            .background(Color("Shadow"))
-            .cornerRadius(10)
-        }
-        .padding(.init(top: 0, leading: 6, bottom: 0, trailing: 6))
     }
 }

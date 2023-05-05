@@ -15,6 +15,8 @@ struct ProposeNewEventDatePicker: View {
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
     @ObservedObject var PnVM : ProposenewViewModel
     
+    @Binding var selectedDate : Date
+    
     var body: some View {
         VStack () {
             

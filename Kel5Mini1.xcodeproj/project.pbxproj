@@ -39,6 +39,7 @@
 		157EB62B29EFA7A00056F675 /* Kel5Mini1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB62A29EFA7A00056F675 /* Kel5Mini1Tests.swift */; };
 		157EB63529EFA7A00056F675 /* Kel5Mini1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB63429EFA7A00056F675 /* Kel5Mini1UITests.swift */; };
 		157EB63729EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157EB63629EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift */; };
+		158BBE202A05095100A0CF23 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BBE1F2A05095100A0CF23 /* CalendarManager.swift */; };
 		15BF953B29F2F80900CA517E /* HomePageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF953A29F2F80900CA517E /* HomePageHeader.swift */; };
 		15BF953D29F31AF900CA517E /* HomePageUpcomingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF953C29F31AF900CA517E /* HomePageUpcomingEvent.swift */; };
 		15BF953F29F333F700CA517E /* HomePageProposedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF953E29F333F700CA517E /* HomePageProposedEvent.swift */; };
@@ -112,6 +113,7 @@
 		157EB63029EFA7A00056F675 /* Kel5Mini1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kel5Mini1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		157EB63429EFA7A00056F675 /* Kel5Mini1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kel5Mini1UITests.swift; sourceTree = "<group>"; };
 		157EB63629EFA7A00056F675 /* Kel5Mini1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kel5Mini1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		158BBE1F2A05095100A0CF23 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		15BF953A29F2F80900CA517E /* HomePageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageHeader.swift; sourceTree = "<group>"; };
 		15BF953C29F31AF900CA517E /* HomePageUpcomingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageUpcomingEvent.swift; sourceTree = "<group>"; };
 		15BF953E29F333F700CA517E /* HomePageProposedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProposedEvent.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				1551942329FC417100A31780 /* Homepage Viewmodel.swift */,
 				1551942E29FD75BE00A31780 /* CalendarViewModel.swift */,
 				155194AB2A03986D00A31780 /* CardStackViewModel.swift */,
+				158BBE1F2A05095100A0CF23 /* CalendarManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				15BF954129F7DD2000CA517E /* Upcomingpage.swift in Sources */,
 				157EB61729EFA79F0056F675 /* Homepage.swift in Sources */,
 				155194AC2A03986D00A31780 /* CardStackViewModel.swift in Sources */,
+				158BBE202A05095100A0CF23 /* CalendarManager.swift in Sources */,
 				157EB61529EFA79F0056F675 /* Kel5Mini1App.swift in Sources */,
 				15BF953B29F2F80900CA517E /* HomePageHeader.swift in Sources */,
 				15D975CF29F938300033D857 /* Proposed2.swift in Sources */,

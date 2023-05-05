@@ -12,6 +12,13 @@ struct Proposenewpage: View {
     
     var PnVM: ProposenewViewModel
     
+    @State private var selectedDate = Date()
+    @State private var selectedTime = Date()
+    @State private var eventName : String = ""
+    @State private var eventDesc : String = ""
+    @ObservedObject var calendarManager = CalendarManager()
+    
+    
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -25,13 +32,13 @@ struct Proposenewpage: View {
                 
                 ProposeNewEventBackButton()
                 
-                ProposeNewEventDatePicker(PnVM: PnVM)
+                ProposeNewEventDatePicker(PnVM: PnVM, selectedDate : $selectedDate)
                 
-                ProposeNewStartTime(PnVM: PnVM)
+                ProposeNewStartTime(selectedTime: $selectedTime)
                
-                ProposeNewTextFields(PnVM: PnVM)
+                ProposeNewTextFields(PnVM: PnVM, tempEventName: $eventName, tempDescription: $eventDesc)
                 
-                ProposeNewProposalButton(PnVM: PnVM)
+                ProposeNewProposalButton(calendarManager : calendarManager, selectedDate : selectedDate, selectedTime: selectedTime, eventName: eventName, eventDesc: eventDesc)
                 
                 Spacer()
                 

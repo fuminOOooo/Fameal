@@ -13,8 +13,8 @@ struct ProposeNewTextFields: View {
     
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
     @ObservedObject var PnVM : ProposenewViewModel
-    @State var tempEventName: String = ""
-    @State var tempDescription: String = ""
+    @Binding var tempEventName: String
+    @Binding var tempDescription: String
     
     var body: some View {
         VStack (spacing: 4) {

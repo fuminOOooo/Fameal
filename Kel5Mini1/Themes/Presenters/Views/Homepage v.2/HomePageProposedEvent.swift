@@ -106,7 +106,7 @@ struct HomePageProposedEvent: View {
                         Spacer()
                         Button {
                             //code here
-                            self.isPresented.toggle()
+//                            self.isPresented.toggle()
                         } label: {
                             Text("Accept")
                                 .frame(minWidth: 128)

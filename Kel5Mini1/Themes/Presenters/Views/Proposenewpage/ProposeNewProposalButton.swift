@@ -7,20 +7,24 @@
 
 import Foundation
 import SwiftUI
-import CoreData
+import EventKit
 
 struct ProposeNewProposalButton: View {
+    @Environment(\.dismiss) private var dismiss
     
-    @State var temporarySelectedTime = Date()
-    
-    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    
-    @ObservedObject var PnVM : ProposenewViewModel
+    @ObservedObject var eventManager = EventManager()
+    var selectedDate: Date
+    var selectedTime: Date
+    var eventName: String
+    var eventDesc: String
+    @Binding var selectedCalendar: EKCalendar?
     
     var body: some View {
         VStack(alignment: .center) {
             Button {
-                
+//                print(selectedCalendar)
+                eventManager.addEvent(to: self.selectedCalendar ?? selectedCalendar!, startDate: selectedDate, startTime: selectedTime, title: eventName, description: eventDesc)
+                dismiss()
             } label: {
                 Text("Propose Event")
                     .frame(minWidth: 317)

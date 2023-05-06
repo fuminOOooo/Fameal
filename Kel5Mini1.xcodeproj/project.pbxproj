@@ -55,7 +55,6 @@
 		389FF1222A04FE0B0064326F /* Createcalendarpage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */; };
 		389FF1232A04FE0B0064326F /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */; };
 		389FF1242A04FE0B0064326F /* createCalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1202A04FE0B0064326F /* createCalendarPage.swift */; };
-		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
 		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
 /* End PBXBuildFile section */
 
@@ -129,7 +128,6 @@
 		389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Createcalendarpage1.swift; sourceTree = "<group>"; };
 		389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
 		389FF1202A04FE0B0064326F /* createCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createCalendarPage.swift; sourceTree = "<group>"; };
-		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
 		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -397,7 +395,6 @@
 				380014A62A023E2700FF98E3 /* OnboardingView.swift */,
 				380014A82A02476100FF98E3 /* CreateJoinView.swift */,
 				38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */,
-				38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -543,7 +540,6 @@
 			files = (
 				155194AE2A03988E00A31780 /* CardShape.swift in Sources */,
 				1551942029FB9DAA00A31780 /* ProposeNewTextFields.swift in Sources */,
-				38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */,
 				15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */,
 				155194392A01671600A31780 /* Calendar Model.swift in Sources */,
 				380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */,

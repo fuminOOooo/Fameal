@@ -44,7 +44,7 @@ struct Createcalendarpage2: View {
                     print(calendars.count)
                     selectedCalendarUID = CcVM.getCalendarIdentifier(forTitle: ("(Fameal) " + tempCalendarName)) ?? ""
                     selectedCalendar = CcVM.getCalendar(withIdentifier: selectedCalendarUID ?? "")
-                    print(selectedCalendar)
+//                    print(selectedCalendar)
                     dismiss()
                 } label: {
                     if (tempCalendarName == "") {

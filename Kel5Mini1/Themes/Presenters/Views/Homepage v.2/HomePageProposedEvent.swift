@@ -63,7 +63,7 @@ struct HomePageProposedEvent: View {
                 
                 //Content should be changeable
                 VStack(alignment: .leading, spacing: 4){
-                    Text("I got a new resto recommendation, let’s eat there!")
+                    Text(EM.getSpecificCalendarEvents(from: selectedCalendar!)[0].notes!)
                         .font(Font.custom("Fredoka-Regular", size: 17))
                         .foregroundColor(.gray)
                 }

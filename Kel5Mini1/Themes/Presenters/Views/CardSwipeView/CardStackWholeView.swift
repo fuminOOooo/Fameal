@@ -44,7 +44,6 @@ struct CardStackWholeView: View {
             .padding()
             
             Spacer()
-            
         }
     }
 }

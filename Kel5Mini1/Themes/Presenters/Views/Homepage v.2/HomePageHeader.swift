@@ -9,7 +9,6 @@ import SwiftUI
 import EventKit
 
 struct HomePageHeader: View {
-    @ObservedObject var PnVM = ProposenewViewModel()
     @ObservedObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = calendarViewModel()
     @State var calendarSelection: Bool = false
@@ -61,7 +60,7 @@ struct HomePageHeader: View {
                                 Button  {
 //                                    print(calendar)
                                     selectedCalendar = calendar
-                                    print(selectedCalendar?.title)
+//                                    print(selectedCalendar?.title)
                                     calendarSelection.toggle()
                                 } label: {
                                     HStack {
@@ -122,7 +121,7 @@ struct HomePageHeader: View {
                 
                 //Add Event Button
                 NavigationLink {
-                    Proposenewpage(PnVM: PnVM)
+                    Proposenewpage(selectedCalendar: self.$selectedCalendar)
                 } label: {
                     Image(systemName: "plus")
                         .font(Font.custom("Fredoka-Bold", size: 24))

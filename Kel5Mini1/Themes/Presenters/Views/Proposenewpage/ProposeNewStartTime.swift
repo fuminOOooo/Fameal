@@ -28,7 +28,7 @@ struct ProposeNewStartTime: View {
                 Spacer()
                 
                 DatePicker("", selection: $selectedTime, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
+                            .labelsHidden()
                 
             }
         }

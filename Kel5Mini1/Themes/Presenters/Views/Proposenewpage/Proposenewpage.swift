@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData
+import EventKit
 
 struct Proposenewpage: View {
     
@@ -20,34 +20,34 @@ struct Proposenewpage: View {
     
     
     @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
+    @ObservedObject var eventManager = EventManager()
+    @State private var selectedDate = Date()
+    @State private var selectedTime = Date()
+    @State private var eventName: String = ""
+    @State private var eventDesc: String = ""
+    @Binding var selectedCalendar: EKCalendar?
+    
     var body:some View {
         
-            VStack {
-                
-                ProposeNewEventBackButton()
-                
-                ProposeNewEventDatePicker(PnVM: PnVM, selectedDate : $selectedDate)
-                
-                ProposeNewStartTime(selectedTime: $selectedTime)
-               
-                ProposeNewTextFields(PnVM: PnVM, tempEventName: $eventName, tempDescription: $eventDesc)
-                
-                ProposeNewProposalButton(calendarManager : calendarManager, selectedDate : selectedDate, selectedTime: selectedTime, eventName: eventName, eventDesc: eventDesc)
-                
-                Spacer()
-                
-            }
-            .navigationTitle("Propose New Event")
-            .navigationBarTitleDisplayMode(.inline)
-            .padding()
-            .navigationBarBackButtonHidden(true)
-    }
-
-    
+        VStack {
+            
+            ProposeNewEventBackButton()
+            
+            ProposeNewEventDatePicker(selectedDate : $selectedDate)
+            
+            ProposeNewStartTime(selectedTime:$selectedTime)
+            
+            ProposeNewTextFields(eventName:$eventName, eventDesc: $eventDesc)
+            
+            ProposeNewProposalButton(selectedDate: selectedDate, selectedTime: selectedTime,eventName: eventName, eventDesc: eventDesc, selectedCalendar: self.$selectedCalendar)
+            
+            Spacer()
+            
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle("Propose New Event")
+        .navigationBarTitleDisplayMode(.inline)
+        .padding()
+    } 
 }

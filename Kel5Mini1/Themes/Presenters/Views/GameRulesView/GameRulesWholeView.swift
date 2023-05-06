@@ -18,7 +18,7 @@ struct GameRulesWholeView: View {
     @ObservedObject var CSVM = CardStackViewModel()
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 
                 Spacer()
@@ -65,6 +65,7 @@ struct GameRulesWholeView: View {
                                             .frame(width: 25, height: 25)
                                         
                                         Text("\(i+1)")
+                                            .font(Font.custom("Fredoka", size: 16))
                                             .foregroundColor(.white)
                                         
                                     }
@@ -107,8 +108,7 @@ struct GameRulesWholeView: View {
                 Spacer()
                 
             }
-        }
+//        }
         .navigationBarBackButtonHidden(true)
-        .padding()
     }
 }

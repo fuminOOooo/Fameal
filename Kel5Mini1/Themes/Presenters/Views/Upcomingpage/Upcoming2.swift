@@ -66,5 +66,6 @@ struct Upcoming2: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }

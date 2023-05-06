@@ -17,6 +17,7 @@ struct CardStackView: View {
     var body: some View {
         
         VStack {
+            CardStackBackButton()
             
             CardStackWholeView()
             

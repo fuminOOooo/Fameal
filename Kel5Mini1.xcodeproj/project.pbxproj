@@ -56,7 +56,7 @@
 		389FF1222A04FE0B0064326F /* Createcalendarpage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */; };
 		389FF1232A04FE0B0064326F /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */; };
 		389FF1242A04FE0B0064326F /* createCalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1202A04FE0B0064326F /* createCalendarPage.swift */; };
-		38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */; };
+		389FF1262A0634200064326F /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1252A0634200064326F /* EventManager.swift */; };
 		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,7 +131,7 @@
 		389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Createcalendarpage1.swift; sourceTree = "<group>"; };
 		389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
 		389FF1202A04FE0B0064326F /* createCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createCalendarPage.swift; sourceTree = "<group>"; };
-		38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateJoinView2.swift; sourceTree = "<group>"; };
+		389FF1252A0634200064326F /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,7 +204,7 @@
 				1551942329FC417100A31780 /* Homepage Viewmodel.swift */,
 				1551942E29FD75BE00A31780 /* CalendarViewModel.swift */,
 				155194AB2A03986D00A31780 /* CardStackViewModel.swift */,
-				158BBE1F2A05095100A0CF23 /* CalendarManager.swift */,
+				389FF1252A0634200064326F /* EventManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -400,7 +400,6 @@
 				380014A62A023E2700FF98E3 /* OnboardingView.swift */,
 				380014A82A02476100FF98E3 /* CreateJoinView.swift */,
 				38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */,
-				38F1AFFB2A034BDD00E0CD4C /* CreateJoinView2.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -546,7 +545,7 @@
 			files = (
 				155194AE2A03988E00A31780 /* CardShape.swift in Sources */,
 				1551942029FB9DAA00A31780 /* ProposeNewTextFields.swift in Sources */,
-				38F1AFFC2A034BDD00E0CD4C /* CreateJoinView2.swift in Sources */,
+				389FF1262A0634200064326F /* EventManager.swift in Sources */,
 				15D975D429F9417A0033D857 /* ProposeNewEventBackButton.swift in Sources */,
 				155194392A01671600A31780 /* Calendar Model.swift in Sources */,
 				380014A72A023E2700FF98E3 /* OnboardingView.swift in Sources */,
@@ -747,7 +746,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
-				DEVELOPMENT_TEAM = 35V95TRX69;
+				DEVELOPMENT_TEAM = GT493Z58L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
@@ -762,7 +761,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DarySini;
+				PRODUCT_BUNDLE_IDENTIFIER = Kel5Mini1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -778,7 +777,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kel5Mini1/Preview Content\"";
-				DEVELOPMENT_TEAM = 35V95TRX69;
+				DEVELOPMENT_TEAM = GT493Z58L2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kel5Mini1/Info.plist;
@@ -793,7 +792,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DarySini;
+				PRODUCT_BUNDLE_IDENTIFIER = Kel5Mini1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

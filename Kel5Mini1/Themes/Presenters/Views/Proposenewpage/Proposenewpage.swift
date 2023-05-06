@@ -9,16 +9,6 @@ import SwiftUI
 import EventKit
 
 struct Proposenewpage: View {
-    
-    var PnVM: ProposenewViewModel
-    
-    @State private var selectedDate = Date()
-    @State private var selectedTime = Date()
-    @State private var eventName : String = ""
-    @State private var eventDesc : String = ""
-    @ObservedObject var calendarManager = CalendarManager()
-    
-    
     @Environment(\.managedObjectContext) private var viewContext
     
     @ObservedObject var eventManager = EventManager()
@@ -34,13 +24,15 @@ struct Proposenewpage: View {
             
             ProposeNewEventBackButton()
             
-            ProposeNewEventDatePicker(selectedDate : $selectedDate)
-            
-            ProposeNewStartTime(selectedTime:$selectedTime)
-            
-            ProposeNewTextFields(eventName:$eventName, eventDesc: $eventDesc)
-            
-            ProposeNewProposalButton(selectedDate: selectedDate, selectedTime: selectedTime,eventName: eventName, eventDesc: eventDesc, selectedCalendar: self.$selectedCalendar)
+            ScrollView {
+                ProposeNewEventDatePicker(selectedDate : $selectedDate)
+                
+                ProposeNewStartTime(selectedTime:$selectedTime)
+                
+                ProposeNewTextFields(eventName:$eventName, eventDesc: $eventDesc)
+                
+                ProposeNewProposalButton(selectedDate: selectedDate, selectedTime: selectedTime,eventName: eventName, eventDesc: eventDesc, selectedCalendar: self.$selectedCalendar)
+            }
             
             Spacer()
             

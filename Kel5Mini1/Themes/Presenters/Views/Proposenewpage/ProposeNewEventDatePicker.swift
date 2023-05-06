@@ -12,8 +12,6 @@ import CoreData
 struct ProposeNewEventDatePicker: View {
     @Binding var selectedDate: Date
     
-    @Binding var selectedDate : Date
-    
     var body: some View {
         VStack () {
             

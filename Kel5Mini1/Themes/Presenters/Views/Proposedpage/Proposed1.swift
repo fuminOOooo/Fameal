@@ -11,8 +11,6 @@ import CoreData
 
 struct Proposed1: View {
     
-    @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
-    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {

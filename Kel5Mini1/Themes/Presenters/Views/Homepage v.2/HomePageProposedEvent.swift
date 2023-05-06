@@ -8,9 +8,12 @@
 import Foundation
 import SwiftUI
 import CoreData
+import EventKit
 
 struct HomePageProposedEvent: View {
     
+    @ObservedObject var EM = EventManager()
+    @Binding var selectedCalendar: EKCalendar?
     @ObservedObject var HpVM : HomepageViewModel
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
     
@@ -23,7 +26,7 @@ struct HomePageProposedEvent: View {
                     .foregroundColor(Color("Gray3"))
                 Spacer()
                 NavigationLink {
-                    Proposed()
+                    Proposed(selectedCalendar: self.$selectedCalendar)
                 } label: {
                     Text ("See all")
                         .font(Font.custom("Fredoka", size: 16))
@@ -36,14 +39,14 @@ struct HomePageProposedEvent: View {
             VStack(alignment: .leading, spacing: 14){
                 HStack(){
                     //Content should be changeable
-                    Text("Elvis has invited you to join...")
+                    Text("___ has invited you to join...")
                         .font(Font.custom("Fredoka-Regular", size: 14))
                         .foregroundColor(Color("PB-900"))
                 }
                 
                 HStack{
                     // "Monday, 17 Apr" SHOULD BE CHANGABLE
-                    Text("Sunday, 21 Apr")
+                    Text(EM.formattedDate(date: EM.getSpecificCalendarEvents(from: selectedCalendar!)[0].startDate))
                         .font(Font.custom("Fredoka-Medium", size: 20))
                         .foregroundColor(Color("Primary"))
                     
@@ -52,7 +55,7 @@ struct HomePageProposedEvent: View {
                         .foregroundColor(Color("Primary"))
                     
                     // "06.00 pm" SHOULD BE CHANGABLE
-                    Text("08.00 pm")
+                    Text(EM.formattedTime(date: EM.getSpecificCalendarEvents(from: selectedCalendar!)[0].startDate))
                         .font(Font.custom("Fredoka-Medium", size: 20))
                         .foregroundColor(Color("Primary"))
                     Spacer()

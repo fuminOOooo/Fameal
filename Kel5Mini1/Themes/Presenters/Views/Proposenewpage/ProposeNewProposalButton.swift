@@ -10,8 +10,6 @@ import SwiftUI
 import EventKit
 
 struct ProposeNewProposalButton: View {
-    
-    var calendarManager: CalendarManager
     @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var eventManager = EventManager()

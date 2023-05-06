@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import EventKit
 import CoreData
 
 struct Proposed: View {
@@ -16,6 +17,8 @@ struct Proposed: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @Binding var selectedCalendar: EKCalendar?
 
     var body:some View {
         
@@ -23,7 +26,7 @@ struct Proposed: View {
                 
                 Proposed1()
                 
-                Proposed2()
+                Proposed2(selectedCalendar: self.$selectedCalendar)
                 
                 Spacer()
                 

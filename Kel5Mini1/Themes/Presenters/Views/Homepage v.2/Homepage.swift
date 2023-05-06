@@ -25,7 +25,7 @@ struct Homepage: View {
                 
                 HomePageUpcomingEvent()
                 
-                HomePageProposedEvent(HpVM: HpVM)
+                HomePageProposedEvent(selectedCalendar: self.$selectedCalendar, HpVM: HpVM)
                     .padding(.top)
                 
                 Spacer()

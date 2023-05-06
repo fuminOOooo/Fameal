@@ -33,6 +33,7 @@ class calendarViewModel: ObservableObject {
                 // Authorized access to the calendar
                 let calendar = EKCalendar(for: .event, eventStore: self.eventStore)
                 calendar.title = name
+                calendar.allowsContentModifications
                 
                 // Find the iCloud source
                 var iCloudSource: EKSource?

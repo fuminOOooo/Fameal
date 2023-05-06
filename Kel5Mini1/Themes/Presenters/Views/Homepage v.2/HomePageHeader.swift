@@ -61,7 +61,7 @@ struct HomePageHeader: View {
                                 Button  {
 //                                    print(calendar)
                                     selectedCalendar = calendar
-                                    print(selectedCalendar?.title)
+//                                    print(selectedCalendar?.title)
                                     calendarSelection.toggle()
                                 } label: {
                                     HStack {

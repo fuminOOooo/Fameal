@@ -83,8 +83,10 @@ struct HomePageUpcomingEvent: View {
     }
 }
 
+/*
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         HomePageUpcomingEvent().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+*/

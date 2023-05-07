@@ -21,7 +21,7 @@ struct Kel5Mini1App: App {
     
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            CardStackWholeView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -20,7 +20,7 @@ struct Cards: View {
     
     var rotationAngle: Double {
         let cardOffset = Double(index - totalCards / 2)
-            return Double(offset.width / 10) + cardOffset
+        return Double(offset.width / 10) + cardOffset
     }
     
     var body: some View {
@@ -31,12 +31,15 @@ struct Cards: View {
                 
                 Image("CardGradient")
                 
+                Image("cardImage")
+                    .padding(.init(top: -190, leading: 130, bottom: 0, trailing: 0))
+                
                 HStack {
                     VStack {
                         Spacer()
-                            Text(card.title)
-                                .foregroundColor(.white)
-                                .font(Font.custom("Fredoka-Semibold", size: 26))
+                        Text(card.title)
+                            .foregroundColor(.white)
+                            .font(Font.custom("Fredoka-Semibold", size: 26))
                         HStack {
                             Text("BY FAMEAL")
                                 .foregroundColor(.white)

@@ -11,6 +11,9 @@ import EventKit
 struct HomePageHeader: View {
     @ObservedObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = calendarViewModel()
+    @ObservedObject var EM = EventManager()
+    @State var events = [EKEvent]()
+    @State var allEvents = [EKEvent]()
     @State var calendarSelection: Bool = false
     @State private var isCreatingCalendar: Bool = false
     @Binding var selectedCalendar: EKCalendar?
@@ -18,11 +21,7 @@ struct HomePageHeader: View {
     
     var body: some View {
         VStack (spacing: 4) {
-//            Text(selectedCalendar.calendarIdentifier)
-            // Component 1
             HStack {
-                
-                // Calendar Name
                 Button {
                     calendars = CcVM.getUserCalendars()
                     print(calendars)
@@ -38,29 +37,20 @@ struct HomePageHeader: View {
                     
                 }
                 .sheet(isPresented: $calendarSelection, content: {
-                    
                     VStack {
-                        
                         HStack {
-                            
                             Spacer()
-                            
                             Text("Families")
                                 .font(Font.custom("Fredoka-Medium", size: 20))
                                 .foregroundColor(Color("PB-800"))
-                            
                             Spacer()
-                            
                         }
                         .padding()
                         
                         ScrollView {
-                            
                             ForEach(calendars, id: \.calendarIdentifier) { calendar in
                                 Button  {
-//                                    print(calendar)
                                     selectedCalendar = calendar
-//                                    print(selectedCalendar?.title)
                                     calendarSelection.toggle()
                                 } label: {
                                     HStack {
@@ -68,11 +58,6 @@ struct HomePageHeader: View {
                                             HStack {
                                                 Text (calendar.title.dropFirst(9))
                                                     .font(Font.custom("Fredoka-Medium", size: 20))
-                                                Spacer()
-                                            }
-                                            
-                                            HStack {
-                                                //fill with calendar member count .font(Font.custom("Fredoka-Light", size: 16))
                                                 Spacer()
                                             }
                                         }
@@ -94,8 +79,6 @@ struct HomePageHeader: View {
                                 .padding(.leading)
                                 .padding(.trailing)
                                 
-                                
-                                
                                 if (calendars.count != 1) {
                                     Divider()
                                         .frame(maxWidth: 340)
@@ -110,7 +93,6 @@ struct HomePageHeader: View {
                                 .foregroundColor(Color("Secondary"))
                                 .frame(height:64)
                         }.sheet(isPresented: self.$isCreatingCalendar) {
-                            //                            Createcalendarpage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendarIndex: self.$selectedCalendarIndex)
                             addCalendarPage(isCreatingCalendar: self.$isCreatingCalendar, calendarSelection: self.$calendarSelection, selectedCalendar: self.$selectedCalendar)
                         }
                     }
@@ -128,42 +110,235 @@ struct HomePageHeader: View {
                         .foregroundColor(Color("PB-800"))
                         .bold()
                 }
-                
             }
+            .padding(.top)
             
-            
-            //Component 2
-            HStack {
-                Button {
-                    //                    CcVM.inviteToCalendar(calendar: CcVM, participants: <#T##[String]#>, viewController: <#T##UIViewController#>)
-                } label: {
-                    HStack (spacing: -4) {
+            //UPCOMING EVENT
+            VStack{
+                HStack{
+                    Text ("UPCOMING EVENT")
+                        .font(Font.custom("Fredoka-Medium", size: 14))
+                        .foregroundColor(Color("Gray3"))
+                    Spacer()
+                }
+                .padding(.top)
+                
+                //card
+                if(!events.isEmpty){
+                    VStack(alignment: .leading, spacing: 14){
+                        HStack{
+                            // "Monday, 17 Apr" SHOULD BE CHANGABLE
+                            Text(EM.formattedDate(date: events[0].startDate))
+                                .font(Font.custom("Fredoka-Medium", size: 20))
+                                .foregroundColor(Color("Primary"))
+                            
+                            Image(systemName: "circle.fill")
+                                .font(Font.custom("Fredoka-Medium", size: 5))
+                                .foregroundColor(Color("Primary"))
+                            
+                            // "06.00 pm" SHOULD BE CHANGABLE
+                            Text(EM.formattedTime(date: events[0].startDate))
+                                .font(Font.custom("Fredoka-Medium", size: 20))
+                                .foregroundColor(Color("Primary"))
+                            Spacer()
+                        }
                         
-                        // "temporaryUsers" SHOULD BE CHANGABLE
-                        ForEach (0 ..< HpVM.calendars[HpVM.currentCalendar].calendarMembers.count) { users in
-                            if (users < 3) {
-                                Image(systemName: "person.circle.fill")
-                                    .resizable()
-                                    .frame(width: 25, height: 25)
+                        //Content should be changeable
+                        VStack(alignment: .leading, spacing: 4){
+                            Text(events[0].title!)
+                                .font(Font.custom("Fredoka-Medium", size: 17))
+                                .foregroundColor(Color("Grey"))
+                            
+                            Text(events[0].notes!)
+                                .font(Font.custom("Fredoka-Regular", size: 17))
+                                .foregroundColor(.gray)
+                        }
+                        
+                        HStack(alignment: .center) {
+                            NavigationLink {
+                                //code here
+                                GameRulesView()
+                            } label: {
+                                Text("Find Topic 🤩")
+                                    .frame(minWidth: 290)
+                            }
+                            .buttonStyle(FillButton())
+                        }
+                        
+                    }
+                    .padding()
+                    .background(Color("PB-100"))
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
+                } else {
+                    // if there's no event
+                    VStack(alignment: .leading, spacing: 14){
+                        HStack(){
+                            Spacer()
+                            Image("calfill")
+                            Spacer()
+                        }
+                        
+                        VStack(alignment: .leading, spacing: 4){
+                            Text("You don't have any upcoming event yet!")
+                                .font(Font.custom("Fredoka-Medium", size: 18))
+                                .foregroundColor(Color("Primary"))
+                        }
+                    }
+                    .padding()
+                    .background(Color("PB-100"))
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
+                }
+            }
+            .padding(.top, 14)
+            
+            //PROPOSED EVENT
+            VStack{
+                HStack{
+                    Text ("PROPOSED EVENT")
+                        .font(Font.custom("Fredoka-Medium", size: 14))
+                        .foregroundColor(Color("Gray3"))
+                    Spacer()
+                    if(events.count > 2){
+                        NavigationLink {
+                            Proposed(selectedCalendar: self.$selectedCalendar)
+                        } label: {
+                            Text ("See all (\(events.count))")
+                                .font(Font.custom("Fredoka", size: 16))
+                                .foregroundColor(Color("Secondary"))
+                        }
+                    }
+                }
+                .padding(.top)
+                
+                if(!events.isEmpty){
+                    VStack(spacing: 18){
+                        VStack(alignment: .leading, spacing: 14){
+                            HStack{
+                                // "Monday, 17 Apr" SHOULD BE CHANGABLE
+                                Text(EM.formattedDate(date: allEvents[0].startDate))
+                                    .font(Font.custom("Fredoka-Medium", size: 20))
+                                    .foregroundColor(Color("Primary"))
+                                
+                                Image(systemName: "circle.fill")
+                                    .font(Font.custom("Fredoka-Medium", size: 5))
+                                    .foregroundColor(Color("Primary"))
+                                
+                                // "06.00 pm" SHOULD BE CHANGABLE
+                                Text(EM.formattedTime(date: allEvents[0].startDate))
+                                    .font(Font.custom("Fredoka-Medium", size: 20))
+                                    .foregroundColor(Color("Primary"))
+                                Spacer()
+                            }
+                            
+                            //Content should be changeable
+                            VStack(alignment: .leading, spacing: 4){
+                                Text(allEvents[0].title!)
+                                    .font(Font.custom("Fredoka-Medium", size: 17))
+                                    .foregroundColor(Color("Grey"))
+                                
+                                Text(allEvents[0].notes!)
+                                    .font(Font.custom("Fredoka-Regular", size: 17))
                                     .foregroundColor(.gray)
                             }
                         }
+                        .frame(minWidth: 320)
+                        .padding()
+                        .background(.white)
+                        .cornerRadius(8)
+                        .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
+                        
+                        if(events.count>1){
+                            VStack(alignment: .leading, spacing: 14){
+                                HStack{
+                                    // "Monday, 17 Apr" SHOULD BE CHANGABLE
+                                    Text(EM.formattedDate(date: allEvents[1].startDate))
+                                        .font(Font.custom("Fredoka-Medium", size: 20))
+                                        .foregroundColor(Color("Primary"))
+                                    
+                                    Image(systemName: "circle.fill")
+                                        .font(Font.custom("Fredoka-Medium", size: 5))
+                                        .foregroundColor(Color("Primary"))
+                                    
+                                    // "06.00 pm" SHOULD BE CHANGABLE
+                                    Text(EM.formattedTime(date: allEvents[1].startDate))
+                                        .font(Font.custom("Fredoka-Medium", size: 20))
+                                        .foregroundColor(Color("Primary"))
+                                    Spacer()
+                                }
+                                
+                                //Content should be changeable
+                                VStack(alignment: .leading, spacing: 4){
+                                    Text(allEvents[1].title!)
+                                        .font(Font.custom("Fredoka-Medium", size: 17))
+                                        .foregroundColor(Color("Grey"))
+                                    
+                                    Text(allEvents[1].notes!)
+                                        .font(Font.custom("Fredoka-Regular", size: 17))
+                                        .foregroundColor(.gray)
+                                }
+                            }
+                            .frame(minWidth: 320)
+                            .padding()
+                            .background(.white)
+                            .cornerRadius(8)
+                            .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
+                        }
+                        
                     }
-                    
-                    // "temporaryUsers" SHOULD BE CHANGABLE
-                    if (HpVM.calendars[HpVM.currentCalendar].calendarMembers.count > 3) {
-                        Text("\(HpVM.calendars[HpVM.currentCalendar].calendarMembers.count-3)+")
-                            .font(Font.custom("Fredoka", size: 14))
-                            .foregroundColor(Color("PB-800"))
+                } else{
+                    // if there's no event
+                    VStack(alignment: .leading, spacing: 14){
+                        HStack(){
+                            Spacer()
+                            Image("calendar")
+                            Spacer()
+                        }
+                        
+                        VStack(alignment: .leading, spacing: 4){
+                            Text("You don't have any proposed event yet!")
+                                .font(Font.custom("Fredoka-Medium", size: 18))
+                                .foregroundColor(Color("Primary"))
+                            Text("Propose a new event for your family?")
+                                .font(Font.custom("Fredoka-Regular", size: 16))
+                                .foregroundColor(.gray)
+                        }
+                        
+                        HStack(alignment: .center) {
+                            NavigationLink{
+                                Proposenewpage(selectedCalendar: self.$selectedCalendar)
+                            } label: {
+                                Text("Propose a new event")
+                                    .frame(minWidth: 290)
+                            }
+                            .buttonStyle(FillButton())
+                        }
+                        
                     }
+                    .padding()
+                    .background(.white)
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
                 }
-                
-                Spacer()
-                
             }
+            .padding(.top, 14)
         }
-        .onAppear{
+        .onAppear(){
+            refreshView()
             print("Result" + (selectedCalendar?.title ?? ""))
+        }
+        .onChange(of: selectedCalendar) { _ in
+            refreshView()
+            print("Result" + (selectedCalendar?.title ?? ""))
+        }
+    }
+    
+    private func refreshView() {
+        //Fetch events for the selected calendar
+        if let calendar = selectedCalendar {
+            events = EM.getSpecificCalendarEvents(from: calendar)
+            allEvents = EM.getAllEvents(from: calendar)
         }
     }
 }

@@ -14,26 +14,27 @@ struct Homepage: View {
     @StateObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = calendarViewModel()
     @ObservedObject var EM = EventManager()
-//    @Binding private var selectedCalendarID: String
+    //    @Binding private var selectedCalendarID: String
     @State var selectedCalendar: EKCalendar?
     //    @State var selectedCalendarIndex: Int = 0
     @State private var calendars: [EKCalendar] = calendarViewModel().getUserCalendars()
     
     var body:some View {
-//        NavigationView {
+        ZStack {
+//            Image("asetbottom")
+//                .scaledToFill()
+//                .scaleEffect(1.3)
+//                .padding(.top, 685)
+            
             VStack {
                 HomePageHeader(selectedCalendar: self.$selectedCalendar)
-                
-                HomePageUpcomingEvent()
-                
-                HomePageProposedEvent(selectedCalendar: self.$selectedCalendar, HpVM: HpVM)
-                    .padding(.top)
-                
+
                 Spacer()
                 
             }
             .padding(24)
-//        }
+
+        }
         .navigationBarBackButtonHidden(true)
     }
 }

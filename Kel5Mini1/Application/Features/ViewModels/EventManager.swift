@@ -18,12 +18,23 @@ class EventManager: ObservableObject {
         }
     }
     
-    func getSpecificCalendarEvents(from calendar: EKCalendar) -> [EKEvent] {
-        let startDate = Date()
-        //        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
-        //        let specificCalendar = eventStore.calendars(for: .event).first { $0.title == calendar.title }
+    func getAllEvents(from calendar: EKCalendar) -> [EKEvent] {
         guard let specificCalendar = eventStore.calendar(withIdentifier: calendar.calendarIdentifier) else {
             // Specific calendar not found, handle the error here
+            return []
+        }
+        let predicate = eventStore.predicateForEvents (
+            withStart: Date(), end: Date().addingTimeInterval(60*60*24*365), calendars: [specificCalendar]
+        )
+        
+        let events = eventStore.events(matching: predicate)
+        let sortedEvents = events.sorted(by: { $0.creationDate ?? Date.distantPast > $1.creationDate ?? Date.distantPast })
+        
+        return sortedEvents
+    }
+    
+    func getSpecificCalendarEvents(from calendar: EKCalendar) -> [EKEvent] {
+        guard let specificCalendar = eventStore.calendar(withIdentifier: calendar.calendarIdentifier) else {
             return []
         }
         
@@ -61,8 +72,8 @@ class EventManager: ObservableObject {
     func addEvent(to calendar: EKCalendar, startDate: Date, startTime: Date, title: String, description: String) {
         let event = EKEvent(eventStore: eventStore)
         event.title = title
-//        let defaultAlert = EKAlarm(relativeOffset: -1 * 24 * 60 * 60) // 3 days before
-//        event.alarms = [defaultAlert]
+        //        let defaultAlert = EKAlarm(relativeOffset: -1 * 24 * 60 * 60) // 3 days before
+        //        event.alarms = [defaultAlert]
         event.alarms = nil
         let startDateandTime = self.setTimeInDate(date: startDate, time: startTime)
         event.startDate = startDateandTime
@@ -91,10 +102,24 @@ class EventManager: ObservableObject {
         formatter.dateFormat = "EEEE, d MMM"
         return formatter.string(from: date)
     }
+    
     func formattedTime(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH.mm"
-        return formatter.string(from: date)
+        
+        let timeString = formatter.string(from: date)
+        
+        let components = timeString.split(separator: ".")
+        guard let hour = Int(components.first ?? ""),
+              let minute = Int(components.last ?? "") else {
+            return ""
+        }
+        
+        let isAM = hour < 12 || hour == 0
+        let hourIn12Format = hour == 0 ? 12 : (hour > 12 ? hour - 12 : hour)
+        let amPmString = isAM ? "am" : "pm"
+        
+        return "\(formatter.string(from: date)) \(amPmString)"
     }
     
     

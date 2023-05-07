@@ -27,12 +27,12 @@ struct CardStackWholeView: View {
                     .foregroundColor(Color("Gray3"))
                     .font(Font.custom("Fredoka-Medium", size: 16))
             }
+            .padding(.bottom, 60)
             
             // All Stack of Cards
             ZStack {
                 
                 Text("OUT OF TOPICS!")
-                    .font(.subheadline)
                     .foregroundColor(Color("Gray3"))
                     .font(Font.custom("Fredoka-Medium", size: 16))
                 

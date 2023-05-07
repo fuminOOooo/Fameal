@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "157EB61029EFA79F0056F675"
-               BuildableName = "Kel5Mini1.app"
-               BlueprintName = "Kel5Mini1"
+               BuildableName = "Fameal.app"
+               BlueprintName = "Fameal"
                ReferencedContainer = "container:Kel5Mini1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "157EB61029EFA79F0056F675"
-            BuildableName = "Kel5Mini1.app"
-            BlueprintName = "Kel5Mini1"
+            BuildableName = "Fameal.app"
+            BlueprintName = "Fameal"
             ReferencedContainer = "container:Kel5Mini1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -85,8 +85,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "157EB61029EFA79F0056F675"
-            BuildableName = "Kel5Mini1.app"
-            BlueprintName = "Kel5Mini1"
+            BuildableName = "Fameal.app"
+            BlueprintName = "Fameal"
             ReferencedContainer = "container:Kel5Mini1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

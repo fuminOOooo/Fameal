@@ -140,13 +140,13 @@ struct inviteGuide: View {
     }
     
     private func redirectToNativeCalendarApp() {
-            if let calendarAppURL = URL(string: "calshow://") {
-                if UIApplication.shared.canOpenURL(calendarAppURL) {
-                    UIApplication.shared.open(calendarAppURL)
-                } else {
-                    print("Native Calendar app is not installed.")
-                    // Handle the case where the native Calendar app is not installed
-                }
+        if let calendarAppURL = URL(string: "calshow://") {
+            if UIApplication.shared.canOpenURL(calendarAppURL) {
+                UIApplication.shared.open(calendarAppURL)
+            } else {
+                print("Native Calendar app is not installed.")
+                // Handle the case where the native Calendar app is not installed
             }
         }
+    }
 }

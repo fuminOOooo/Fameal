@@ -11,22 +11,31 @@ import EventKit
 class EventManager: ObservableObject {
     
     @Published var eventStore = EKEventStore()
-    /*
-     func requestAccess(completion: @escaping (Bool) -> Void) {
-     eventStore.requestAccess(to: .event) { granted, error in
-     completion(granted)
-     }
-     }
-     */
+    
+    func requestAccess(completion: @escaping (Bool) -> Void) {
+        eventStore.requestAccess(to: .event) { granted, error in
+            completion(granted)
+        }
+    }
     
     func getSpecificCalendarEvents(from calendar: EKCalendar) -> [EKEvent] {
         let startDate = Date()
-//        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
-        let specificCalendar = eventStore.calendars(for: .event).first { $0.title == calendar.title }
+        //        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+        //        let specificCalendar = eventStore.calendars(for: .event).first { $0.title == calendar.title }
+        guard let specificCalendar = eventStore.calendar(withIdentifier: calendar.calendarIdentifier) else {
+            // Specific calendar not found, handle the error here
+            return []
+        }
+        
+        print(specificCalendar.title)
+        
         let predicate = eventStore.predicateForEvents (
-            withStart: Date(), end: Date().addingTimeInterval(60*60*24*365), calendars: [specificCalendar!]
+            withStart: Date(), end: Date().addingTimeInterval(60*60*24*365), calendars: [specificCalendar]
         )
-        return eventStore.events(matching: predicate)
+        
+        let theEvents = eventStore.events(matching: predicate)
+        let sortedEvents = theEvents.sorted(by: { $0.startDate < $1.startDate })
+        return sortedEvents
     }
     
     func getEvents() -> [EKEvent] {
@@ -52,13 +61,13 @@ class EventManager: ObservableObject {
     func addEvent(to calendar: EKCalendar, startDate: Date, startTime: Date, title: String, description: String) {
         let event = EKEvent(eventStore: eventStore)
         event.title = title
-        let defaultAlert = EKAlarm(relativeOffset: -1 * 24 * 60 * 60) // 3 days before
-        event.alarms = [defaultAlert]
+//        let defaultAlert = EKAlarm(relativeOffset: -1 * 24 * 60 * 60) // 3 days before
+//        event.alarms = [defaultAlert]
+        event.alarms = nil
         let startDateandTime = self.setTimeInDate(date: startDate, time: startTime)
         event.startDate = startDateandTime
         event.endDate = startDateandTime.addingTimeInterval(60 * 60) // 1 hour
         event.notes = description
-        event.availability = .busy
         event.calendar = calendar
         
         do {

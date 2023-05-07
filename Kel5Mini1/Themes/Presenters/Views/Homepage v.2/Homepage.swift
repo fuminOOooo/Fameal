@@ -13,6 +13,7 @@ struct Homepage: View {
     
     @StateObject var HpVM = HomepageViewModel()
     @ObservedObject var CcVM = calendarViewModel()
+    @ObservedObject var EM = EventManager()
 //    @Binding private var selectedCalendarID: String
     @State var selectedCalendar: EKCalendar?
     //    @State var selectedCalendarIndex: Int = 0

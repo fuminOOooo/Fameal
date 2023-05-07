@@ -12,11 +12,11 @@ class EventManager: ObservableObject {
     
     @Published var eventStore = EKEventStore()
     /*
-    func requestAccess(completion: @escaping (Bool) -> Void) {
-        eventStore.requestAccess(to: .event) { granted, error in
-            completion(granted)
-        }
-    }
+     func requestAccess(completion: @escaping (Bool) -> Void) {
+     eventStore.requestAccess(to: .event) { granted, error in
+     completion(granted)
+     }
+     }
      */
     
     func getSpecificCalendarEvents(from calendar: EKCalendar) -> [EKEvent] {
@@ -51,13 +51,15 @@ class EventManager: ObservableObject {
     
     func addEvent(to calendar: EKCalendar, startDate: Date, startTime: Date, title: String, description: String) {
         let event = EKEvent(eventStore: eventStore)
-        event.calendar = calendar
         event.title = title
-        event.alarms = nil
+        let defaultAlert = EKAlarm(relativeOffset: -3 * 24 * 60 * 60) // 3 days before
+        event.alarms = [defaultAlert]
         let startDateandTime = self.setTimeInDate(date: startDate, time: startTime)
         event.startDate = startDateandTime
         event.endDate = startDateandTime.addingTimeInterval(60 * 60) // 1 hour
         event.notes = description
+        event.availability = .busy
+        event.calendar = calendar
         
         do {
             try eventStore.save(event, span: .thisEvent)

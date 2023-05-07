@@ -52,7 +52,7 @@ class EventManager: ObservableObject {
     func addEvent(to calendar: EKCalendar, startDate: Date, startTime: Date, title: String, description: String) {
         let event = EKEvent(eventStore: eventStore)
         event.title = title
-        let defaultAlert = EKAlarm(relativeOffset: -3 * 24 * 60 * 60) // 3 days before
+        let defaultAlert = EKAlarm(relativeOffset: -1 * 24 * 60 * 60) // 3 days before
         event.alarms = [defaultAlert]
         let startDateandTime = self.setTimeInDate(date: startDate, time: startTime)
         event.startDate = startDateandTime

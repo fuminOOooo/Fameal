@@ -126,7 +126,7 @@ struct createCalendarPage: View {
             }
         }
         else {
-            Homepage(selectedCalendar: selectedCalendar)
+            inviteGuide(selectedCalendar: selectedCalendar)
         }
     }
 }

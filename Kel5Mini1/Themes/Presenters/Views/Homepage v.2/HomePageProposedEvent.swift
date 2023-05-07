@@ -41,7 +41,7 @@ struct HomePageProposedEvent: View {
                 VStack(alignment: .leading, spacing: 14){
                     HStack(){
                         //Content should be changeable
-                        Text("___ has invited you to join...")
+                        Text("Dary has invited you to join...")
                             .font(Font.custom("Fredoka-Regular", size: 14))
                             .foregroundColor(Color("PB-900"))
                     }
@@ -132,7 +132,7 @@ struct HomePageProposedEvent: View {
                     }
                     
                     VStack(alignment: .leading, spacing: 4){
-                        Text("You don't have any upcoming event")
+                        Text("You don't have any proposed event yet")
                             .font(Font.custom("Fredoka-Medium", size: 19))
                             .foregroundColor(Color("Primary"))
                         Text("Propose a new event for your family?")

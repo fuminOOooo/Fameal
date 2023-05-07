@@ -56,6 +56,8 @@
 		389FF1232A04FE0B0064326F /* Createcalendarpage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */; };
 		389FF1242A04FE0B0064326F /* createCalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1202A04FE0B0064326F /* createCalendarPage.swift */; };
 		389FF1262A0634200064326F /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1252A0634200064326F /* EventManager.swift */; };
+		389FF1282A07952D0064326F /* inviteGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1272A07952D0064326F /* inviteGuide.swift */; };
+		389FF1442A079CBC0064326F /* inviteConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389FF1432A079CBC0064326F /* inviteConfirmation.swift */; };
 		38F1B0182A036B5200E0CD4C /* JoinInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +133,8 @@
 		389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Createcalendarpage2.swift; sourceTree = "<group>"; };
 		389FF1202A04FE0B0064326F /* createCalendarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createCalendarPage.swift; sourceTree = "<group>"; };
 		389FF1252A0634200064326F /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		389FF1272A07952D0064326F /* inviteGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inviteGuide.swift; sourceTree = "<group>"; };
+		389FF1432A079CBC0064326F /* inviteConfirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inviteConfirmation.swift; sourceTree = "<group>"; };
 		38F1B0172A036B5200E0CD4C /* JoinInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +196,8 @@
 				389FF1202A04FE0B0064326F /* createCalendarPage.swift */,
 				389FF11E2A04FE0B0064326F /* Createcalendarpage1.swift */,
 				389FF11F2A04FE0B0064326F /* Createcalendarpage2.swift */,
+				389FF1272A07952D0064326F /* inviteGuide.swift */,
+				389FF1432A079CBC0064326F /* inviteConfirmation.swift */,
 			);
 			path = Createcalendarpage;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389FF1282A07952D0064326F /* inviteGuide.swift in Sources */,
 				155194AE2A03988E00A31780 /* CardShape.swift in Sources */,
 				1551942029FB9DAA00A31780 /* ProposeNewTextFields.swift in Sources */,
 				389FF1262A0634200064326F /* EventManager.swift in Sources */,
@@ -587,6 +594,7 @@
 				389FF1222A04FE0B0064326F /* Createcalendarpage1.swift in Sources */,
 				389FF1242A04FE0B0064326F /* createCalendarPage.swift in Sources */,
 				15D975CD29F9380D0033D857 /* Proposed1.swift in Sources */,
+				389FF1442A079CBC0064326F /* inviteConfirmation.swift in Sources */,
 				15BF954129F7DD2000CA517E /* Upcomingpage.swift in Sources */,
 				157EB61729EFA79F0056F675 /* Homepage.swift in Sources */,
 				155194AC2A03986D00A31780 /* CardStackViewModel.swift in Sources */,

@@ -21,7 +21,7 @@ class EventManager: ObservableObject {
     
     func getSpecificCalendarEvents(from calendar: EKCalendar) -> [EKEvent] {
         let startDate = Date()
-        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+//        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
         let specificCalendar = eventStore.calendars(for: .event).first { $0.title == calendar.title }
         let predicate = eventStore.predicateForEvents (
             withStart: Date(), end: Date().addingTimeInterval(60*60*24*365), calendars: [specificCalendar!]

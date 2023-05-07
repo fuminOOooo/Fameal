@@ -29,6 +29,7 @@ struct ProposeNewProposalButton: View {
                 Text("Propose Event")
                     .frame(minWidth: 317)
             }
+            .disabled(eventName.isEmpty || eventDesc.isEmpty)
             .buttonStyle(FillButton())
         }
         .padding()

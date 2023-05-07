@@ -41,5 +41,8 @@ struct Proposenewpage: View {
         .navigationTitle("Propose New Event")
         .navigationBarTitleDisplayMode(.inline)
         .padding()
+        .onDisappear{
+            eventManager.getSpecificCalendarEvents(from: selectedCalendar!)
+        }
     } 
 }

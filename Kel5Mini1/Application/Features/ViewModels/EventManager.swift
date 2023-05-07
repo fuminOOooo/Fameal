@@ -11,22 +11,24 @@ import EventKit
 class EventManager: ObservableObject {
     
     @Published var eventStore = EKEventStore()
-    /*
-     func requestAccess(completion: @escaping (Bool) -> Void) {
-     eventStore.requestAccess(to: .event) { granted, error in
-     completion(granted)
-     }
-     }
-     */
+    
+    func requestAccess(completion: @escaping (Bool) -> Void) {
+        eventStore.requestAccess(to: .event) { granted, error in
+            completion(granted)
+        }
+    }
     
     func getSpecificCalendarEvents(from calendar: EKCalendar) -> [EKEvent] {
         let startDate = Date()
 //        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
         let specificCalendar = eventStore.calendars(for: .event).first { $0.title == calendar.title }
+        print("specificCalendar : \(String(describing: specificCalendar))")
         let predicate = eventStore.predicateForEvents (
             withStart: Date(), end: Date().addingTimeInterval(60*60*24*365), calendars: [specificCalendar!]
         )
-        return eventStore.events(matching: predicate)
+        let theEvents = eventStore.events(matching: predicate)
+        let sortedEvents = theEvents.sorted(by: { $0.startDate < $1.startDate })
+        return sortedEvents
     }
     
     func getEvents() -> [EKEvent] {

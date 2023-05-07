@@ -13,6 +13,7 @@ struct ProposeNewEventDatePicker: View {
     @Binding var selectedDate: Date
     
     var body: some View {
+        
         VStack () {
             
             //Component 2
@@ -32,6 +33,7 @@ struct ProposeNewEventDatePicker: View {
             }
             .padding(.init(top: 6, leading: 6, bottom: 0, trailing: 6))
         }
+        
     }
 }
 

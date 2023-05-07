@@ -12,6 +12,7 @@ import EventKit
 
 struct HomePageProposedEvent: View {    
     @ObservedObject var EM = EventManager()
+    @State var events = [EKEvent]()
     @Binding var selectedCalendar: EKCalendar?
     @ObservedObject var HpVM : HomepageViewModel
     @State var temporaryUsers: [String] = ["Hai", "Halo", "Hey", "Hello", "Ola"]
@@ -24,7 +25,7 @@ struct HomePageProposedEvent: View {
                     .font(Font.custom("Fredoka-Medium", size: 14))
                     .foregroundColor(Color("Gray3"))
                 Spacer()
-                if(!EM.getSpecificCalendarEvents(from: selectedCalendar!).isEmpty){
+                if(!events.isEmpty){
                     NavigationLink {
                         Proposed(selectedCalendar: self.$selectedCalendar)
                     } label: {
@@ -36,7 +37,7 @@ struct HomePageProposedEvent: View {
             }
             .padding(.top)
             
-            if(!EM.getSpecificCalendarEvents(from: selectedCalendar!).isEmpty){
+            if(!events.isEmpty){
                 VStack(alignment: .leading, spacing: 14){
                     HStack(){
                         //Content should be changeable
@@ -47,7 +48,7 @@ struct HomePageProposedEvent: View {
                     
                     HStack{
                         // "Monday, 17 Apr" SHOULD BE CHANGABLE
-                        Text(EM.formattedDate(date: EM.getSpecificCalendarEvents(from: selectedCalendar!)[0].startDate))
+                        Text(EM.formattedDate(date: events[0].startDate))
                             .font(Font.custom("Fredoka-Medium", size: 20))
                             .foregroundColor(Color("Primary"))
                         
@@ -56,7 +57,7 @@ struct HomePageProposedEvent: View {
                             .foregroundColor(Color("Primary"))
                         
                         // "06.00 pm" SHOULD BE CHANGABLE
-                        Text(EM.formattedTime(date: EM.getSpecificCalendarEvents(from: selectedCalendar!)[0].startDate))
+                        Text(EM.formattedTime(date: events[0].startDate))
                             .font(Font.custom("Fredoka-Medium", size: 20))
                             .foregroundColor(Color("Primary"))
                         Spacer()
@@ -64,7 +65,7 @@ struct HomePageProposedEvent: View {
                     
                     //Content should be changeable
                     VStack(alignment: .leading, spacing: 4){
-                        Text(EM.getSpecificCalendarEvents(from: selectedCalendar!)[0].notes!)
+                        Text(events[0].notes!)
                             .font(Font.custom("Fredoka-Regular", size: 17))
                             .foregroundColor(.gray)
                     }
@@ -121,7 +122,7 @@ struct HomePageProposedEvent: View {
                 .background(.white)
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
-            }else{
+            } else{
                 // if there's no event
                 VStack(alignment: .leading, spacing: 14){
                     HStack(){
@@ -157,8 +158,25 @@ struct HomePageProposedEvent: View {
             }
             
         }
-        .onAppear{
-            EM.getSpecificCalendarEvents(from: selectedCalendar!)
+        .onAppear {
+            EM.requestAccess { granted in
+                if granted {
+                    fetchEvents(from: self.selectedCalendar!)
+                }
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .EKEventStoreChanged)) { _ in
+            fetchEvents(from: self.selectedCalendar!)
         }
     }
+ 
+    func fetchEvents(from calendar: EKCalendar) {
+        let startDate = Date()
+        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+        events = EM.getSpecificCalendarEvents(from: calendar)
+        events = events.sorted { (event1, event2) -> Bool in
+            return event1.startDate.compare(event2.startDate) == .orderedAscending
+        }
+    }
+    
 }

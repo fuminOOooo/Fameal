@@ -15,9 +15,9 @@ struct BorderButton: ButtonStyle {
             .frame(height: 44)
             .background(configuration.isPressed ? Color("Secondary") : Color(.white))
             .overlay(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(configuration.isPressed ? Color("Secondary") : Color("Secondary"))
-                    )
+                RoundedRectangle(cornerRadius: 6)
+                    .stroke(configuration.isPressed ? Color("Secondary") : Color("Secondary"))
+            )
             .cornerRadius(6)
             .foregroundColor(configuration.isPressed ? Color(.white) : Color("Secondary"))
     }
@@ -31,10 +31,27 @@ struct FillButton: ButtonStyle {
             .frame(height: 44)
             .background(configuration.isPressed ? Color("SO-600") : Color("Secondary"))
             .overlay(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(configuration.isPressed ? Color("SO-600") : Color("Secondary"))
-                    )
+                RoundedRectangle(cornerRadius: 6)
+                    .stroke(configuration.isPressed ? Color("SO-600") : Color("Secondary"))
+            )
             .cornerRadius(6)
             .foregroundColor(configuration.isPressed ? Color(.white) : Color(.white))
     }
 }
+
+struct DisabledButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(Font.custom("Fredoka-Medium", size: 16))
+            .padding()
+            .frame(height: 44)
+            .background(Color("Secondary"))
+            .overlay(
+                RoundedRectangle(cornerRadius: 6)
+                    .stroke(configuration.isPressed ? Color("SO-600") : Color("Secondary"))
+            )
+            .cornerRadius(6)
+            .foregroundColor(configuration.isPressed ? Color(.white) : Color(.white))
+    }
+}
+

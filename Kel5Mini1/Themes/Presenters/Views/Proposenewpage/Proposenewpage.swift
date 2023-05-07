@@ -26,21 +26,22 @@ struct Proposenewpage: View {
             
             ScrollView {
                 ProposeNewEventDatePicker(selectedDate : $selectedDate)
+                    .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
                 
                 ProposeNewStartTime(selectedTime:$selectedTime)
+                    .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
                 
                 ProposeNewTextFields(eventName:$eventName, eventDesc: $eventDesc)
+                    .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
                 
                 ProposeNewProposalButton(selectedDate: selectedDate, selectedTime: selectedTime,eventName: eventName, eventDesc: eventDesc, selectedCalendar: self.$selectedCalendar)
             }
-            
             Spacer()
             
         }
         .navigationBarBackButtonHidden(true)
         .navigationTitle("Propose New Event")
         .navigationBarTitleDisplayMode(.inline)
-        .padding()
         .onDisappear{
             eventManager.getSpecificCalendarEvents(from: selectedCalendar!)
         }

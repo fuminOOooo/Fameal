@@ -26,11 +26,24 @@ struct ProposeNewProposalButton: View {
                 eventManager.addEvent(to: self.selectedCalendar ?? selectedCalendar!, startDate: selectedDate, startTime: selectedTime, title: eventName, description: eventDesc)
                 dismiss()
             } label: {
-                Text("Propose Event")
-                    .frame(minWidth: 317)
+                if (eventName.isEmpty || eventDesc.isEmpty) {
+                    Text("Propose New Event")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                        .background(Color("SO-100"))
+                        .cornerRadius(6)
+                        .font(Font.custom("Fredoka-Medium", size: 16))
+                } else {
+                    Text("Propose New Event")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                        .background(Color("Secondary"))
+                        .cornerRadius(6)
+                        .font(Font.custom("Fredoka-Medium", size: 16))
+                        .frame(maxWidth: .infinity)
+                }
             }
             .disabled(eventName.isEmpty || eventDesc.isEmpty)
-            .buttonStyle(FillButton())
         }
         .padding()
     }

@@ -17,7 +17,6 @@ struct ProposeNewEventDatePicker: View {
             
             //Component 2
             DatePicker("Select a date", selection: $selectedDate, in: Date()..., displayedComponents: .date)
-                .padding(6)
                 .cornerRadius(10)
                 .datePickerStyle(.graphical)
                 .colorScheme(.light)
